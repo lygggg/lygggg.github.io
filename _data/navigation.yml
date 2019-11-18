@@ -1,8 +1,8 @@
 main:
 
   - title: "Posts"
-    url: /year-archive/
+    url: /categories/
   - title: "TIL"
-    url: /til/
+    url: /categories/til/
   - title: "About"
     url: /about/
