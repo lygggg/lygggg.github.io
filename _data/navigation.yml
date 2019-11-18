@@ -1,6 +1,6 @@
 main:
 
-  - title: "Post"
+  - title: "Posts"
     url: /year-archive/
   - title: "TIL"
     url: /til/
