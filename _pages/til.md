@@ -6,4 +6,4 @@ author_profile: true
 taxonomy: TIL
 ---
 
-Todat I Learned
+Today I Learned
