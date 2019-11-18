@@ -1,0 +1,8 @@
+main:
+
+  - title: "Post"
+    url: /year-archive/
+  - title: "TIL"
+    url: /til/
+  - title: "About"
+    url: /about/
