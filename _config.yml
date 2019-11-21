@@ -302,4 +302,4 @@ defaults:
       read_time: false
       comments: false
       share: true
-      related:
+      related: false
