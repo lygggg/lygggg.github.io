@@ -1,11 +1,17 @@
 ---
 title:  "React Router로 사용자 로그인, 로그아웃을 다뤄보자"
-excerpt: "React Router을 이용해 로그인 상태일때만 페이지에 들어갈수있게 구현해보자. "
+excerpt: "React Router을 이용해 로그인 상태일때만 페이지에 들어갈수있게 구현해보자. " 
 
 categories:
   - Blog
 tags:
-  - #CUSTOMROUTE, #PRIVATEROUTE, #AUTHROUTE, #로그인, #로그아웃, #인증, #localStorage
+  - CUSTOMROUTE 
+  - PRIVATEROUTE
+  - AUTHROUTE
+  - localStorage
+  - 인증
+  - 로그인
+  - 로그아웃
 ---
 
 
@@ -30,7 +36,7 @@ App.js에서
             </AuthRoute>
 ~~~
 
-AuthRoute를 선언해준 뒤에,
+AuthRoute를 선언해준 뒤에
 
 - Home.js 
 
