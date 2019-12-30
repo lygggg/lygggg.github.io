@@ -3,9 +3,7 @@ title:  "Web Storage Api의 등장배경, 쿠키,세션의 차이점"
 excerpt: "Web Storage Api의 등장배경, 쿠키,세션의 차이점" 
 categories:
   - Blog
-  - Cookie
-  - Session
-  - Web Storage Api
+  
 ---
 다른글에서 간단하게 쿠키와 세션에 대해서 간단하게 정리해 보았는데 이글에서 더 집중적으로 쿠키와 세션에 대해서 적어보려고 합니다.
 
