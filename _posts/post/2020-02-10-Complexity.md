@@ -2,11 +2,11 @@
 title:  "시간 복잡도, 공간 복잡도, Big-O에 대해서 알아보자."
 excerpt: "시간 복잡도, 공간 복잡도, Big-O에 대해서 알아보자" 
 categories:
+    - Blog
+tags:
     - 시간 복잡도
     - 공간 복잡도
     - Big-O
-tags:
-    - 재귀함수
 ---
 ### 목적
 
@@ -28,7 +28,7 @@ tags:
 보통 시간 복잡도와 공간 복잡도를 나타내는데 주로 사용된다.
 Big-O는 최고차항만을 계산합니다.
 
-<img src='/assets/images/big-o.png' width='400px' height='400px'/>
+<img src='/assets/images/big-o.png' width='600px' height='600px'/>
 
 ### 시간 복잡도 예시
 
