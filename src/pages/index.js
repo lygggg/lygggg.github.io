@@ -6,7 +6,6 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import ThumbnailContainer from '../components/thumbnail-container'
 import Category from '../components/category'
-import PlanContainer from '../components/plan-container'
 
 export default ({ data }) => {
   const initialCategory = 'All'
@@ -26,7 +25,6 @@ export default ({ data }) => {
   return (
     <Layout>
       <Header title={title} />
-      <PlanContainer planTitle={planTitle} showPlan={showPlan} />
       <Category tags={tags} selectCategory={selectCategory} />
       <ThumbnailContainer posts={posts} category={category} />
     </Layout>
