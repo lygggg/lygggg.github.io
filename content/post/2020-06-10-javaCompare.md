@@ -1,6 +1,6 @@
 ---
 title: '[JAVA]Comparable과 Comparator'
-date: 2021-06-10
+date: 2020-06-10
 tag: ['Posts']
 ---
 
