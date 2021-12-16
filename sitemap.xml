@@ -6,5 +6,4 @@
 <url> <loc>http://answer.netlify.app/third_post/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://answer.netlify.app/plan/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
