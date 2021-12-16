@@ -39,7 +39,7 @@ export const Bio = () => {
                     icon={['far', v.icon]}
                     style={{ width: '23px', marginRight: '10px' }}
                     fixedWidth
-                    className='icon'
+                    className="icon"
                   />
                   <FontAwesomeIcon
                     key={index}
@@ -70,7 +70,6 @@ export const bioQuery = graphql`
     site {
       siteMetadata {
         author
-        introduction
         social {
           icon
           url

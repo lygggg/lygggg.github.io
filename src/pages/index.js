@@ -39,7 +39,6 @@ export const query = graphql`
       siteMetadata {
         title
         author
-        introduction
         planTitle
         showPlan
       }
