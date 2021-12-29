@@ -4,7 +4,7 @@ date: 2019-12-08
 tag: ['Posts']
 ---
 
-<img src='/assets/images/React.png' width='300px' height='300px'/>
+<img src='../assets/images/React.png' width='300px' height='300px'/>
 
 이 포스트는 localStorage를 이용한 로그인을 사용하였고, 로그인 상태면 localStorage에 `isLogin key`값에 `true`를 저장하고, 로그아웃 상태면 `false`를 저장하도록 했습니다. 자 이제 AUTHROUTE라는 js파일을 만들어 봅시다. 저는 로그인 상태일 경우, MyPage로 들어갈 수 있고, 로그아웃 상태일경우 로그인화면으로 `ReDirect` 시켜 주도록 만들었습니다.
 
@@ -12,7 +12,7 @@ tag: ['Posts']
 
 - AuthRoute.js
 
-<img src='/assets/images/AuthRoute.PNG'/>
+<img src='../assets/images/AuthRoute.PNG'/>
 
 AuthRoute를 만들어주고, 라우팅을 해주도록 하겠습니다.
 App.js에서

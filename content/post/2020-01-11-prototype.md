@@ -26,7 +26,7 @@ const student = {
 console.log(student.hasOwnProperty('name')); // true
 ```
 
-<img src='/assets/images/printout_student_obj_from_chrome.png' width='700px' height='400px'/>
+<img src='../assets/images/printout_student_obj_from_chrome.png' width='700px' height='400px'/>
 
 ECMAScript spec에서는 자바스크립트의 모든 객체는 [[Prototype]]이라는 인터널 슬롯(internal slot)를 가진다. [[Prototype]]의 값은 null 또는 객체이며 상속을 구현하는데 사용된다. [[Prototype]] 객체의 데이터 프로퍼티는 get 액세스를 위해 상속되어 자식 객체의 프로퍼티처럼 사용할 수 있다. 하지만 set 액세스는 허용되지 않는다. 라고 되어있다.
 

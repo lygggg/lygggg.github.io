@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://javaplant.tistory.com/18 -->
+<html lang="ko" style="" class=" rgba csscalc opacity supports displaytable display-table no-cssvhunit cssvwunit mediaqueries cssanimations backgroundsize borderradius boxshadow boxsizing no-overflowscrolling csstransforms csstransforms3d csstransitions textshadow"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/lightbox.min.css"><link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/font.css"><link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/content.css"><!--[if lt IE 9]><script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js"></script><![endif]--><!--[if gte IE 9]>
+<!--><script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/osd.js.다운로드"></script><script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(4).txt" id="google_shimpl"></script><script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jquery-3.2.1.min.js.다운로드"></script><!--<![endif]-->
+<script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/lightbox-plus-jquery.min.js.다운로드"></script>
+<script>
+lightbox.options.fadeDuration = 200;
+lightbox.options.resizeDuration = 200;
+lightbox.options.wrapAround = false;
+lightbox.options.albumLabel = "%1 / %2";
+</script>
+<script>var tjQuery = jQuery.noConflict(true);</script><style type="text/css">.tt_article_useless_p_margin p {padding-top:0 !important;padding-bottom:0 !important;margin-top:0 !important;margin-bottom:0 !important;}</style><meta name="referrer" content="always"><link rel="icon" href="https://t1.daumcdn.net/tistory_admin/static/top/favicon_0630.ico"><link rel="apple-touch-icon" href="https://img1.daumcdn.net/thumb/C180x180/?fname=https%3A%2F%2Ftistory3.daumcdn.net%2Ftistory%2F2898205%2Fattach%2Fbe16ee8b0f1c4e25aee2933fb665520a">
+<link rel="apple-touch-icon" sizes="76x76" href="https://img1.daumcdn.net/thumb/C76x76/?fname=https%3A%2F%2Ftistory3.daumcdn.net%2Ftistory%2F2898205%2Fattach%2Fbe16ee8b0f1c4e25aee2933fb665520a">
+<link rel="apple-touch-icon" sizes="120x120" href="https://img1.daumcdn.net/thumb/C120x120/?fname=https%3A%2F%2Ftistory3.daumcdn.net%2Ftistory%2F2898205%2Fattach%2Fbe16ee8b0f1c4e25aee2933fb665520a">
+<link rel="apple-touch-icon" sizes="152x152" href="https://img1.daumcdn.net/thumb/C152x152/?fname=https%3A%2F%2Ftistory3.daumcdn.net%2Ftistory%2F2898205%2Fattach%2Fbe16ee8b0f1c4e25aee2933fb665520a"><meta name="description" content="HTTP Request 정보 GET /index.html HTTP/1.1 요청 URL정보 (Mehotd /URI HTTP버젼) user-agent: MSIE 6.0; Window NT 5.0 사용자 웹 브라우져 종류 accept: test/html; */* 요청 데이터 타입 (응답의 Content-ty..">
+
+<!-- BEGIN OPENGRAPH -->
+<link rel="canonical" href="https://javaplant.tistory.com/18"><meta property="og:type" content="article"><meta property="og:url" content="https://javaplant.tistory.com/18"><meta property="og:site_name" content="자바공작소"><meta property="og:title" content="HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS"><meta name="by" content="전산쟁이 Leejisoo"><meta property="og:description" content="HTTP Request 정보 GET /index.html HTTP/1.1 요청 URL정보 (Mehotd /URI HTTP버젼) user-agent: MSIE 6.0; Window NT 5.0 사용자 웹 브라우져 종류 accept: test/html; */* 요청 데이터 타입 (응답의 Content-ty.."><meta property="og:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9937533E5AE73D400C"><meta property="article:section" content="IT 인터넷">
+<!-- END OPENGRAPH -->
+
+
+
+<!-- BEGIN TWITTERCARD -->
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TISTORY"><meta name="twitter:title" content="HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS"><meta name="twitter:description" content="HTTP Request 정보 GET /index.html HTTP/1.1 요청 URL정보 (Mehotd /URI HTTP버젼) user-agent: MSIE 6.0; Window NT 5.0 사용자 웹 브라우져 종류 accept: test/html; */* 요청 데이터 타입 (응답의 Content-ty.."><meta property="twitter:image" content="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9937533E5AE73D400C">
+<!-- END TWITTERCARD -->
+
+
+
+<!-- BEGIN DAUMAPP -->
+<meta property="dg:plink" content="https://javaplant.tistory.com/18"><meta name="plink" content="https://javaplant.tistory.com/18"><meta name="title" content="HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS"><meta name="article:media_name" content="자바공작소"><meta property="article:mobile_url" content="https://javaplant.tistory.com/m/18"><meta property="article:pc_url" content="https://javaplant.tistory.com/18"><meta property="article:mobile_view_url" content="https://javaplant.tistory.com/m/18"><meta property="article:pc_view_url" content="https://javaplant.tistory.com/18"><meta property="article:talk_channel_view_url" content="https://javaplant.tistory.com/m/18"><meta property="article:pc_service_home" content="https://www.tistory.com"><meta property="article:mobile_service_home" content="https://www.tistory.com/m"><meta property="article:txid" content="2898205_18"><meta property="article:published_time" content="2018-05-01T00:59:05+09:00"><meta property="og:regDate" content="20180430235414"><meta property="article:modified_time" content="2018-05-01T13:46:12+09:00">
+<!-- END DAUMAPP -->
+
+
+
+<!-- BEGIN STRUCTURED_DATA -->
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BlogPosting","mainEntityOfPage":{"@id":"https:\/\/javaplant.tistory.com\/18"},"url":"https:\/\/javaplant.tistory.com\/18","headline":"HTTP \uc751\ub2f5\ucf54\ub4dc \uba54\uc18c\ub4dc \uc815\ub9ac GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS","description":"HTTP Request \uc815\ubcf4 GET \/index.html HTTP\/1.1 \uc694\uccad URL\uc815\ubcf4 (Mehotd \/URI HTTP\ubc84\uc83c) user-agent: MSIE 6.0; Window NT 5.0 \uc0ac\uc6a9\uc790 \uc6f9 \ube0c\ub77c\uc6b0\uc838 \uc885\ub958 accept: test\/html; *\/* \uc694\uccad \ub370\uc774\ud130 \ud0c0\uc785 (\uc751\ub2f5\uc758 Content-ty..","author":{"@type":"Person","name":"\uc804\uc0b0\uc7c1\uc774 Leejisoo"},"image":{"@type":"ImageObject","url":"https:\/\/img1.daumcdn.net\/thumb\/R800x0\/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9937533E5AE73D400C","width":"800px","height":"800px"},"datePublished":"20180501T00:59:05+09:00","dateModified":"20180501T13:46:12+09:00","publisher":{"@type":"Organization","name":"TISTORY","logo":{"@type":"ImageObject","url":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/images\/openGraph\/opengraph.png","width":"800px","height":"800px"}}}</script>
+<!-- END STRUCTURED_DATA -->
+
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="ALL">
+    <!-- 네이버 웹마스터 도구 소유확인 -->
+    <meta name="naver-site-verification" content="bc54ddf5275d592c1397b4d631158c684c9b5b76">
+    <!-- 구글 웹마스터 도구 소유확인 -->
+    <meta name="google-site-verification" content="vyahoX_aRgCmqr-DSO54AmAw_4mZ8YLWUWJuxP2lyao">
+    <!-- 구글 페이지 전면 광고 -->
+		<!--
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8005500753255035",
+        enable_page_level_ads: true
+    }); 
+    </script>-->
+
+    <!-- 애드센스 자동광고 -->
+		<script async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(5).txt"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8005500753255035",
+              enable_page_level_ads: true
+         });
+    </script>
+    <title>HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS</title>
+    <link rel="shortcut icon" href="https://javaplant.tistory.com/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="자바공작소" href="https://javaplant.tistory.com/rss">
+    <link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/normalize-5.0.0.min.css">
+    <link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jquery.nivo.slider.css">
+    <link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jquery.nivo.slider.default.css">
+    <link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/style.css">
+    <script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/modernizr-3.3.1.min.js.다운로드"></script><link rel="preload" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(6).txt" as="script"><script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(6).txt"></script><link rel="preload" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(7).txt" as="script"><script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(7).txt"></script>
+    <script>
+      var jbSliderImage = new Array();
+      var jbSliderLink = new Array();
+      var jbSliderCaption = new Array();
+			var jbInfeedCount = 0;
+      // Skin Options - Start
+        var jbShowSlider = 1;     // 0 -> Yes, 1 -> No
+          jbSliderImage[0] = 'https://tistory4.daumcdn.net/tistory/2898205/skin/images/promotion1.jpg';
+          jbSliderLink[0] = 'https://www.gearbest.com/promotion-new-years-resolutions-special-1889.html?lkid=12170337';
+          jbSliderCaption[0] = ' ▶ 기어베스트 2018 새해 프로모션';
+          jbSliderImage[1] = 'https://tistory4.daumcdn.net/tistory/2898205/skin/images/promotion2.jpg';
+          jbSliderLink[1] = 'https://www.gearbest.com/promotion-ces-2018-sale-special-1901.html?lkid=12170337';
+          jbSliderCaption[1] = ' ▶ 기어베스트 CES 2018 전자제품 프로모션';
+          jbSliderImage[2] = 'https://tistory4.daumcdn.net/tistory/2898205/skin/images/promotion3.jpg';
+          jbSliderLink[2] = 'https://www.gearbest.com/promotion-adventure-gear-special-1129.html?lkid=12170337';
+          jbSliderCaption[2] = ' ▶ 기어베스트 IT제품 최대 50% 할인 프로모션';
+				var jbShowInfeedAdSense = 0; // 0 -> Yes, 1 -> No
+				var jbInfeedAdSenseInterval = 4;
+			  var jbInfeedAdSenseCode = '<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fk+3n+d8-bc-je" data-ad-client="ca-pub-8005500753255035" data-ad-slot="3933154277"></ins>';
+			  if (!matchMedia("screen and (min-width: 767px)").matches) {
+					jbInfeedAdSenseCode = '<ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-9k-2q-5j+jg+2j"     data-ad-client="ca-pub-8005500753255035" data-ad-slot="3161726879"></ins>';
+				}
+			  
+				var jbAdSenseNativeContentCode = '<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-xxxx" data-ad-slot="xxxx"></ins>';
+      // Skin Options - End
+    </script>
+		<link rel="stylesheet" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/androidstudio.min.css">
+		<script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/highlight.min.js.다운로드"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+    <!--[if lt IE 9]>
+      <script src="https://tistory4.daumcdn.net/tistory/2898205/skin/images/html5shiv-3.7.3.min.js"></script>
+      <script src="https://tistory4.daumcdn.net/tistory/2898205/skin/images/placeholders-4.0.1.min.js"></script>
+      <script>
+        var head = document.getElementsByTagName('head')[0], style = document.createElement('style');
+        style.type = 'text/css';
+        style.styleSheet.cssText = ':before,:after{content:none !important';
+        head.appendChild(style);
+        setTimeout(function(){
+            head.removeChild(style);
+        }, 0);
+      </script>
+    <![endif]-->
+  
+<link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/style(1).css">
+<script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/profile.js.다운로드"></script>
+	<style type="text/css">
+		.another_category { border: 1px solid #E5E5E5; padding: 10px 10px 5px; margin:10px 0; clear: both; }
+		.another_category h4 { font-size: 12px !important; margin: 0 !important; border-bottom: 1px solid #E5E5E5 !important; padding: 2px 0 6px !important; }
+		.another_category h4 a { font-weight: bold !important; }
+		.another_category table { table-layout: fixed; border-collapse: collapse; width: 100% !important; margin-top: 10px !important; }
+		* html .another_category table { width: auto !important; }
+		*:first-child+html .another_category table { width: auto !important; }
+		.another_category th, .another_category td { padding: 0 0 4px !important; }
+		.another_category th { text-align: left; font-size: 12px !important; font-weight: normal;  word-break: break-all; overflow: hidden; line-height: 1.5; }
+		.another_category td { text-align: right; width: 80px; font-size: 11px; }
+		.another_category th a { font-weight: normal; text-decoration: none; border: none !important; }
+		.another_category th a.current{ font-weight: bold; text-decoration: none !important; border-bottom: 1px solid !important; }
+		.another_category th span { font-weight: normal; text-decoration: none; font: 10px Tahoma, Sans-serif; border: none !important; }
+
+		.another_category_color_gray, .another_category_color_gray h4 { border-color: #E5E5E5 !important; }
+		.another_category_color_gray * { color: #909090 !important; }
+		.another_category_color_gray th a.current{border-color:#909090 !important;}
+		.another_category_color_gray h4, .another_category_color_gray h4 a { color: #737373 !important; }
+
+
+		.another_category_color_red, .another_category_color_red h4 { border-color: #F6D4D3 !important;  }
+		.another_category_color_red * { color: #E86869 !important; }
+		.another_category_color_red th a.current{border-color:#E86869 !important;}
+		.another_category_color_red h4, .another_category_color_red h4 a { color: #ED0908 !important; }
+
+
+		.another_category_color_green, .another_category_color_green h4 { border-color: #CCE7C8 !important; }
+		.another_category_color_green * { color: #64C05B !important; }
+		.another_category_color_green th a.current{border-color:#64C05B !important;}
+		.another_category_color_green h4, .another_category_color_green h4 a { color: #3EA731 !important; }
+
+
+		.another_category_color_blue, .another_category_color_blue h4 { border-color: #C8DAF2 !important; }
+		.another_category_color_blue * { color: #477FD6 !important; }
+		.another_category_color_blue th a.current{border-color:#477FD6 !important;}
+		.another_category_color_blue h4, .another_category_color_blue h4 a { color: #1960CA !important; }
+
+
+		.another_category_color_violet, .another_category_color_violet h4 { border-color: #E1CEEC !important;  }
+		.another_category_color_violet * { color:#9D64C5 !important; }
+		.another_category_color_violet th a.current{border-color:#9D64C5 !important;}
+		.another_category_color_violet h4, .another_category_color_violet h4 a { color: #7E2CB5 !important; }
+	</style>
+<script type="text/javascript">
+        
+        window.TistoryBlog = {
+            basePath: "",
+            url: "https://javaplant.tistory.com",
+            tistoryUrl: "https://javaplant.tistory.com",
+			manageUrl: 'https://javaplant.tistory.com/manage',
+            token: 'IlsInJ/mAAWGlrvgd7FKdA=='
+        };
+        var servicePath = "";
+        var blogURL = "";
+    </script>
+
+	<script> (function() { window.orgjQuery = window.jQuery; window.jQuery = tjQuery })()</script>
+    <script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/uoclike.min.js.다운로드"></script>
+	<script> (function() { window.jQuery = window.orgjQuery; delete window.orgjQuery })()</script>
+    <script>
+		(function($) {
+			$.fn.extend({
+				size: function () {
+					return this.length
+				}
+			});
+			$.fn.UOCLike.defaults.updateServiceCategory = true;
+					})(tjQuery)
+    </script>
+        <script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/base.js.다운로드"></script>
+        <link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/dialog.css">
+            <link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/font(1).css">
+    <link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/postBtn.css">
+        <link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/tistory.css">
+        <script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/kakao.min.js.다운로드"></script><script type="text/javascript" async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/td.min.js.다운로드"></script><link rel="stylesheet" type="text/css" href="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/uoclike.min-20150408-2.css"></head>
+  <body id="tt-body-page"><script type="text/javascript">
+	(function() {
+		if (!window.T) {
+			window.T = {}
+		}
+		window.T.config = {"TOP_SSL_URL":"https:\/\/www.tistory.com","PREVIEW":false,"ROLE":"guest","PREV_PAGE":"\/19","NEXT_PAGE":"\/17","BLOG":{"isDormancy":true,"title":"\uc790\ubc14\uacf5\uc791\uc18c"},"NEED_COMMENT_LOGIN":true,"COMMENT_LOGIN_CONFIRM_MESSAGE":"\uc774 \ube14\ub85c\uadf8\ub294 \ud734\uba74 \uc0c1\ud0dc\uc774\ubbc0\ub85c \ub85c\uadf8\uc778\ud55c \uc0ac\uc6a9\uc790\uc5d0\uac8c\ub9cc \uc790\ubc14\uacf5\uc791\uc18c \uc791\uc131\uc774 \ud5c8\uc6a9\ub429\ub2c8\ub2e4. \uc9c0\uae08 \ub85c\uadf8\uc778\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?","LOGIN_URL":"https:\/\/www.tistory.com\/auth\/login\/?redirectUrl=http%3A%2F%2Fjavaplant.tistory.com%2F18","DEFAULT_URL":"https:\/\/javaplant.tistory.com","USER":{"name":null,"homepage":null},"ROLE_GROUP":"visitor","SUBSCRIPTION":{"status":"none","isConnected":false,"isProcessing":false,"isPending":false,"isWait":false,"isNone":true},"IS_LOGIN":false};
+		window.appInfo = {"domain":"tistory.com","topUrl":"https:\/\/www.tistory.com","loginUrl":"https:\/\/www.tistory.com\/auth\/login","logoutUrl":"https:\/\/www.tistory.com\/auth\/logout"};
+
+        window.initData = {};
+        
+	})();
+</script><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(3).html"></iframe></ins></ins></ins>
+
+<script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/common.js.다운로드"></script>
+<div style="margin:0; padding:0; border:none; background:none; float:none; clear:none; z-index:0"></div>
+
+<div class="jb-page jb-youtube-auto jb-typography-2 jb-post-title-show-line" style="height: auto !important;">
+
+<div class="jb-background jb-background-header" style="visibility: visible;">
+  <div class="jb-container jb-container-header">
+    <div class="jb-row jb-row-header">
+      <div class="jb-line jb-line-header-top"></div>
+      <div class="jb-column jb-column-header">
+        <div class="jb-cell jb-cell-header">
+          <div class="jb-header-table">
+            <div class="jb-header-table-row">
+              <div class="jb-header-table-cell jb-header-table-cell-site-title">
+                <div class="jb-header-mobile-table">
+                  <div class="jb-header-mobile-table-row">
+										<div class="jb-header-mobile-table-cell jb-header-mobile-table-cell-site-title">
+                      <header>
+                        <h1 class="jb-site-title"><a href="https://javaplant.tistory.com/">자바공작소</a></h1>
+												<!--<h1 class="jb-site-title-image"><a href="/"><img src="https://tistory4.daumcdn.net/tistory/2898205/skin/images/jb-logo-skin-127.png" alt=""></a></h1>-->
+                      </header>
+                    </div>
+                    <div class="jb-header-mobile-table-cell jb-header-mobile-table-cell-bars">
+                      <div class="jb-bars"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/ic_menu_black_48dp_2x.png" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="jb-header-table-cell jb-header-table-cell-navigation">
+                <nav>
+                  <h2 class="jb-section-title jb-section-title-main-menu">Main Menu</h2>
+									<div class="jb-navigation jb-navigation-category">
+                    <div class="jb-navigation-category-title">
+                      <ul>
+                        <li>카테고리</li>
+                      </ul>
+                    </div>
+                    <div class="jb-navigation-category-list">
+                      <ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="https://javaplant.tistory.com/category">
+			분류 전체보기							<span class="c_cnt">(33)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/JAVA">
+						JAVA													<span class="c_cnt">(32)</span>
+						
+											<i class="fa fa-angle-down"></i></a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EA%B3%BC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">
+									알고리즘과 자료구조
+																			<span class="c_cnt">(12)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%9D%B4%EB%A1%A0">
+									프로그래밍 이론
+																			<span class="c_cnt">(6)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4">
+									디자인패턴
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/JAVA%20%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">
+									JAVA  프로그래밍
+																			<span class="c_cnt">(6)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/JAVA%20Thread%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">
+									JAVA Thread 프로그래밍
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/Spring%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC">
+									Spring 프레임워크
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/%EC%84%9C%EB%B2%84">
+						서버													<span class="c_cnt">(1)</span>
+						
+											<i class="fa fa-angle-down"></i></a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/%EC%84%9C%EB%B2%84/%EC%BD%94%EB%85%B8%ED%95%98%20VPS%20Server">
+									코노하 VPS Server
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/OS">
+						OS													<span class="c_cnt">(0)</span>
+						
+											<i class="fa fa-angle-down"></i></a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/OS/MAC">
+									MAC
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/OS/Window">
+									Window
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/IDE">
+						IDE													<span class="c_cnt">(0)</span>
+						
+											<i class="fa fa-angle-down"></i></a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/IDE/%EC%9D%B8%ED%85%94%EB%A6%ACJ">
+									인텔리J
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/IDE/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4">
+									이클립스
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+                    </div>
+                  </div>
+                  <div class="jb-navigation jb-navigation-blog-menu">
+                    <div class="jb-navigation-blog-menu-title">
+                      <ul>
+                        <li>블로그 메뉴</li>
+                      </ul>
+                    </div>
+                    <div class="jb-navigation-blog-menu-list">
+                      <ul>		<li class="t_menu_home first">
+			<a href="https://javaplant.tistory.com/">홈</a>
+		</li>
+				<li class="t_menu_tag">
+			<a href="https://javaplant.tistory.com/tag">태그</a>
+		</li>
+				<li class="t_menu_medialog">
+			<a href="https://javaplant.tistory.com/media">미디어로그</a>
+		</li>
+				<li class="t_menu_location">
+			<a href="https://javaplant.tistory.com/location">위치로그</a>
+		</li>
+				<li class="t_menu_guestbook last">
+			<a href="https://javaplant.tistory.com/guestbook">방명록</a>
+		</li>
+		</ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jb-line jb-line-header-bottom"></div>
+    </div>
+  </div>
+</div>
+	
+	
+<div class="jb-background jb-background-main" style="visibility: visible; height: auto !important;">
+  <div class="jb-container jb-container-main" style="height: auto !important;">
+    <div class="jb-row jb-row-main" style="height: auto !important;">			
+      <div class="jb-column jb-column-content" style="height: auto !important;">
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+            <div class="jb-cell jb-cell-content jb-cell-content-article" style="height: auto !important;">
+              <article style="height: auto !important;">
+								<header>
+									<div class="jb-content-title jb-content-title-article">
+										<h2><a href="https://javaplant.tistory.com/18">HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS</a></h2>
+										<div class="jb-article-information">
+											<ul>
+												<li><span class="jb-article-information-category"><a href="https://javaplant.tistory.com/category/JAVA/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%9D%B4%EB%A1%A0">JAVA/프로그래밍 이론</a></span></li>												
+												<!--<li><span class="jb-article-information-author">전산쟁이 Leejisoo</span></li>-->
+												<li><span class="jb-article-information-date">2018. 5. 1. 00:59</span></li>
+												
+											</ul>
+										</div>
+									</div>
+								</header>
+								<div class="jb-adsense jb-adsense-ct">
+									
+								</div>
+								<div class="jb-adsense jb-adsense-ctr">
+									
+								</div>
+								<section style="height: auto !important;">
+  								<div class="jb-content jb-content-article" style="height: auto !important;">
+	  								<div class="jb-article" style="height: auto !important;"><div class="tt_article_useless_p_margin" style="height: auto !important;"><div class="tt_adsense_top" style="margin-bottom:30px"><script async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(5).txt"></script>
+<!-- 블로그 상단 반응형 -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-8005500753255035" data-ad-slot="9875601584" data-ad-format="auto" data-language="ko" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 280px; overflow: visible;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(4).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><h1></h1><h3 style="text-align: center; clear: none; float: none;"></h3><h3 style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:728px;;height:auto;max-width:100%"><img srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=http%3A%2F%2Fcfile3.uf.tistory.com%2Fimage%2F9937533E5AE73D400C2A01" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/9937533E5AE73D400C" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img(&#39;https://t1.daumcdn.net/cfile/tistory/9937533E5AE73D400C?original&#39;)" width="728" height="351" filename="rest-api.png" filemime="image/jpeg"></span></h3><h3><span style="font-size: 15.21px; font-weight: bold;">HTTP Request 정보</span></h3><table class="txc-table" width="100%" cellspacing="0" cellpadding="0" border="0" 맑은="" 고딕",="" sans-serif;font-size:13px"="" style="border: none; border-collapse: collapse;"><tbody><tr><td style="width: 262px; height: 24px; border-width: 0px; border-style: none;"><p>&nbsp;GET /index.html HTTP/1.1</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-top-width: 0px; border-top-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;요청 URL정보 (Mehotd /URI HTTP버젼)</span></p></td></tr><tr><td style="width: 262px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;user-agent: MSIE 6.0; Window NT 5.0</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;사용자 웹 브라우져 종류</span></p></td></tr><tr><td style="width: 262px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;accept: test/html; */*</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;요청 데이터 타입 (응답의 Content-type과 유사)</span></p></td></tr><tr><td style="width: 262px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;cookie:name=value</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;쿠키(인증 정보)</span></p></td></tr><tr><td style="width: 262px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;refere: http://abc.com</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;경유지 URL</span></p></td></tr><tr><td style="width: 262px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;host: www.abc.com</p></td><td style="width: 430px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;요청&nbsp;</span><span style="color: rgb(34, 116, 28);">도메인</span></p></td></tr></tbody></table><p><br></p><h3><span style="font-size: 15.21px;"><b>HTTP Response 정보</b></span></h3><table class="txc-table" width="100%" cellspacing="0" cellpadding="0" border="0" 맑은="" 고딕",="" sans-serif;font-size:13px"="" style="border: none; border-collapse: collapse;"><tbody><tr><td style="width: 260px; height: 24px; border-width: 0px; border-style: none;"><p>HTTP/1.1 200 OK</p></td><td style="width: 431px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-top-width: 0px; border-top-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;프로토콜 버젼 및 응답코드</span></p></td></tr><tr><td style="width: 260px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;Server: Apache</p></td><td style="width: 431px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;웹 서버 정보</span></p></td></tr><tr><td style="width: 260px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;Content-type: text/html</p></td><td style="width: 431px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;MIME 타입</span></p></td></tr><tr><td style="width: 260px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;Content-length : 1593</p></td><td style="width: 431px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;HTTP BODY 사이즈</span></p></td></tr><tr><td style="width: 260px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none; border-left-width: 0px; border-left-style: none;"><p>&nbsp;&lt;html&gt;&lt;head&gt;.....</p></td><td style="width: 431px; height: 24px; border-bottom-width: 0px; border-bottom-style: none; border-right-width: 0px; border-right-style: none;"><p><span style="color: rgb(34, 116, 28);">&nbsp;HTTP BO</span><span style="color: rgb(34, 116, 28);">DY 컨텐츠</span></p></td></tr></tbody></table><p><b style="font-size: 15.21px;"><br></b></p><h3><b style="font-size: 15.21px;">HTTP 응답코드</b></h3><table class="txc-table" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:" 맑은="" 고딕",="" sans-serif;font-size:13px"=""><tbody><tr><td style="width: 91px; height: 24px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(217, 217, 217) rgb(217, 217, 217) rgb(0, 0, 0); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" colspan="1"><p style="text-align: center;">&nbsp;응답대역</p></td><td style="width: 82px; height: 24px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(217, 217, 217) rgb(217, 217, 217) rgb(204, 204, 204); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"><p style="text-align: center;">&nbsp;응답코드</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"><p>&nbsp;설명</p></td>
+</tr>
+<tr><td style="width: 91px; height: 49px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" colspan="1" rowspan="2"><p style="text-align: center;">정보전송</p><p style="text-align: center;">임시응답</p></td><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;100</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Continue (클라이언트로 부터 일부 요청을 받았으며 나머지 정보를 계속 요청함)</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;101</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Switching protocols</p></td>
+</tr>
+<tr><td style="width: 91px; height: 132px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" colspan="1" rowspan="5"><p style="text-align: center;">성공</p></td><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;200</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;OK(요청이 성공적으로 수행되었음</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;201</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Created (PUT 메소드에 의해 원격지 서버에 파일 생성됨)</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;202</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Accepted(웹 서버가 명령 수신함)</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;203</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Non-authoritative information (서버가 클라이언트 요구 중 일부만 전송)</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;204</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;No content, (PUT, POST, DELETE 요청의 경우 성공은 했지만&nbsp;전송할 데이터가 없는 경우)</p></td>
+</tr>
+<tr><td style="width: 91px; height: 84px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" colspan="1" rowspan="3"><p style="text-align: center;">리다이렉션</p></td><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">&nbsp;301</p></td>
+<td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;Moved permanently (요구한 데이터를 변경된 타 URL에 요청함 / Redirect된 경우)</p></td>
+</tr>
+<tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;302</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Not temporarily</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;304</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Not modified (컴퓨터 로컬의 캐시 정보를 이용함, 대개 gif 등은 웹 서버에 요청하지 않음)</td></tr><tr><td style="width: 91px; height: 267px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="11" colspan="1"><p style="text-align: center;">클라이언트<br>요청에러</p></td><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;400</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;Bad Request (사용자의 잘못된 요청을 처리할 수 없음)</p></td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;401</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Unauthorized (인증이 필요한 페이지를 요청한 경우)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;402</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;Payment required(예약됨)</p></td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;403</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Forbidden (접근 금지, 디렉터리 리스팅 요청 및 관리자 페이지 접근 등을 차단)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;404</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Not found, (요청한 페이지 없음)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;405</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Method not allowed (혀용되지 않는 http method 사용함)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;407</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Proxy authentication required (프락시 인증 요구됨)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;408</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Request timeout (요청 시간 초과)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;410</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Gone (영구적으로 사용 금지)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;412</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Precondition failed (전체 조건 실패)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;414</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Request-URI too long (요청 URL 길이가 긴 경우임)</td></tr><tr><td style="width: 91px; height: 121px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="5" colspan="1"><p style="text-align: center;">서버에러</p></td><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;500</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Internal server error (내부 서버 오류)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;501</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Not implemented (웹 서버가 처리할 수 없음)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;503</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Service unnailable (서비스 제공 불가)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;504</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;Gateway timeout (게이트웨이 시간 초과)</td></tr><tr><td style="width: 82px; height: 24px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(204, 204, 204); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">&nbsp;505</p></td><td style="width: 527px; height: 24px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1">&nbsp;HTTP version not supported (해당 http 버전 지원되지 않음)</td></tr></tbody></table><p><br></p><h3><span style="font-size: 15.21px; font-weight: bold;">HTTP 메소드 정리</span></h3><p></p><table class="txc-table" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:none;border-collapse:collapse;;font-family:" 맑은="" 고딕",="" sans-serif;font-size:13px"=""><tbody><tr><td style="width: 106px; height: 24px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0) rgb(217, 217, 217) rgb(217, 217, 217) rgb(0, 0, 0); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"><p style="text-align: center;">HTTP Method</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(0, 0, 0); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"><p>&nbsp;전송형태</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);"><p>&nbsp;설명</p></td>
+</tr>
+<tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">GET</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;GET [request-uri]?query_string HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;요청받은 URI의 정보를 검색하여 응답한다.</p></td>
+</tr>
+<tr><td style="width: 106px; height: 36px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">HEAD</p></td>
+<td style="width: 282px; height: 36px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;HEAD [request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p></td>
+<td style="width: 331px; height: 36px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;GET방식과 동일하지만, 응답에 BODY가 없고 응답코드와 HEAD만 응답한다.</p><p>웹서버 정보확인, 헬스체크, 버젼확인, 최종 수정일자 확인등의 용도로 사용된다.</p></td>
+</tr>
+<tr><td style="width: 106px; height: 71px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">POST</p></td>
+<td style="width: 282px; height: 71px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;POST [request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p><p>&nbsp;Content-Lenght:[Length in Bytes]</p><p>&nbsp;Content-Type:[Content Type]</p><p>&nbsp;[데이터]&nbsp;</p></td>
+<td style="width: 331px; height: 71px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;요청된 자원을 생성(CREATE)한다. 새로 작성된 리소스인 경우 HTTP헤더 항목 Location : URI주소를 포함하여 응답.</p><p></p></td></tr><tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">PUT</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;PUT [request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p><p>&nbsp;Content-Lenght:[Length in Bytes]</p><p>&nbsp;Content-Type:[Content Type]</p><p>&nbsp;[데이터]&nbsp;</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;요청된 자원을 수정(UPDATE)한다. 내용 갱신을 위주로 Location : URI를 보내지 않아도 된다. 클라이언트측은 요청된 URI를 그대로 사용하는 것으로 간주함.</p><p></p></td></tr><tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">PATCH</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;<span style="text-align: center;">PATCH&nbsp;</span>[request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p><p>&nbsp;Content-Lenght:[Length in Bytes]</p><p>&nbsp;Content-Type:[Content Type]</p><p>&nbsp;[데이터]&nbsp;</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp; PUT과 유사하게 요청된 자원을 수정(UPDATE)할 때 사용한다. PUT의 경우 자원 전체를 갱신하는 의미지만, PATCH는 해당자원의 일부를 교체하는 의미로 사용.</p></td>
+</tr>
+<tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">DELETE</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;DELETE [request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;요청된 자원을 삭제할 것을 요청함. &nbsp;(안전성 문제로 대부분의 서버에서 비활성)</p></td>
+</tr>
+<tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p style="text-align: center;">CONNECT</p></td>
+<td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;CONNECT [request-uri] HTTP/1.1</p><p>&nbsp;Host:[Hostname] 혹은 [IP]</p></td>
+<td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);"><p>&nbsp;동적으로 터널 모드를 교환, 프락시 기능을 요청시 사용.</p></td>
+</tr>
+<tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">TRACE</p></td><td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;TRACE [request-uri] HTTP/ 1.1</p><p>&nbsp;Host: [Hostname] 혹은 [IP]</p></td><td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;원격지 서버에 루프백 메시지 호출하기 위해 테스트용으로 사용.</p></td></tr><tr><td style="width: 106px; height: 24px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(217, 217, 217); border-left: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p style="text-align: center;">OPTIONS</p></td><td style="width: 282px; height: 24px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(217, 217, 217); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;OPTIONS [request-uri] HTTP/ 1.1</p><p>&nbsp;Host: [Hostname] 혹은 [IP]</p></td><td style="width: 331px; height: 24px; border-bottom: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); background-color: transparent; color: rgb(0, 0, 0);" rowspan="1"><p>&nbsp;웹서버에서 지원되는 메소드의 종류를 확인할 경우 사용.</p></td></tr></tbody></table><p></p><p><br></p><h3><b><span style="font-size: 11pt; font-family: &quot;맑은 고딕&quot;, sans-serif;">HTTP POST과 PUT의 차이</span></b></h3><div><p><b><u>POST는 보통 INSERT의 개념</u></b>으로 사용되고, <b><u>PUT은 UPDATE개념</u></b>으로 생각하면 이해하기 쉽다. 또한 POST는 멱등하지 않고 PUT은 멱등하다. 즉 동일한 자원을 여러번 POST 하면 서버자원에는 변화가 생기지만, 여러번 PUT하는 경우는 변화가 생기지 않는다.</p><p><br></p><p>예를들어 POST의 경우 클라이언트가 리소스의 위치를 지정하지 않는 경우 사용된다. (/dogs)</p><p>따라서, 아래와 같은 요청이 여러번 수행되는 경우 매번 새로운 dog가 생성되어 dogs/3, dogs/4 등 매번 새로운 자원이 생성된다. 멱등하지 않다는 말이다.</p><div class="txc-textbox" style="border-style: solid; border-width: 1px; border-color: rgb(238, 238, 238); background-color: rgb(238, 238, 238); padding: 10px;"><p>POST&nbsp;<b>/dogs</b>&nbsp;HTTP/1.1</p><p>{ "name": "blue", "age": 5 }</p><p>HTTP/1.1 201 Created</p></div><p><br></p><p>반면 PUT의 경우는 클라이언트가 명확하게 리소스의 위치를 지정한다. (/dogs/3)</p><p>따라서, 아무리 많이 수행되더라도 리소스의 위치가 지정되어 새로운 자원이 생성되지 않으며 동일한 리소스(/dogs/3)를 수정하기 때문에 여러번 요청하더라도 멱등하다.</p><div class="txc-textbox" style="border-style: solid; border-width: 1px; border-color: rgb(238, 238, 238); background-color: rgb(238, 238, 238); padding: 10px;"><p>PUT&nbsp;<b>/dogs/3</b>&nbsp;HTTP/1.1</p><p>{ "name": "blue", "age": 5 }</p><div><br></div></div></div><h3><span style="font-size: 15.21px; font-weight: bold;"><br></span></h3><h3><span style="font-size: 15.21px; font-weight: bold;">HTTP PUT과 PATCH의 차이</span></h3><p><b><u>PUT이 해당 자원의 전체를 교체</u></b>하는 의미를 지니는 대신, <b><u>PATCH는 일부를 변경한다는 의미</u></b>를 지니기 때문에 최근 update 이벤트에서 PUT보다 더 의미적으로 적합하다고 평가받고 있다. 또한 PUT의 경우는 멱등하지만, PATCH의 경우는 멱등하지 않다. PUT은 전체 자원을 업데이트 하기 때문에 동일 자원에 대해서 동일하게 PUT을 처리하는 경우 멱등하게 처리된다. 반면 PATCH로 처리되는 경우 자원의 일부가 변경되기 때문에 멱등성을 보장할 수 없다.</p><p><br></p><h3><span style="font-size: 15.21px; font-weight: bold;">HTTP 멱등성</span></h3><p style="text-align: center; clear: none; float: none;"><span class="imageblock" style="display:inline-block;width:728px;;height:auto;max-width:100%"><img srcset="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=http%3A%2F%2Fcfile10.uf.tistory.com%2Fimage%2F9935CE375AE7330A15A3D1" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/9935CE375AE7330A15" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img(&#39;https://t1.daumcdn.net/cfile/tistory/9935CE375AE7330A15?original&#39;)" width="728" height="241" filename="캡처.jpg" filemime="image/jpeg"></span></p><p>멱등(idempotent)의 의미는 같은 작업을 계속 반복해도 같은 결과가 나오는 경우를 의미한다. 동일한 자원에 대한 GET요청이라면 클라이언트에 반환되는 모든 응답은 동일해야 한다. 특정 자원에 대한 DELETE의 경우도 자원은 더이상 이용하 수 없어야 하며, DELETE요청을 다시 호출한 경우도 자원은 여전히 사용할 수 없는 상태야여 한다.&nbsp;</p><p><br></p><h3><b><span style="font-size: 11pt;">참고 사이트</span></b></h3><p><a href="https://ko.wikipedia.org/wiki/HTTP" target="_blank" class="tx-link">https://ko.wikipedia.org/wiki/HTTP</a></p><p><a href="http://haker.tistory.com/94" target="_blank" class="tx-link">http://haker.tistory.com/94</a></p><div><a href="http://gyrfalcon.tistory.com/entry/HTTP-%EC%9D%91%EB%8B%B5-%EC%BD%94%EB%93%9C-%EC%A2%85%EB%A5%98-HTTP-%EB%A9%94%EC%86%8C%EB%93%9C-%EC%A2%85%EB%A5%98" target="_blank" class="tx-link">http://gyrfalcon.tistory.com/entry/HTTP-응답-코드-종류-HTTP-메소드-종류</a></div><div><a href="https://spoqa.github.io/2012/02/27/rest-introduction.html" target="_blank" class="tx-link">https://spoqa.github.io/2012/02/27/rest-introduction.html</a></div><div><a href="http://1ambda.github.io/javascripts/rest-api-put-vs-post/" target="_blank" class="tx-link">http://1ambda.github.io/javascripts/rest-api-put-vs-post/</a></div><div><br></div><p><br></p><div class="tt_adsense_bottom" style="margin-top:30px"><script async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(5).txt"></script>
+<!-- 블로그 하단 반응형 -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-8005500753255035" data-ad-slot="7738614107" data-ad-format="auto" data-language="ko" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 728px; height: 280px; overflow: visible;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(5).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><div class="container_postbtn #post_button_group">
+    <div class="postbtn_like">
+        <div class="wrap_btn">
+    <button type="button" class="btn_post like_btn uoc-icon" data-uoc-svc="tistory" data-uoc-uid="2898205_18" data-uoc-sc="401" data-uoc-pcurl="https://javaplant.tistory.com/18" data-uoc-fetchurl="http://api.kakao.tistory.com/like/fetch?uid=2898205_18">
+        <div class="uoc-icon">
+            <span class="ico_postbtn ico_like">좋아요</span>
+            <span class="txt_like uoc-text screen_out">공감</span>
+            <span class="txt_like uoc-count">6</span>
+        </div>
+    </button>
+</div>
+        <div class="wrap_btn wrap_btn_share">
+    <button type="button" class="btn_post sns_btn btn_share" data-thumbnail-url="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9937533E5AE73D400C" data-title="HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS" data-description="HTTP Request 정보 GET /index.html HTTP/1.1 요청 URL정보 (Mehotd /URI HTTP버젼) user-agent: MSIE 6.0; Window NT 5.0 사용자 웹 브라우져 종류 accept: test/html; */* 요청 데이터 타입 (응답의 Content-ty.." data-profile-image="https://tistory3.daumcdn.net/tistory/2898205/attach/be16ee8b0f1c4e25aee2933fb665520a" data-profile-name="전산쟁이 Leejisoo" data-pc-url="https://javaplant.tistory.com/18" data-relative-pc-url="/18" data-blog-title="자바공작소">
+        <span class="ico_postbtn ico_share">공유하기</span>
+    </button>
+</div>
+                <div class="wrap_btn wrap_btn_etc" data-entry-id="18" data-entry-visibility="public" data-category-visibility="public">
+    <button type="button" class="btn_post btn_etc2"><span class="ico_postbtn ico_etc">글 요소</span></button>
+</div>
+    </div>
+    <button type="button" class="btn_menu_toolbar btn_subscription  #subscribe" data-blog-id="2898205" data-url="https://javaplant.tistory.com/18" data-device="web_pc">
+    <em class="txt_state">구독하기</em>
+    <strong class="txt_tool_id">자바공작소</strong>
+    <span class="img_common_tistory ico_check_type1"></span>
+</button>
+    <div class="postbtn_ccl" data-ccl-type="1">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko" target="_blank" class="link_ccl">
+        <span class="bundle_ccl">
+            <span class="ico_postbtn ico_ccl1">저작자표시</span><span class="ico_postbtn ico_ccl2">비영리</span><span class="ico_postbtn ico_ccl3">변경금지</span>        </span>
+    </a>
+</div>
+    <!--
+<rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Work rdf:about="">
+        <license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.0/kr/" />
+    </Work>
+    <License rdf:about="http://creativecommons.org/licenses/by-nc-nd/">
+        <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <requires rdf:resource="http://web.resource.org/cc/Notice"/>
+        <requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+                        <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
+            </License>
+</rdf:RDF>
+-->
+</div><div style="text-align:left; padding-top:10px;clear:both">
+<iframe src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:310px; height:65px;" allowtransparency="true"></iframe>
+</div>
+<div class="another_category another_category_color_gray">
+<h4>'<a href="https://javaplant.tistory.com/category/JAVA">JAVA</a>&nbsp;&gt;&nbsp;<a href="https://javaplant.tistory.com/category/JAVA/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%9D%B4%EB%A1%A0">프로그래밍 이론</a>' 카테고리의 다른 글</h4>
+<table>
+<tbody><tr>
+<th>
+<a href="https://javaplant.tistory.com/33?category=788164">EJB CMT 방식의 2PC XADatasource처리방식</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2018.05.15</td>
+</tr>
+<tr>
+<th>
+<a href="https://javaplant.tistory.com/26?category=788164">암호화 양방향, 단방향, 공개키(비댕칭키), 비공개키(대칭키) 개념/분류 알고리즘 정리</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2018.05.08</td>
+</tr>
+<tr>
+<th>
+<a href="https://javaplant.tistory.com/24?category=788164">TCP 연결부터 종료 과정 3-way Handshaking, 4-way Handshaking</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2018.05.04</td>
+</tr>
+<tr>
+<th>
+<a href="https://javaplant.tistory.com/23?category=788164">AtomicInterger 완전정복 - CAS알고리즘(compareAndSet)</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2018.05.03</td>
+</tr>
+<tr>
+<th>
+<a href="https://javaplant.tistory.com/20?category=788164">JAVA 접근제한자 public protected default private</a>&nbsp;&nbsp;<span>(0)</span>
+</th>
+<td>
+2018.05.01</td>
+</tr>
+<tr>
+<th>
+<a href="https://javaplant.tistory.com/18?category=788164" class="current">HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS</a>&nbsp;&nbsp;<span>(1)</span>
+</th>
+<td>
+2018.05.01</td>
+</tr>
+</tbody></table></div></div></div>
+		  						</div>
+							  </section>
+								
+								
+								<div class="jb-adsense jb-adsense-cb">
+									
+								</div>
+								<!-- SNS Share -->
+										<div class="jb-wrap-sns-share">
+											<p>이 글을 공유하기</p>
+											<div class="jb-sns-share jb-sns-share-facebook">
+												<a href="https://javaplant.tistory.com/18#" onclick="javascript:window.open( &#39;https://www.facebook.com/sharer/sharer.php?u=&#39; + encodeURIComponent( document.URL ) + &#39;&amp;t=&#39; + encodeURIComponent( document.title ), &#39;jb-share-window-facebook&#39;, &#39;menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=600, height=600&#39; ); return false;" target="_blank"><div class="jb-sns-share-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jb-sns-logo-facebook.png" alt=""></div><div class="jb-sns-share-label">Facebook</div></a>
+											</div>
+											<div class="jb-sns-share jb-sns-share-twitter">
+												<a href="https://javaplant.tistory.com/18#" onclick="javascript:window.open( &#39;https://twitter.com/intent/tweet?text=&#39; + encodeURIComponent( document.title ) + &#39;%20(&#39; + encodeURIComponent( document.URL ) + &#39;)&#39;, &#39;jb-share-window-google-plus&#39;, &#39;menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=600, height=600&#39; ); return false;" target="_blank"><div class="jb-sns-share-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jb-sns-logo-twitter.png" alt=""></div><div class="jb-sns-share-label">Twitter</div></a>
+											</div>
+											<div class="jb-sns-share jb-sns-share-google-plus">
+												<a href="https://javaplant.tistory.com/18#" onclick="javascript:window.open( &#39;https://plus.google.com/share?url=&#39; + encodeURIComponent( document.URL ), &#39;jb-share-window-google-plus&#39;, &#39;menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=600, height=600&#39; ); return false;" target="_blank"><div class="jb-sns-share-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jb-sns-logo-google-plus.png" alt=""></div><div class="jb-sns-share-label">Google +</div></a>
+											</div>
+											<div class="jb-sns-share jb-sns-share-kakaostory">
+												<a href="https://javaplant.tistory.com/18#" onclick="javascript:window.open( &#39;https://story.kakao.com/share?url=&#39; + encodeURIComponent( document.URL ), &#39;jb-share-window-kakostory&#39;, &#39;menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=600, height=600&#39; ); return false;" target="_blank"><div class="jb-sns-share-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jb-sns-logo-kakaostory.png" alt=""></div><div class="jb-sns-share-label">Kakao Story</div></a>
+											</div>
+											<div class="jb-sns-share jb-sns-share-naver">
+												<a href="https://javaplant.tistory.com/18#" onclick="javascript:window.open( &#39;http://share.naver.com/web/shareView.nhn?url=&#39; + encodeURIComponent( document.URL ) + &#39;&amp;title=&#39; + encodeURIComponent( document.title ), &#39;jb-share-window-naver&#39;, &#39;menubar=no, toolbar=no, resizable=yes, scrollbars=yes, width=600, height=600&#39; ); return false;" target="_blank"><div class="jb-sns-share-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jb-sns-logo-naver.png" alt=""></div><div class="jb-sns-share-label">Naver</div></a>
+											</div>
+										</div>
+									
+								<p class="jb-discuss-count">
+									<span class="jb-discuss-count-reply"><a href="https://javaplant.tistory.com/18#rp" onclick=""><span class="jb-discuss-count-label">댓글</span><span id="commentCount18_0"><span class="jb-discuss-count-number">(1)</span></span></a></span>
+								</p>
+								<div id="entry18Comment">
+									
+										<div class="jb-wrap-discuss-list jb-wrap-discuss-list-reply">
+											<ul class="jb-discuss-list-level-1">
+												
+													<li id="comment13415753" class="rp_general">
+														<table class="jb-discuss-table jb-discuss-table-reply">
+                              <tbody><tr class="jb-discuss-table-row jb-discuss-table-row-reply">
+                                <td class="jb-discuss-table-cell jb-discuss-table-cell-logo jb-discuss-table-cell-reply jb-discuss-table-cell-logo-reply">
+                                  <div class="jb-discuss-information-logo"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/profile_default_06.png" alt=""></div>
+                                </td>
+                                <td class="jb-discuss-table-cell jb-discuss-table-cell-name jb-discuss-table-cell-reply jb-discuss-table-cell-name-reply">
+                                  <div class="jb-discuss-information-name"> <a href="http://webgori.github.com/" onclick="return openLinkInNewWindow(this)">webgori</a></div>
+                                  <div class="jb-discuss-information-date">2019.03.18 11:54</div>
+                                </td>
+                              </tr>
+                              <tr class="jb-discuss-table-row jb-discuss-table-row-reply">
+                                <td colspan="2" class="jb-discuss-table-cell jb-discuss-table-cell-desc jb-discuss-table-cell-reply jb-discuss-table-cell-desc-reply">
+                                  <p class="jb-discuss-content">좋은 내용이라 퍼가고 싶은데 출처 남기고 퍼가도 괜찮을까요?</p>
+                                </td>
+                              </tr>
+                              <tr class="jb-discuss-table-row jb-discuss-table-row-reply">
+                                <td colspan="2" class="jb-discuss-table-cell jb-discuss-table-cell-reaction jb-discuss-table-cell-reply jb-discuss-table-cell-reaction-reply">
+                                  <div class="jb-discuss-reaction">
+                                    <a href="https://javaplant.tistory.com/18#" onclick="commentRequireLoginByDormancy(); return false;commentComment(13415753); return false" class="jb-discuss-reaction-reply">답글</a>
+                                    <a href="https://javaplant.tistory.com/18#" onclick="deleteComment(13415753);return false" class="jb-discuss-reaction-edit">수정</a>
+                                  </div>
+                                </td>
+                              </tr>
+														</tbody></table>
+														
+													</li>
+												
+											</ul>
+										</div>
+									
+									<form method="post" action="https://javaplant.tistory.com/comment/add/18" onsubmit="return false" style="margin: 0">
+										<div class="jb-wrap-form-discuss jb-wrap-form-discuss-reply">
+											
+												
+													<div class="jb-form-discuss jb-form-discuss-name jb-form-discuss-table">
+														<div class="jb-form-discuss-table-row">
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-icon">
+																<div class="jb-form-discuss-icon jb-form-discuss-icon-name">
+																	<i class="fa fa-user fa-fw"></i>
+																</div>
+															</div>
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-input">
+																<input type="text" id="name_" name="name" value="" placeholder="Name" class="jb-form-input-text">
+															</div>
+														</div>
+													</div>
+													<div class="jb-form-discuss jb-form-discuss-homepage jb-form-discuss-table">
+														<div class="jb-form-discuss-table-row">
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-icon">
+																<div class="jb-form-discuss-icon jb-form-discuss-icon-homepage">
+																	<i class="fa fa-home fa-fw"></i>
+																</div>
+															</div>
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-input">
+																<input type="text" id="homepage_" name="homepage" value="http://" class="jb-form-input-text">
+															</div>
+														</div>
+													</div>
+													<div class="jb-form-discuss jb-form-discuss-password jb-form-discuss-table">
+														<div class="jb-form-discuss-table-row">
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-icon">
+																<div class="jb-form-discuss-icon jb-form-discuss-icon-password">
+																	<i class="fa fa-key fa-fw"></i>
+																</div>
+															</div>
+															<div class="jb-form-discuss-table-cell jb-form-discuss-table-cell-input">
+																<input type="password" id="password_" name="password" value="" placeholder="Password" class="jb-form-input-text">
+															</div>
+														</div>
+													</div>
+												
+												<div class="jb-form-discuss jb-form-discuss-secret">
+													<label for="secret_" class="jb-form-label"><input type="checkbox" id="secret_" name="secret" value="1" class="jb-form-input-checkbox"> 비밀 글</label>
+												</div>
+											
+											<div class="jb-form-discuss jb-form-discuss-content">
+												<textarea name="comment" rows="5" class="jb-form-textarea"></textarea>
+											</div>
+											<div class="jb-form-discuss jb-form-discuss-submit">
+												<button onclick="addComment(this, 18); return false;" class="jb-form-button">등록</button>
+											</div>
+										</div>
+									</form>
+								</div><script type="text/javascript">loadedComments[18]=true;findFragmentAndHighlight(18)</script>
+								
+									<div class="jb-related">
+										<div class="jb-related-header-table">
+											<div class="jb-related-header-table-row">
+												<div class="jb-related-header-table-cell jb-related-header-table-cell-title">
+													<h2>'JAVA/프로그래밍 이론' 관련 글</h2>
+												</div>
+												<div class="jb-related-header-table-cell jb-related-header-table-cell-more">
+												</div>
+											</div>
+										</div>
+                    <script async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(5).txt"></script>
+                    <ins class="adsbygoogle" style="display: block; height: 1294px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-8005500753255035" data-ad-slot="7823438995" data-matched-content-rows-num="6" data-matched-content-columns-num="3" data-matched-content-ui-type="image_card_stacked" data-full-width-responsive="false" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:1294px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:1294px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe width="728" height="1294" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0px;width:728px;height:1294px;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(6).html"></iframe></ins></ins></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+										<!--
+										
+											<div class="jb-cell jb-cell-content jb-cell-index jb-cell-index-related thumb_type">
+												<div class="jb-index-table jb-index-table-related">
+													<div class="jb-index-table-row jb-index-table-row-related">
+														<div class="jb-index-table-cell jb-index-table-cell-thumbnail jb-index-table-cell-related jb-index-table-cell-thumbnail-related">
+															<a href="/26?category=788164">
+																
+																	<div class="jb-index-thumbnail jb-index-thumbnail-related">
+																		<img src="//i1.daumcdn.net/thumb/C480x270/?fname=https://t1.daumcdn.net/cfile/tistory/99A7FA385AF07DC41B" alt="">
+																	</div>
+																
+															</a>
+														</div>
+														<div class="jb-index-table-cell jb-index-table-cell-information jb-index-table-cell-related jb-index-table-cell-information-related">
+															<h3 class="jb-index-title jb-index-title-related"><a href="/26?category=788164">암호화 양방향, 단방향, 공개키(비댕칭키), 비공개키(대칭키) 개념/분류 알고리즘 정리</a></h3>
+															<p class="jb-index-information jb-index-information-related">
+																<span class="jb-index-information-date jb-index-information-date-related">2018.05.08</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										
+											<div class="jb-cell jb-cell-content jb-cell-index jb-cell-index-related thumb_type">
+												<div class="jb-index-table jb-index-table-related">
+													<div class="jb-index-table-row jb-index-table-row-related">
+														<div class="jb-index-table-cell jb-index-table-cell-thumbnail jb-index-table-cell-related jb-index-table-cell-thumbnail-related">
+															<a href="/24?category=788164">
+																
+																	<div class="jb-index-thumbnail jb-index-thumbnail-related">
+																		<img src="//i1.daumcdn.net/thumb/C480x270/?fname=https://t1.daumcdn.net/cfile/tistory/9993684E5AEBCCC822" alt="">
+																	</div>
+																
+															</a>
+														</div>
+														<div class="jb-index-table-cell jb-index-table-cell-information jb-index-table-cell-related jb-index-table-cell-information-related">
+															<h3 class="jb-index-title jb-index-title-related"><a href="/24?category=788164">TCP 연결부터 종료 과정 3-way Handshaking, 4-way Handshaking</a></h3>
+															<p class="jb-index-information jb-index-information-related">
+																<span class="jb-index-information-date jb-index-information-date-related">2018.05.04</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										
+											<div class="jb-cell jb-cell-content jb-cell-index jb-cell-index-related thumb_type">
+												<div class="jb-index-table jb-index-table-related">
+													<div class="jb-index-table-row jb-index-table-row-related">
+														<div class="jb-index-table-cell jb-index-table-cell-thumbnail jb-index-table-cell-related jb-index-table-cell-thumbnail-related">
+															<a href="/23?category=788164">
+																
+																	<div class="jb-index-thumbnail jb-index-thumbnail-related">
+																		<img src="//i1.daumcdn.net/thumb/C480x270/?fname=https://t1.daumcdn.net/cfile/tistory/994F7B375AE9DAF00B" alt="">
+																	</div>
+																
+															</a>
+														</div>
+														<div class="jb-index-table-cell jb-index-table-cell-information jb-index-table-cell-related jb-index-table-cell-information-related">
+															<h3 class="jb-index-title jb-index-title-related"><a href="/23?category=788164">AtomicInterger 완전정복 - CAS알고리즘(compareAndSet)</a></h3>
+															<p class="jb-index-information jb-index-information-related">
+																<span class="jb-index-information-date jb-index-information-date-related">2018.05.03</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										
+											<div class="jb-cell jb-cell-content jb-cell-index jb-cell-index-related thumb_type">
+												<div class="jb-index-table jb-index-table-related">
+													<div class="jb-index-table-row jb-index-table-row-related">
+														<div class="jb-index-table-cell jb-index-table-cell-thumbnail jb-index-table-cell-related jb-index-table-cell-thumbnail-related">
+															<a href="/20?category=788164">
+																
+																	<div class="jb-index-thumbnail jb-index-thumbnail-related">
+																		<img src="//i1.daumcdn.net/thumb/C480x270/?fname=https://t1.daumcdn.net/cfile/tistory/99B99D405AE80F7D05" alt="">
+																	</div>
+																
+															</a>
+														</div>
+														<div class="jb-index-table-cell jb-index-table-cell-information jb-index-table-cell-related jb-index-table-cell-information-related">
+															<h3 class="jb-index-title jb-index-title-related"><a href="/20?category=788164">JAVA 접근제한자 public protected default private</a></h3>
+															<p class="jb-index-information jb-index-information-related">
+																<span class="jb-index-information-date jb-index-information-date-related">2018.05.01</span>
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										
+										-->
+										<div class="jb-related-more"><a href="https://javaplant.tistory.com/category/JAVA/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%9D%B4%EB%A1%A0">'JAVA/프로그래밍 이론' 관련 글 더보기</a></div>
+									</div>
+								
+              </article>
+            </div>
+          
+        
+        
+          <div class="jb-cell jb-cell-pagination">
+						<div class="jb-pagination">
+							<ul>
+								<li><a href="https://javaplant.tistory.com/19"><i class="fa fa-caret-left"></i></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/35"><span>1</span></a></li>
+								
+									<li><a><span>···</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/22"><span>14</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/21"><span>15</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/20"><span>16</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/19"><span>17</span></a></li>
+								
+									<li class="jb-active"><a><span class="selected">18</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/17"><span>19</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/16"><span>20</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/15"><span>21</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/14"><span>22</span></a></li>
+								
+									<li><a><span>···</span></a></li>
+								
+									<li><a href="https://javaplant.tistory.com/3"><span>33</span></a></li>
+								
+								<li><a href="https://javaplant.tistory.com/17"><i class="fa fa-caret-right"></i></a></li>
+							</ul>
+						</div>
+          </div>
+        
+      </div>
+      <div class="jb-column jb-column-sidebar" style="height: auto !important;">
+        <aside style="height: auto !important;">
+					<h2 class="jb-section-title jb-section-title-sidebar">Sidebar</h2>
+          <!-- Blog Information -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-blog-information">
+                <div class="jb-sidebar-title jb-sidebar-title-blog-information">
+                  <h3>블로그 정보</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-blog-information">
+                  <p class="jb-blog-information jb-blog-information-image"><img src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/be16ee8b0f1c4e25aee2933fb665520a" alt=""></p>
+                  <p class="jb-blog-information jb-blog-information-blogger">-Leejisoo-</p>
+                  <p class="jb-blog-information jb-blog-information-description">프로그래밍 스터디 노트</p>
+                </div>
+              </div>
+            <!-- Search -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-search">
+                <div class="jb-sidebar-title jb-sidebar-title-search">
+                  <h3>검색</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-search">
+                  
+                    <div class="jb-form-search-table">
+                      <div class="jb-form-search-table-row">
+                        <div class="jb-form-search-table-cell jb-form-search-table-cell-input">
+                          <input type="text" name="search" value="" onkeypress="if (event.keyCode == 13) { try{window.location.href=&#39;/search/&#39;+looseURIEncode(document.getElementsByName(&#39;search&#39;)[0].value);document.getElementsByName(&#39;search&#39;)[0].value=&#39;&#39;;return false;}catch(e){} }" class="jb-form-input-text">
+                        </div>
+                        <div class="jb-form-search-table-cell jb-form-search-table-cell-button">
+                          <button type="button" onclick="try{window.location.href=&#39;/search/&#39;+looseURIEncode(document.getElementsByName(&#39;search&#39;)[0].value);document.getElementsByName(&#39;search&#39;)[0].value=&#39;&#39;;return false;}catch(e){}" class="jb-form-button"><i class="fa fa-search fa-fw"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  
+                </div>
+              </div>
+            <!-- Category -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-category">
+                <div class="jb-sidebar-title jb-sidebar-title-category">
+                  <h3>카테고리</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-category">
+                  <ul class="tt_category">
+	<li class="">
+		<a class="link_tit" href="https://javaplant.tistory.com/category">
+			분류 전체보기							<span class="c_cnt">(33)</span>
+			
+					</a>
+
+				<ul class="category_list">
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/JAVA">
+						JAVA													<span class="c_cnt">(32)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EA%B3%BC%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">
+									알고리즘과 자료구조
+																			<span class="c_cnt">(12)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%9D%B4%EB%A1%A0">
+									프로그래밍 이론
+																			<span class="c_cnt">(6)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4">
+									디자인패턴
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/JAVA%20%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">
+									JAVA  프로그래밍
+																			<span class="c_cnt">(6)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/JAVA%20Thread%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D">
+									JAVA Thread 프로그래밍
+																			<span class="c_cnt">(2)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/JAVA/Spring%20%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC">
+									Spring 프레임워크
+																			<span class="c_cnt">(3)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/%EC%84%9C%EB%B2%84">
+						서버													<span class="c_cnt">(1)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/%EC%84%9C%EB%B2%84/%EC%BD%94%EB%85%B8%ED%95%98%20VPS%20Server">
+									코노하 VPS Server
+																			<span class="c_cnt">(1)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/OS">
+						OS													<span class="c_cnt">(0)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/OS/MAC">
+									MAC
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/OS/Window">
+									Window
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+							<li class="">
+					<a class="link_item" href="https://javaplant.tistory.com/category/IDE">
+						IDE													<span class="c_cnt">(0)</span>
+						
+											</a>
+
+										<ul class="sub_category_list">
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/IDE/%EC%9D%B8%ED%85%94%EB%A6%ACJ">
+									인텔리J
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+													<li class="">
+								<a class="link_sub_item" href="https://javaplant.tistory.com/category/IDE/%EC%9D%B4%ED%81%B4%EB%A6%BD%EC%8A%A4">
+									이클립스
+																			<span class="c_cnt">(0)</span>
+									
+																	</a>
+							</li>
+											</ul>
+					
+				</li>
+					</ul>
+			</li>
+</ul>
+                </div>
+              </div>
+            <div class="module module_plugin"><script async="" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/f(5).txt"></script>
+<!-- 블로그 사이드바 -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-8005500753255035" data-ad-slot="6261880901" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 300px; height: 600px; overflow: visible;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(7).html"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><!-- Recent Posts -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-recent-posts">
+                <div class="jb-sidebar-title jb-sidebar-title-recent-posts">
+                  <h3>최근 글</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-recent-posts jb-sidebar-content-list">
+                  <ul>
+                    
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/35"><span class="jb-recent-posts-title">코노하 Conoha VPS 서버 가입 및 서..</span><span class="jb-recent-posts-reply-count"><span id="commentCountOnRecentEntries35"></span></span><span class="jb-recent-posts-author">전산쟁이 Leejisoo</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/34"><span class="jb-recent-posts-title">java.util.function패키지가 제공하..</span><span class="jb-recent-posts-reply-count"><span id="commentCountOnRecentEntries34"></span></span><span class="jb-recent-posts-author">전산쟁이 Leejisoo</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/33"><span class="jb-recent-posts-title">EJB CMT 방식의 2PC XADatasource처..</span><span class="jb-recent-posts-reply-count"><span id="commentCountOnRecentEntries33"></span></span><span class="jb-recent-posts-author">전산쟁이 Leejisoo</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/32"><span class="jb-recent-posts-title">JAVA8 Lambda 람다는 @FunctionalInt..</span><span class="jb-recent-posts-reply-count"><span id="commentCountOnRecentEntries32"></span></span><span class="jb-recent-posts-author">전산쟁이 Leejisoo</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/31"><span class="jb-recent-posts-title">윈도우10 MariaDB 마리아DB 설치방법</span><span class="jb-recent-posts-reply-count"><span id="commentCountOnRecentEntries31">(1)</span></span><span class="jb-recent-posts-author">전산쟁이 Leejisoo</span></a></span></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            <!-- Recent Replies -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-recent-replies">
+                <div class="jb-sidebar-title jb-sidebar-title-recent-replies">
+                  <h3>최근 댓글</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-recent-replies jb-sidebar-content-list">
+                  <ul>
+                    
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/4#comment13506024"><span class="jb-recent-replies-title">어떻게 풀어야 할지 고민이였는데 보..</span><span class="jb-recent-replies-name">두유콩</span><span class="jb-recent-replies-time">11.02</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/10#comment13493795"><span class="jb-recent-replies-title">좋은 글 감사합니다.
+진법 변환 부분..</span><span class="jb-recent-replies-name">최정민</span><span class="jb-recent-replies-time">10.04</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/10#comment13467976"><span class="jb-recent-replies-title">안녕하세요, 좋은 글 잘 봤습니다...</span><span class="jb-recent-replies-name">김세일</span><span class="jb-recent-replies-time">08.26</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/3#comment13444817"><span class="jb-recent-replies-title">서쿤스//  카카오 문제 채점도 해볼..</span><span class="jb-recent-replies-name">知彼知己百戰不殆</span><span class="jb-recent-replies-time">06.17</span></a></span></li>
+                    
+
+                      <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/18#comment13415753"><span class="jb-recent-replies-title">좋은 내용이라 퍼가고 싶은데 출처..</span><span class="jb-recent-replies-name">webgori</span><span class="jb-recent-replies-time">03.18</span></a></span></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            <!-- Links -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-links">
+                <div class="jb-sidebar-title jb-sidebar-title-links">
+                  <h3>링크</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-links jb-sidebar-content-list">
+                  <ul>
+                    
+                  </ul>
+                </div>
+              </div>
+            <!-- Statistics -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-statistics">
+                <div class="jb-sidebar-title jb-sidebar-title-statistics">
+                  <h3>통계</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-statistics jb-sidebar-content-list">
+                  <ul>
+                    <li><span class="jb-sidebar-list"><span class="jb-statistics-label">Total : </span><span class="jb-statistics-count">71,008</span></span></li>
+                    <li><span class="jb-sidebar-list"><span class="jb-statistics-label">Today : </span><span class="jb-statistics-count">49</span></span></li>
+                    <li><span class="jb-sidebar-list"><span class="jb-statistics-label">Yesterday : </span><span class="jb-statistics-count">54</span></span></li>
+                  </ul>
+                </div>
+              </div>
+            <!-- Admin Menu -->
+              <div class="jb-cell jb-cell-sidebar jb-cell-sidebar-admin">
+                <div class="jb-sidebar-title jb-sidebar-title-admin">
+                  <h3>관리</h3>
+                </div>
+                <div class="jb-sidebar-content jb-sidebar-content-admin jb-sidebar-content-list">
+                  <ul>
+                    <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/manage">관리자</a></span></li>
+                    <li><span class="jb-sidebar-list"><a href="https://javaplant.tistory.com/manage/entry/post">글쓰기</a></span></li>
+                  </ul>
+                </div>
+              </div>
+            
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="jb-background jb-background-foot" style="visibility: visible;">
+  <div class="jb-container jb-container-foot">
+    <div class="jb-row jb-row-foot">
+      <div class="jb-line jb-line-foot-top"></div>
+      <div class="jb-column jb-column-foot jb-column-foot-1">
+        <div class="jb-cell jb-cell-foot jb-cell-foot-1">
+          <div class="jb-copyright">
+            <h6>Copyright © 자바공작소 All Rights Reserved</h6>
+          </div>
+        </div>
+      </div>
+      <div class="jb-column jb-column-foot jb-column-foot-2">
+        <div class="jb-cell jb-cell-foot jb-cell-foot-2">
+          <div class="jb-designed">
+            <h6>Email by <a href="https://www.jbfactory.net/" target="_blank">JB FACTORY</a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .jb-page -->
+
+<a href="https://javaplant.tistory.com/18#" class="jb-top" style="display: inline;"><i class="fa fa-arrow-up"></i></a>
+
+<script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jquery-1.12.3.min.js.다운로드"></script>
+<script src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/jquery.nivo.slider.min.js.다운로드"></script>
+<script>
+  jQuery.noConflict();
+  jQuery( document ).ready( function( $ ) {
+    // Variables
+      var jbCurrentUrl = window.location.pathname;
+    // Menu
+      $( '.jb-navigation-category-list > ul > li > ul > li:has( ul ) > a' ).append( '<i class="fa fa-angle-down"></i>' );
+      $( '.jb-bars img' ).click( function() {
+        $( '.jb-header-table-cell-navigation' ).slideToggle();
+      } );
+    // Admin Menu
+      $( '.jb-admin-button' ).click( function() {
+        $( '.jb-admin-menu' ).slideToggle();
+      } );
+		// Discuss
+			//$( '.jb-discuss-information-name' ).not( ':has( img )' ).prepend( '<img src="https://tistory4.daumcdn.net/tistory/2898205/skin/images/ic_person_white_48dp_2x.png" alt="">' );
+			//var jbUserLogo;
+			//$( '.jb-discuss-table' ).each( function() {
+			//	jbUserLogo = $( '.jb-discuss-information-name > img', this ).detach();
+			//	$( '.jb-discuss-information-logo', this ).append( jbUserLogo );
+			//} );
+		// 신고
+			$( 'img[src="//t1.daumcdn.net/tistory_admin/static/ico/ico_spam_report.png"]' ).parent().wrap( '<span class="jb-singo jb-singo-post"></span>');
+			$( '.jb-singo-post' ).parent().removeAttr( 'style' );
+			$( 'img[src="//t1.daumcdn.net/tistory_admin/static/ico/ico_spam_report.png"]' ).before( '<i class="fa fa-bell"></i> 신고' ).remove();
+			$( '.jb-discuss-information-date a' ).prepend( '<i class="fa fa-bell"></i>' ).wrap( '<span class="jb-singo jb-singo-reply"></span>' );
+    // Index
+      //$( '.jb-cell-index' ).wrapAll( '<div class="jb-row jb-row-index"></div>' );
+		  //$( '.jb-row-index .jb-cell-index:nth-child(1) .jb-index-table' ).addClass( 'jb-index-table-1' );
+			//$( '.jb-row-index .jb-cell-index:nth-child(2) .jb-index-table' ).addClass( 'jb-index-table-2' );
+		  //$( '.jb-row-index .jb-cell-index:nth-child(2n+1)' ).addClass( 'jb-cell-index-odd' );
+		  //$( '.jb-row-index .jb-cell-index:nth-child(2n+2)' ).addClass( 'jb-cell-index-even' );
+      //$( '.jb-row-index .jb-cell-index:nth-child(2n+2)' ).after( '<div class="jb-clearfix"></div>' );
+      $( '.jb-index-table-cell-thumbnail a' ).not( ':has( .jb-index-thumbnail )' ).append( '<div class="jb-index-thumbnail jb-index-thumbnail-no-image"><img src="https://tistory4.daumcdn.net/tistory/2898205/skin/images/jb-blank-480x270.png" alt=""></div>' );
+		// Notice Category Title
+			if ( $( 'body' ).attr( 'id' ) == 'tt-body-index' && jbCurrentUrl.indexOf( '/notice' ) > -1 ) {
+				$( '.jb-column-content' ).prepend( '<div class="jb-cell jb-cell-content jb-cell-content-search-list"><header><div class="jb-content-title jb-content-title-search-list" style="border-bottom: none;"><h2>공지사항</h2></div></header></div>' );
+			}
+    // Pagination
+      $( 'span.interword' ).replaceWith( '<li><a>&middot;&middot;&middot;</a></li>' );
+      $( '.jb-pagination span[class="selected"]' ).parent( 'a' ).parent( 'li' ).addClass( 'jb-active' );
+    // Calendar
+      $( '.jb-sidebar-content-calendar table td' ).has( 'a' ).addClass( 'jb-day-has-post' );
+    // Top Button
+      $( window ).scroll( function() {
+        if ( $( this ).scrollTop() > 200 ) { $( '.jb-top' ).fadeIn(); }
+        else { $( '.jb-top' ).fadeOut(); }
+      } );
+      $( '.jb-top' ).click( function() { $( 'html, body' ).animate( { scrollTop : 0 }, 600 ); return false; } );
+    // AdSense
+      $( '.jb-adsense-cb' ).appendTo( '#jb-adsense-cm' );
+			$( 'div#jb-adsense-cm-1' ).append( '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"><' + '/script>' + jbAdSenseNativeContentCode + '<script>(adsbygoogle = window.adsbygoogle || []).push({});<' + '/script>' );
+			$( 'div#jb-adsense-cm-2' ).append( '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"><' + '/script>' + jbAdSenseNativeContentCode + '<script>(adsbygoogle = window.adsbygoogle || []).push({});<' + '/script>' );
+			$( 'div#jb-adsense-cm-3' ).append( '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"><' + '/script>' + jbAdSenseNativeContentCode + '<script>(adsbygoogle = window.adsbygoogle || []).push({});<' + '/script>' );
+    // Youtube
+      $( '.jb-youtube-auto .jb-article iframe[src^="https://www.youtube.com/"]' ).wrap( '<div class="jb-youtube-16x9"></div>' );
+      $( '.jb-youtube-auto .jb-article .jb-youtube-16x9:has( .jb-youtube-16x9 )' ).css( 'padding-bottom', '0px' );
+		// Image Table
+			$( 'table:has(span.imageblock)' ).each( function() {
+				//alert( $( 'td', this ).length );
+				if ( $( 'td', this ).length == 2 ) {
+					$( this ).addClass( 'jb-image-table jb-image-table-2' );
+				}
+				if ( $( 'td', this ).length == 3 ) {
+					$( this ).addClass( 'jb-image-table jb-image-table-3' );
+				}
+			} );
+    // Slider
+      if ( jbShowSlider == 0 && $( 'body' ).attr( 'id' ) == 'tt-body-index' && jbCurrentUrl.indexOf( '/notice' ) < 0 ) {
+        $( '.jb-column-content' ).prepend( '<div class="jb-cell jb-cell-slider"><div class="slider-wrapper theme-default"><div class="ribbon"></div><div id="jb-slider" class="nivoSlider"></div></div></div>' );
+        for ( var i = 0; i < jbSliderImage.length; i++) {
+          if ( jbSliderLink[ i ] == '' && jbSliderCaption[ i ] == '' ) {
+            var jbSliderCode = '<img src="' + jbSliderImage[ i ] + '">';
+          }
+          if ( jbSliderLink[ i ] !== '' && jbSliderCaption[ i ] == '' ) {
+            var jbSliderCode = '<a href="' + jbSliderLink[ i ] + '" target="_blank"><img src="' + jbSliderImage[ i ] + '"></a>';
+          }
+          if ( jbSliderLink[ i ] == '' && jbSliderCaption[ i ] !== '' ) {
+            var jbSliderCode = '<img src="' + jbSliderImage[ i ] + '" title="' + jbSliderCaption[ i ] + '">';
+          }
+          if ( jbSliderLink[ i ] !== '' && jbSliderCaption[ i ] !== '' ) {
+            var jbSliderCode = '<a href="' + jbSliderLink[ i ] + '" target="_blank"><img src="' + jbSliderImage[ i ] + '" title="' + jbSliderCaption[ i ] + '"></a>';
+          }
+          $( '#jb-slider' ).append( jbSliderCode );
+        }
+        $( '#jb-slider' ).nivoSlider( {
+          effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
+          slices: 15, // For slice animations
+          boxCols: 8, // For box animations
+          boxRows: 4, // For box animations
+          animSpeed: 500, // Slide transition speed
+          pauseTime: 5000, // How long each slide will show
+          startSlide: 0, // Set starting Slide (0 index)
+          directionNav: true, // Next & Prev navigation
+          controlNav: true, // 1,2,3... navigation
+          controlNavThumbs: false, // Use thumbnails for Control Nav
+          pauseOnHover: true, // Stop animation while hovering
+          manualAdvance: false, // Force manual transitions
+          prevText: 'Prev', // Prev directionNav text
+          nextText: 'Next', // Next directionNav text
+          randomStart: false, // Start on a random slide
+          beforeChange: function(){}, // Triggers before a slide transition
+          afterChange: function(){}, // Triggers after a slide transition
+          slideshowEnd: function(){}, // Triggers after all slides have been shown
+          lastSlide: function(){}, // Triggers when last slide is shown
+          afterLoad: function(){} // Triggers when slider has loaded
+        } );
+      }
+      $( '#jb-slider' ).nivoSlider();
+    // Show
+      $( '.jb-background-header' ).css( { visibility: 'visible' } );
+      $( '.jb-background-main' ).css( { visibility: 'visible' } );
+      $( '.jb-background-footer' ).css( { visibility: 'visible' } );
+      $( '.jb-background-foot' ).css( { visibility: 'visible' } );
+  } );
+</script>
+
+  <script>
+    (function($) {
+        $("body").bind('copy', function (e) {
+
+            var url = document.location.href,
+                decodedUrl = decodeURI(url),
+                selection = window.getSelection();
+
+
+            if (typeof window.getSelection == "undefined") {//IE8 or earlier...
+                event.preventDefault();
+
+                var pagelink = '\n\n 출처: ' + decodedUrl,
+                    copytext = selection + pagelink;
+
+                if (window.clipboardData) {
+                    window.clipboardData.setData('Text', copytext);
+                }
+                return;
+            }
+            var body_element = document.getElementsByTagName('body')[0];
+
+            //if the selection is short let's not annoy our users
+            if (("" + selection).length < 30) return;
+
+            //create a div outside of the visible area
+            var newdiv = document.createElement('div');
+            newdiv.style.position = 'absolute';
+            newdiv.style.left = '-99999px';
+            body_element.appendChild(newdiv);
+            newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+            //we need a <pre> tag workaround
+            //otherwise the text inside "pre" loses all the line breaks!
+            if (selection.getRangeAt(0).commonAncestorContainer.nodeName == "PRE") {
+                newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+            }
+
+            newdiv.innerHTML += '<br /><br />출처: <a href="' + url + '">' + escapeHTML(decodedUrl) + '</a> [자바공작소]';
+
+            selection.selectAllChildren(newdiv);
+
+            window.setTimeout(function () {
+                body_element.removeChild(newdiv);
+            }, 200);
+        });
+    })(tjQuery);
+</script><script type="text/javascript">
+var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+_tiq.push(['__setConfig', {enableScroll:true, enableClick:true, enableButton:true}]);
+_tiq.push(["__setParam", "svcdomain", "user.tistory.com"]);
+(function(d) {
+	var se = d.createElement('script'); se.type = 'text/javascript'; se.async = true;
+	se.src = location.protocol + '//m2.daumcdn.net/tiara/js/td.min.js';
+	var s = d.getElementsByTagName('head')[0]; s.appendChild(se);
+})(document);
+_tiq.push(['__setParam', 'param_ex', JSON.stringify({"userId":"558717","blogId":"2898205","role":"guest","filterTarget":false,"entryId":"18"})]);
+_tiq.push(['__trackPageview']);
+_tiq.push(['__content', 't_content', {
+'c_id':'2898205_18', 
+'c_title':'HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS', 
+'type':'article', 
+'author':'', 
+'author_id':'558717', 
+'cp':'자바공작소', 
+'cp_id':'2898205', 
+'regdata':'2018-05-01 00:59:05', 
+'plink':'https://javaplant.tistory.com/18', 
+'media':'pcweb', 
+}]);
+var addEvent = function (evt, fn) { window.addEventListener ? window.addEventListener(evt, fn, false) : window.attachEvent('on' + evt, fn); };
+var removeEvent = function(evt, fn) { window.removeEventListener ? window.removeEventListener(evt, fn, false) : window.detachEvent('on' + evt, fn);};
+var ua = navigator.userAgent.toLowerCase(); var isIOS = /iP[ao]d|iPhone/i.test(ua);
+var contentExStat = function() {
+		_tiq.push(['__content', 't_content_ex', {
+			'data_type':'usage'
+, 'meta': {
+'c_id':'2898205_18', 
+'c_title':'HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS', 
+'type':'article', 
+'author':'', 
+'author_id':'558717', 
+'cp':'자바공작소', 
+'cp_id':'2898205', 
+'regdata':'2018-05-01 00:59:05', 
+'plink':'https://javaplant.tistory.com/18', 
+'media':'pcweb', 
+}
+}]);
+		removeEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+};
+addEvent(isIOS ? 'pagehide' : 'beforeunload', contentExStat);
+</script>
+<script type="text/javascript">window.roosevelt_params_queue = window.roosevelt_params_queue || []; window.roosevelt_params_queue.push({channel_id: "dk", channel_label: 'tistory'});</script>
+<script type="text/javascript" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/roosevelt_dk_bt.js.다운로드" async=""></script><script type="text/javascript">if(window.console!=undefined){setTimeout(console.log.bind(console,"%cTISTORY","font:8em Arial;color:#EC6521;font-weight:bold"),0);setTimeout(console.log.bind(console,"%c  나를 표현하는 블로그","font:2em sans-serif;color:#333;"),0);}</script><iframe style="position:absolute;width:1px;height:1px;left:-100px;top:-100px" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/api.html" id="editEntry"></iframe><div id="tistoryEtcLayer" class="layer_post" style="display: none;"></div><div id="tistorySnsLayer" class="layer_post" style="display: none;"><div class="bundle_post"><a href="https://javaplant.tistory.com/18#none" class="btn_mark" data-service="facebook"><span class="ico_sns ico_fb"></span>페이스북으로 공유</a><a href="https://javaplant.tistory.com/18#none" class="btn_mark" data-service="kakaotalk"><span class="ico_sns ico_kt"></span>카카오톡으로 공유</a><a href="https://javaplant.tistory.com/18#none" class="btn_mark" data-service="kakaostory"><span class="ico_sns ico_ks"></span>카카오스토리로 공유</a><a href="https://javaplant.tistory.com/18#none" class="btn_mark" data-service="twitter"><span class="ico_sns ico_tw"></span>트위터로 공유</a><a href="https://javaplant.tistory.com/18#none" class="btn_mark" data-service="url"><span class="ico_sns ico_url"></span>URL 복사</a><span class="ico_postbtn ico_arrbt"></span></div></div>
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href="https://javaplant.tistory.com/18"></a><a class="lb-next" href="https://javaplant.tistory.com/18"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><iframe id="google_osd_static_frame_1847133325117" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/saved_resource(8).html"></iframe></body><iframe id="google_esf" name="google_esf" src="./HTTP 응답코드 메소드 정리 GET, POST, PUT, PATCH, DELETE, TRACE, OPTIONS_files/zrt_lookup.html" data-ad-client="ca-pub-8005500753255035" style="display: none;"></iframe></html>

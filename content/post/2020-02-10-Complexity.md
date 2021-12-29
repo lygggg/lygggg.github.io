@@ -24,7 +24,7 @@ tag: ['Posts']
 보통 시간 복잡도와 공간 복잡도를 나타내는데 주로 사용된다.
 Big-O는 최고차항만을 계산합니다.
 
-<img src='/assets/images/big-o.png' width='600px' height='600px'/>
+<img src='../assets/images/big-o.png' width='600px' height='600px'/>
 
 ### 시간 복잡도 예시
 

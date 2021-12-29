@@ -4,8 +4,8 @@ date: 2019-12-01
 tag: ['Posts']
 ---
 
-<img src="/assets/images/React.png" width="300px" height="300px"/>
-<img src="/assets/images/StateLibrary.png" width="550px" height="300px"/>
+<img src="../assets/images/React.png" width="300px" height="300px"/>
+<img src="../assets/images/StateLibrary.png" width="550px" height="300px"/>
 
 ### 왜 쓰는가?
 
@@ -32,7 +32,7 @@ Global하게 데이터를 공유할수 있도록 고안된 방법입니다. 비�
 
 Context는 꼭 용도에 맞는 상황에서만 사용해야 합니다. 즉, 전역 데이터를 한 곳에서 저장하고 여러 컴포넌트에서 접근하고 싶은 경우가 아니라면 사용을 안하는게 좋습니다. 문서에 따르면 Context 를 사용하게 되면 해당 컴포넌트는 해당 Context가 없이는 재사용이 어려워지므로 꼭 필요 할때만 사용해야합니다.
 
-<img src="/assets/images/Redux.png" width="550px" height="300px"/>
+<img src="../assets/images/Redux.png" width="550px" height="300px"/>
 
 ## Context API가 Redux나 Mobx를 대신할수 있는가?
 

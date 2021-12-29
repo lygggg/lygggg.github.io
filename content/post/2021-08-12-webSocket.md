@@ -8,7 +8,7 @@ tag: ['Posts']
 
 웹소켓은 HTML5 표준 기술로, 사용자의 브라우저와 서버 사이의 동적인 양방향 연결 채널을 구성합니다. Websocket API를 통해 서버로 메세지를 보내고, 요청 없이 응답을 받아오는것이 가능하며, 웹소켓은 별도의 포트를 사용하지 않고 HTTP와 같은 80번 포트를 사용하고 있는데, 이때문에 클라이언트인 웹 브라우저뿐만 아니라 웹 서버도 기능을 지원하고 있어야 한다.
 
-<img src='/assets/images/websocket-polling.gif' width='450px' height='250px'/>
+<img src='../assets/images/websocket-polling.gif' width='450px' height='250px'/>
 
 ### Socket.io의 등장
 

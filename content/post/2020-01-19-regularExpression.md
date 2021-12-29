@@ -24,7 +24,7 @@ console.log(myRegExp.test(tel)); // false
 
 정규 표현식은 리터럴 표기법으로 생성할 수 있다. 정규 표현식 리터럴은 아래와 같이 표현한다.
 
-<img src='/assets/images/regular_expression.png' width='700px' height='400px'/>
+<img src='../assets/images/regular_expression.png' width='700px' height='400px'/>
 
 정규표현식을 사용하는 자바스크립트 메소드는RegExp.prototype.exec, RegExp.prototype.test, String.prototype.match, String.prototype.replace, String.prototype.search, String.prototype.split 등이 있다고 한다.
 

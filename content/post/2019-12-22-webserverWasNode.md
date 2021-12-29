@@ -6,7 +6,7 @@ tag: ['Posts']
 
 # Web Server와 WAS
 
-<img src='/assets/images/webserver-vs-was1.png' width='900px' height='500px'/>
+<img src='../assets/images/webserver-vs-was1.png' width='900px' height='500px'/>
 ## Web Server
 
 ### Web Server의 개념
@@ -61,7 +61,7 @@ tag: ['Posts']
 
 ### Web Server와 WAS의 차이?
 
-<img src='/assets/images/webserver-vs-was2.png' width='900px' height='500px'/>
+<img src='../assets/images/webserver-vs-was2.png' width='900px' height='500px'/>
 
 ### 목적부터가 다르다
 
