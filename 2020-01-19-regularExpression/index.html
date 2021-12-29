@@ -9,7 +9,13 @@ const myRegExp = /^[0-9]+$/;
 console.log(myRegExp.test(tel)); // false</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>이와같이 반복문과 조건문을 사용한 복잡한 코드도 정규표현식을 이용하면 매우 간단하게 표현 가능하다. 하지만 정규표현식은 주석이나 공백을 허용하지 않고 여러가지 기호를 혼합하여 사용하기 때문에 가독성이 좋지 못하다.</p>
 <p>정규 표현식은 리터럴 표기법으로 생성할 수 있다. 정규 표현식 리터럴은 아래와 같이 표현한다.</p>
-<img src='/assets/images/regular_expression.png' width='700px' height='400px'/>
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 620px;">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom: 42.38845144356955%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABcSAAAXEgFnn9JSAAABu0lEQVQoz2OIjIhgAIGIiAgxIDYBYkkgtgBidSA2AGJ2qDxDeHgEQ1JYEINBbB7DRDVrhv8MEACjwSAsOhxMR0aHcQXHRigGJIYLhMREqAckhPMHxodLOOWFsYJ1/HcDYgcg9mZENgHFMBjQ7AxkiHVJYGXAA/5DIYSdxVht6sQKM+wfumIl12pemdBSB4Z9XoZMqwN1GDb4GzBs9FcC0kaM6wJUmNcEmLKsDlBkXRGowrrF04ihpsJguoKlP9BAAawGqhu0iovkZicw7PKOYlgbkMKw3r8ViFOBuAGIm4EG5wFxFcO6gCam7Z4hDMmdjmcEpeOABqqC9N8REmIEhXEEND4YlO3quQUr04QZDnjyMq8OkAAaosSwxd8F6Moyhq3+ckCswrDdX5xhfYASy043AQaH+bynxKWkgAZyYoSNonMNCn+ybAwwbEqYbIvDhKxLQ7khIVfA9IAhjRmmpiTWmUOwoY5dNy+fIzUokDU8MpIL6DpWIGYCK1CzrWOQLkxjFF7ky+CTEs4GjG31qLAIdyA2C40GY+OwqAj94LgIcZD64PBo7qjwcJvIiHBnoCGaQGwOxPagJAcAYt2LCluZtbAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="regular expression" title="regular expression" src="/static/464e20dd70ff473604103bf8cf0e2c6b/2a195/regular_expression.png" srcset="/static/464e20dd70ff473604103bf8cf0e2c6b/158c9/regular_expression.png 155w,
+/static/464e20dd70ff473604103bf8cf0e2c6b/5fad2/regular_expression.png 310w,
+/static/464e20dd70ff473604103bf8cf0e2c6b/2a195/regular_expression.png 620w,
+/static/464e20dd70ff473604103bf8cf0e2c6b/a016c/regular_expression.png 762w" sizes="(max-width: 620px) 100vw, 620px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
+    </span>
 <p>정규표현식을 사용하는 자바스크립트 메소드는RegExp.prototype.exec, RegExp.prototype.test, String.prototype.match, String.prototype.replace, String.prototype.search, String.prototype.split 등이 있다고 한다.</p>
 <div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const targetStr = &#39;This is a pen.&#39;;
 const regexr = /is/ig;

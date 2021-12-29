@@ -11,7 +11,15 @@
 
 // student에는 hasOwnProperty 메소드가 없지만 아래 구문은 동작합니다.
 console.log(student.hasOwnProperty(&#39;name&#39;)); // true</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<img src='/assets/images/printout_student_obj_from_chrome.png' width='700px' height='400px'/>
+<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 620px;">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom: 46.84873949579832%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABcSAAAXEgFnn9JSAAABkElEQVQoz32S227TQBRF3cdSCaQKBBLiBfFlfegv9bsod5L4ErdOHN/G9njsJJ5ZPU4iBFLDkbb2g+3lffaMV9cNj3FOWxuctUzjzsuens/EXnjPjdMd/deA+ouPXvj0YQBNDeMe9qJxFIw9ahyPf+z7gNvbj3jeNZeXH8Tfit47z3vt7duWbhExzBPU9wX1rzm7JGe7aujSnE28JA1D1HrNVimLc7i2Dbi5+SSQV1xdvRN/I5r82pM30GagK7bozcB2cHRZh5k1qFTx7ecPPt/fs4xjGq3/Xvny2ZWtHWnLKU2HzrTARFHNZrbiYfnAOl2TpilN00gD+1PJbu6Uejl9z93dBZOf5FlnaYoWkxtMYehyjYlb6seKMAiJlzFRFGGMkQqPHToBih2BcPHvoQiwq+VgyoG+6jGqp88MvSRWSUkcxfi+f0hZlqWdwJL0PHBKqCt9SGeK7pCuElAURKxWK3a7HcMwHJzTtZGZS8rzwCpRtImmlu66pEX5OcvfIVmWURQFVVXJrbF/gP9b+QnvJhddWTAwhAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;"></span>
+  <img class="gatsby-resp-image-image" alt="printout student obj from chrome" title="printout student obj from chrome" src="/static/48b3f753681664b9bdc5afc0c0a7a9e4/2a195/printout_student_obj_from_chrome.png" srcset="/static/48b3f753681664b9bdc5afc0c0a7a9e4/158c9/printout_student_obj_from_chrome.png 155w,
+/static/48b3f753681664b9bdc5afc0c0a7a9e4/5fad2/printout_student_obj_from_chrome.png 310w,
+/static/48b3f753681664b9bdc5afc0c0a7a9e4/2a195/printout_student_obj_from_chrome.png 620w,
+/static/48b3f753681664b9bdc5afc0c0a7a9e4/416ee/printout_student_obj_from_chrome.png 930w,
+/static/48b3f753681664b9bdc5afc0c0a7a9e4/7a4b2/printout_student_obj_from_chrome.png 1240w,
+/static/48b3f753681664b9bdc5afc0c0a7a9e4/ccf0c/printout_student_obj_from_chrome.png 1428w" sizes="(max-width: 620px) 100vw, 620px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
+    </span>
 <p>ECMAScript spec에서는 자바스크립트의 모든 객체는 [[Prototype]]이라는 인터널 슬롯(internal slot)를 가진다. [[Prototype]]의 값은 null 또는 객체이며 상속을 구현하는데 사용된다. [[Prototype]] 객체의 데이터 프로퍼티는 get 액세스를 위해 상속되어 자식 객체의 프로퍼티처럼 사용할 수 있다. 하지만 set 액세스는 허용되지 않는다. 라고 되어있다.</p>
 <p>[[Prototype]]의 값은 Prototype(프로토타입) 객체이며 <strong>proto</strong> accessor property로 접근할 수 있다. <strong>proto</strong> 프로퍼티에 접근하면 내부적으로 Object.getPrototypeOf가 호출되어 프로토타입 객체를 반환한다.</p>
 <p>student 객체는 <strong>proto</strong> 프로퍼티로 자신의 부모 객체(프로토타입 객체)인 Object.prototype을 가리키고 있다.</p>
