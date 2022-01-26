@@ -20,9 +20,12 @@
 <url> <loc>http://answer.netlify.app/2022-01-24-TIL152/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-04-TIL12/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2022-01-23-TIL151/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://answer.netlify.app/2022-01-25-TIL153/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-01-State_Library_Basics/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2022-01-12-TIL146/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://answer.netlify.app/2022-01-26-TIL154/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-05-TIL13/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://answer.netlify.app/2022-01-26-모던자바스크립트/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-08-CustomRoute/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-06-TIL14/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-09-TIL15/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -181,7 +184,6 @@
 <url> <loc>http://answer.netlify.app/2020-08-11-TIL132/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2021-08-10-TIL134/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2021-08-11-TIL135/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://answer.netlify.app/2021-08-12-webSocket/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2021-08-21-TIL137/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2021-08-17-TIL136/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2021-08-31-TIL138/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
