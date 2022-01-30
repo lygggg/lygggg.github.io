@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `lyg`, // Modify this to your disqus-short-name
+        shortname: `disqus_93JVYbBpDP`, // Modify this to your disqus-short-name
       },
     },
     {
