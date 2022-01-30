@@ -1,4 +1,4 @@
-const metaConfig = require("./gatsby-meta-config")
+const metaConfig = require('./gatsby-meta-config')
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `Your Disqus-short-name here`, // Modify this to your disqus-short-name
+        shortname: `lyg`, // Modify this to your disqus-short-name
       },
     },
     {
@@ -50,7 +50,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: "%",
+              inlineCodeMarker: '%',
               showLineNumbers: true,
             },
           },
@@ -81,8 +81,8 @@ module.exports = {
               short_name: metaConfig.title,
               start_url: `/`,
               background_color: `#ffffff`,
-              theme_color: "#6b37bf",
-              display: "standalone",
+              theme_color: '#6b37bf',
+              display: 'standalone',
               icon: metaConfig.icon,
             },
           },
@@ -101,7 +101,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
-    "gatsby-plugin-offline",
+    'gatsby-plugin-offline',
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
   ],

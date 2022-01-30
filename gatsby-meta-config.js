@@ -22,7 +22,7 @@ module.exports = {
   planTitle: `Future Action Plan`, // Your blog planTitle
   showPlan: true, //If you don't want to see the plan, change the status to false.
   comment: {
-    disqusShortName: 'Your Disqus-short-name here', // Your disqus-short-name. check disqus.com.
+    disqusShortName: 'lyg', // Your disqus-short-name. check disqus.com.
     // You shoud modify disqus-short-name in "gatsby-config.js" too. check it.
   },
   ga: 'UA-149433358-1', // Add your google analytics tranking ID
