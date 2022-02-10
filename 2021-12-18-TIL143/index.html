@@ -11,12 +11,11 @@
 <ul>
 <li>[PropTypes] 자바스크립트의 유연성때문에 사용하기 편한반면 코드가 많아지면 생산성이 떨어진다는 문제떄문에 타입스크립트를 많이 사용하는데, 자바스크립만 사용해서 앱을 개발해야하는 상황에서 Proptypes를 사용한다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">import PropTypes from &quot;prop-types&quot;;
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">'prop-types'</span>
 
-
-Loginform.prototype = {
-  setIsLoggedIn: PropTypes.func.isRequired,
-};</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+Loginform<span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
+  setIsLoggedIn<span class="token operator">:</span> PropTypes<span class="token punctuation">.</span>func<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>PropTypes는 부모로부터 전달받은 prop의 데이터 type을 검사한다. 자식 컴포넌트에서 명시해 놓은 데이터 타입과 부모로부터 넘겨받은 타입이 일치하지 않으면 경고문이 나온다.</p>
 <h2>Future Action</h2>
 <p>-</p></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,

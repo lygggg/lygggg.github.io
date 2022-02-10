@@ -24,16 +24,16 @@
 </ul>
 <h3>특징</h3>
 <p>참조 타입은 변수에 값을 직접 저장하지 않는다. 변수에 저장되는 것은 메모리 안에서 객체의 위치를 가리키는 “포인터” 이다. 즉 무엇이 저장되느냐, 이것이 원시 타입과 참조 타입의 가장 큰 차이다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const objOne = {one : 1};
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> objOne <span class="token operator">=</span> <span class="token punctuation">{</span> one<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span>
 
-const objTwo = {two : 2};
+<span class="token keyword">const</span> objTwo <span class="token operator">=</span> <span class="token punctuation">{</span> two<span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span>
 
-objTwo = objOne;
+objTwo <span class="token operator">=</span> objOne
 
-objTwo.one = 3;
+objTwo<span class="token punctuation">.</span>one <span class="token operator">=</span> <span class="token number">3</span>
 
-console.log(objOne);
-console.log(objTwo);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objOne<span class="token punctuation">)</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>objTwo<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>결과를 출력해보면 둘다 값이 3인 것을 확인 할 수 있다.</p>
 <h3>원시 래퍼 타입</h3>
 <p>원시 타입을 객체처럼 편리하게 사용하도록 도와준다.</p>
@@ -46,21 +46,21 @@ console.log(objTwo);</code><span aria-hidden="true" class="line-numbers-rows" st
 <p>원시 타입을 객체처럼 사용하는 순간, 자바스크립트 내부에서 사용하는 데이터의 인스턴스를 만들게됩니다. 이렇게 만들어진 객체는 코드를 실행후 바로 다음 줄에서 파괴됩니다. 이러한 과정을 오토박싱이라고 한다.</p>
 <h3>this</h3>
 <p>this를 이용하면 함수를 다른 객체에서 사용 할 수 있다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function menuGlobal() {
-  console.log(&quot;오늘 저녁은&quot; + this.name);
-}
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">menuGlobal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'오늘 저녁은'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-var myDiner = {
-  name: &quot;김치찌개&quot;,
-  menu: menuGlobal
-}
+<span class="token keyword">var</span> myDiner <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'김치찌개'</span><span class="token punctuation">,</span>
+  menu<span class="token operator">:</span> menuGlobal<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
 
-var yourDiner = {
-  name: &quot;된장찌개&quot;,
-  menu: menuGlobal
-}
-myDiner.menu()
-yourDiner.menu()</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token keyword">var</span> yourDiner <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'된장찌개'</span><span class="token punctuation">,</span>
+  menu<span class="token operator">:</span> menuGlobal<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+myDiner<span class="token punctuation">.</span><span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+yourDiner<span class="token punctuation">.</span><span class="token function">menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3>this제어</h3>
 <ul>
 <li>
@@ -70,232 +70,212 @@ yourDiner.menu()</code><span aria-hidden="true" class="line-numbers-rows" style=
 </ul>
 </li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function menuGlobal(item) {
-  console.log(&quot;오늘 저녁은&quot; + item + this.name)
-}
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">menuGlobal</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"오늘 저녁은"</span> <span class="token operator">+</span> item <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-var myDiner = {
-  name : &quot;김치찌개&quot;
-}
+<span class="token keyword">var</span> myDiner <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name <span class="token operator">:</span> <span class="token string">"김치찌개"</span>
+<span class="token punctuation">}</span>
 
-var yourDiner = {
-  name: &quot;된장찌개&quot;
-}
+<span class="token keyword">var</span> yourDiner <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">"된장찌개"</span>
+<span class="token punctuation">}</span>
 
-menuGlobal.call(myDiner, &quot;묵은지&quot;);
-menuGlobal.call(yourDiner, &quot;삼겹살&quot;);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<ul>
-<li>
-<p>apply()</p>
-<ul>
-<li>apply 메서드는 함수를 실행할 때 인수를 배열로 묶어 한번에 전달한다.</li>
-</ul>
-</li>
-</ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function menuGlobal(item1, item2) {
-  [item1, item2].forEach(function(el){
+<span class="token function">menuGlobal</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>myDiner<span class="token punctuation">,</span> <span class="token string">"묵은지"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">menuGlobal</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>yourDiner<span class="token punctuation">,</span> <span class="token string">"삼겹살"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token template-punctuation string">`</span></span>`tsx
 
-  console.log(&quot;오늘 저녁은 &quot; + el + this.name)
-  },this)
-}
+<span class="token operator">-</span> <span class="token function">apply</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token operator">-</span> apply 메서드는 함수를 실행할 때 인수를 배열로 묶어 한번에 전달한다<span class="token punctuation">.</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>function menuGlobal(item1, item2) {
+[item1, item2].forEach(function(el){</p>
+<p>console.log(“오늘 저녁은 ” + el + this.name)
+},this)
+}</p>
+<p>var myDiner = {
+name : “김치찌개”
+}</p>
+<p>var yourDiner = {
+name: “된장찌개”
+}</p>
+<p>menuGlobal.apply(myDiner, [“묵은지”, “삼겹살”])</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">### bind()
 
-var myDiner = {
-  name : &quot;김치찌개&quot;
-}
+bind 메서드는 es5에서 추가되었다. this값을 어디서 사용하든 호출 객체가 바뀌지 않게 고정시켜버린다.
 
-var yourDiner = {
-  name: &quot;된장찌개&quot;
-}
+### 화살표 함수와 this
 
-menuGlobal.apply(myDiner, [&quot;묵은지&quot;, &quot;삼겹살&quot;])</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<h3>bind()</h3>
-<p>bind 메서드는 es5에서 추가되었다. this값을 어디서 사용하든 호출 객체가 바뀌지 않게 고정시켜버린다.</p>
-<h3>화살표 함수와 this</h3>
-<p>화살표 함수의 this는 일반적인 this처럼 함수를 호출한 객체를 할당하지 않고, 바로 상위 스코프의 this를 할당한다.</p>
-<h3>스코프</h3>
-<p>스코프는 이름이 출동하는 문제를 덜어주고, 자동으로 메모리를 관리한다.</p>
-<h3>전역 스코프</h3>
-<p>스크립트의 어디서든 접근이 가능하기 때문에 사용이 쉽다. 타인과의 협업, 라이브러리 사용시 충돌의 가능성이 있다.</p>
-<h3>함수 스코프</h3>
-<p>함수 내부에서 정의된 변수와 매개변수는 함수외부에서 접근할 수 없다. 함수 내부에서 정의된 변수라면 함수의 어느 부분에서도 접근 할 수 있다.</p>
-<h3>블록 스코프</h3>
-<p>중괄호 안에서만 접근이 가능하다. 블록 내부에 정의된 변수는 블록의 실행이 끝나면 해제된다.</p>
-<h3>스코프 정리</h3>
-<ul>
-<li>스코프는 변수의 접근성과 생존기간을 제어한다.</li>
-<li>스코프는 이름이 충돌하는 문제를 덜어주고, 자동으로 메모리를 관리한다.</li>
-<li>자바스크립트에는 전역 스코프, 함수 스코프, 블록스코프가 존재한다.</li>
-</ul>
-<h3>클로저</h3>
-<p>말로 표현하면 폐쇄된 공간에 대한 접근 권한을 가진함수를 말한다.</p>
-<p>만약 내부 함수가 외부 함수보다 오래 살아있는 경우에, 외부함수에 있던 변수들은 어떻게 될까?</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">var outer = function() { // 외부함수
-  var a = 1; // outer함수가 반환된 후에도 inner함수는 outer 함수 안에 있는 a에 대한 접근 권한을 가진다. 그래서 변수 a는 메모리에서 해제되지 않은 상태이다.
+화살표 함수의 this는 일반적인 this처럼 함수를 호출한 객체를 할당하지 않고, 바로 상위 스코프의 this를 할당한다.
 
-  var inner = function() { // 내부함수
-    var b = 5;
-    var c = 6;
+### 스코프
 
-    a = a + b + c;
-    console.log(a);
-  };
-  return inner;
-};
+스코프는 이름이 출동하는 문제를 덜어주고, 자동으로 메모리를 관리한다.
 
-var newInner = outer();
+### 전역 스코프
 
-newInner();</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>이러한 특징을 이용하면 비공개 데이터를 가진 객체를 만들어 볼 수 있지 않을까?</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">var person = (function() {
-  var age = 15;
+스크립트의 어디서든 접근이 가능하기 때문에 사용이 쉽다. 타인과의 협업, 라이브러리 사용시 충돌의 가능성이 있다.
 
-  return {
-    name : &quot;Wade&quot;,
+### 함수 스코프
 
-    getAge : function() {
-      console.log(age);
-      return age;
-    },
+함수 내부에서 정의된 변수와 매개변수는 함수외부에서 접근할 수 없다. 함수 내부에서 정의된 변수라면 함수의 어느 부분에서도 접근 할 수 있다.
 
-    setAge : function(val) {
-      age = val;
-      console.log(age);
-    }
-  };
+### 블록 스코프
+
+중괄호 안에서만 접근이 가능하다. 블록 내부에 정의된 변수는 블록의 실행이 끝나면 해제된다.
+
+### 스코프 정리
+
+- 스코프는 변수의 접근성과 생존기간을 제어한다.
+- 스코프는 이름이 충돌하는 문제를 덜어주고, 자동으로 메모리를 관리한다.
+- 자바스크립트에는 전역 스코프, 함수 스코프, 블록스코프가 존재한다.
+
+### 클로저
+
+말로 표현하면 폐쇄된 공간에 대한 접근 권한을 가진함수를 말한다.
+
+만약 내부 함수가 외부 함수보다 오래 살아있는 경우에, 외부함수에 있던 변수들은 어떻게 될까?</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>var outer = function() { // 외부함수
+var a = 1; // outer함수가 반환된 후에도 inner함수는 outer 함수 안에 있는 a에 대한 접근 권한을 가진다. 그래서 변수 a는 메모리에서 해제되지 않은 상태이다.</p>
+<p>var inner = function() { // 내부함수
+var b = 5;
+var c = 6;</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">a = a + b + c;
+console.log(a);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>};
+return inner;
+};</p>
+<p>var newInner = outer();</p>
+<p>newInner();</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">이러한 특징을 이용하면 비공개 데이터를 가진 객체를 만들어 볼 수 있지 않을까?</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>var person = (function() {
+var age = 15;</p>
+<p>return {
+name : “Wade”,</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">getAge : function() {
+  console.log(age);
+  return age;
+},
+
+setAge : function(val) {
+  age = val;
+  console.log(age);
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>};
 })();
 person.setAge(20); // person //이런 방식으로 외부함수에 있는 데이터를 변경할 수 있다.
-person.getAge();</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<h3>프로토타입</h3>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function Food(name) {
-  this.name = name;
-  this.smell = function() {
-    console.log(this.name + &quot;냄새가 난다&quot;);
-  }
+person.getAge();</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">### 프로토타입</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>function Food(name) {
+this.name = name;
+this.smell = function() {
+console.log(this.name + “냄새가 난다”);
 }
+}</p>
+<p>var myFood = new Food(“로제 파스타”);
+var myFood2 = new Food(“창란젓”);</p>
+<p>console.log(myFood.smell === myFood2.smell); // false</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">myFood.smell 메소드와 myFood2.smell 메소드는 서로 다른 참조를 하고 있었다.
 
-var myFood = new Food(&quot;로제 파스타&quot;);
-var myFood2 = new Food(&quot;창란젓&quot;);
-
-console.log(myFood.smell === myFood2.smell); // false</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>myFood.smell 메소드와 myFood2.smell 메소드는 서로 다른 참조를 하고 있었다.</p>
-<p>즉 객체를 생성 할때마다 별개의 함수가 계속 만들어 진것. 앞서 this에서 배운 내용을 바탕으로 좀 더 효율적인 공정으로 바꿔보자</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function smell() {
-    console.log(this.name + &quot;냄새가 난다&quot;);
-  }
-
-function Food(name) {
-  this.name = name;
-  this.smell = smell;
-
-}
-
-var myFood = new Food(&quot;로제 파스타&quot;);
-var myFood2 = new Food(&quot;창란젓&quot;);
-
-myFood.smell();
+즉 객체를 생성 할때마다 별개의 함수가 계속 만들어 진것. 앞서 this에서 배운 내용을 바탕으로 좀 더 효율적인 공정으로 바꿔보자</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>function smell() {
+console.log(this.name + “냄새가 난다”);
+}</p>
+<p>function Food(name) {
+this.name = name;
+this.smell = smell;</p>
+<p>}</p>
+<p>var myFood = new Food(“로제 파스타”);
+var myFood2 = new Food(“창란젓”);</p>
+<p>myFood.smell();
 myFood2.smell();
-console.log(myFood.smell === myFood2.smell); // true</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>smell 함수를 밖으로 빼 문제를 해결했다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">myFood.constructor === Food // true // constructor는 어디서 온걸까?</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
-<p>자바스크립트에서는 생성자의 prototype 프로퍼티를 통해 타입의 특징을 정의한다.</p>
-<p>모든 인스턴스는 내부에 [[Prototype]] 프로퍼티를 가지며, 이를 통해 생성자의 prototype 프로퍼티를 추적한다.</p>
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 301px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 81.3953488372093%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACNUlEQVQ4y5WUi27aQBRE+f+fa9REBQw0YPyGfdrrF4bp7Dak0JBUtXRlZHvPzsy9y+xyuaDveqRZhiTNMI4n/Ovyaz67Zv5l13WI4z222y2EEMjzHG3bouW9yVhpClOWqMyI6Xz5EhqAvk7TCekyRRJlOMYx1GoNs4qgee9tjaHt0A4Tzpc/wEfQ2fXhOI5w2sEWNdyxRle78IxL/8v27HYneZDIFzlEJqBkA3lUhE6MpA8R+GiGYXj//n3tDXt2u5sxBvXBwlYG9mDgjENT96iqA5IkYc5xyPcKuhVz/X2n0DkHcySsZB0tWuswseuuHSCFJLx5i+Fz+3cK/ceqkjC5hkpZmYYuNaPQ2Gx2WC6WWEUrFEWBqqyovAqu7hR6/1fgQKAWHqQIMtAemHADYSFlTVhE6CKAn749Yfu6Reva+6Z8UHjUMAWLQJlJKA8sDATvsmQpi2i5wvzHPAD97K45Wj5fv/4D0AgTgLa00AQZNknlMiiMd3us1xva/4nddhfsZzxh5/MZp9PpzfJfQO0Vsss+R1FpHLhBRJsR7S7mcwz98OWxvAMO4wBLS96iTGlXNKhygZhqXmlPSY2+70MjrOV4GRvm08/mNE0PgHzR2Ib5ebtUGP/OrzMdXNMR0mFDy74pz9+fQ47xLg5dvyp/CKx59FSuqFLxKHLAVUM13Mi2yPhH4YHz+SJkmCZpGCG/9iHQ8QzXoobcy6DQN6ZVHPg3YMGT8vL8EhRGywj7/f4O+Au21s8tDJSnvAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="prototype" title="prototype" src="/static/b834fdc4a26e94369983d91d6c95e1ac/fb933/prototype.png" srcset="/static/b834fdc4a26e94369983d91d6c95e1ac/158c9/prototype.png 155w,
-/static/b834fdc4a26e94369983d91d6c95e1ac/fb933/prototype.png 301w" sizes="(max-width: 301px) 100vw, 301px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">Food.prototype.smell = function() {
-    console.log(this.name + &quot;냄새가 난다&quot;);
-  }
+console.log(myFood.smell === myFood2.smell); // true</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">smell 함수를 밖으로 빼 문제를 해결했다.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>myFood.constructor === Food // true // constructor는 어디서 온걸까?</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">자바스크립트에서는 생성자의 prototype 프로퍼티를 통해 타입의 특징을 정의한다.
 
-function Food(name) {
-  this.name = name;
+모든 인스턴스는 내부에 [[Prototype]] 프로퍼티를 가지며, 이를 통해 생성자의 prototype 프로퍼티를 추적한다.
 
-}
-
-var myFood = new Food(&quot;로제 파스타&quot;);
-var myFood2 = new Food(&quot;창란젓&quot;);
-
-myFood.smell();
+&lt;img src=&quot;../assets/images/prototype.png&quot; width=&quot;300px&quot; height=&quot;300px&quot;/&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Food.prototype.smell = function() {
+console.log(this.name + “냄새가 난다”);
+}</p>
+<p>function Food(name) {
+this.name = name;</p>
+<p>}</p>
+<p>var myFood = new Food(“로제 파스타”);
+var myFood2 = new Food(“창란젓”);</p>
+<p>myFood.smell();
 myFood2.smell();
-console.log(myFood.smell === myFood2.smell);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>이렇게 했더니 결과값이 같다.</p>
-<p>myFood [[prototype]] -> Food [[Prototype]] -> Object [[Prototype]] -> null</p>
-<p>이런식으로 인스턴스에서 생성자의 [[Prototype]]을 타고 올라가며 프로퍼티를 탐색하는 현상을 프로토타입 체인이라고 한다.</p>
-<h3>정리</h3>
-<ul>
-<li>자바스크립트는 생성자의 prototype 프로퍼티를 통해 타입의 특징을 정의한다.</li>
-<li>모든 인스턴스는 내부에 [[Prototype]]프로퍼티를 가지며 이를 통해 생성자의 prototype 프로퍼티를 추적한다.</li>
-<li>인스턴스에서 생성자의 [[Prototype]]을 타고 올라가며 프로퍼티를 탐색하는 현상을 프로토타입 체인이라고 한다.</li>
-</ul>
-<p>브라우저 콘솔에 직접 쳐보면
-<span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 380px;">
-      <span class="gatsby-resp-image-background-image" style="padding-bottom: 127.63157894736842%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAAsSAAALEgHS3X78AAADhklEQVRIx51V65aiOBjs93+/2dnT2qIgyP2SkATCpbYSWsf2Mj+WcyIaSVHfV5XKxziM0IlEH7YQ5xZx3CHi/XPfICsk7GJxvdZ1fRrX+ev14T7G1kB9tUjjC35/7jDqHtFnhTLqMNUGRhkM4x/g++se7AYIznV1i/M5RpoXKOsazaXEEAmU5xzhOcGgFcYkgeEztiigyhLTPD8zdD+U1v7PaZowz4u/W2ux8vu8bPNYFyycW/h95bMLx8uSl2WBdQv+5/VU8jqvsJVGWWicQomqVrBtD5VKXPIMZVlhOAbQ4RlDGMK0HQnMb0X6WFjWmPfIU4XjSSBOelilYKh8VVSILyl0msLs9lBNs4E9sPrBcBxHtG2Lxo8Oo7VepR9v3nTbhgN7wezG0BhDVhckZDIQHA+LV/Z4XX4uWpZtvAR0apa0QErQummR0xqDEBgOAczh6Ps29T0E59z/o1HYxRL/pot/+fJQ/ce3Vsh+JUj/SWE7Abk/wLJvU5rdHnQ2cY7YxvrdxhcM3bSUEtkhRfp1geg1CvZSDQMMW9CR2dbXJ8O81MYDurLbrkObUZhLjTou0RUdmkbgwNJdf4s892U/2uX2+36nuEuw1Cqt0JQELRr6suIOMgjDiCNk/xoMZP1o5mdjf0+MdkSd1+jSDh2Z1nENIzUyzjmWTji3RW+s3ql8fWDinq1ZbhdwhA1EtMWZFgMqlr7f73EIAsZbzHg7I81yGDM89/AGOE8eUJw7iIT9PDFxggqyUmjIOGHiZFmBY3DEbv+FvCjR007bUP4+MuLuAGc0aQNJMHlh2VHjmfbc0y3nRMUeVy0CAoZRhCg6+/7mjLKCI6donZAvAJnYrlSZSSotafQcJQ19PJ22RXSDs1nFzLR2+nvJTbYBtmGNvjOoWsEEOnlRcgbvu/h6KYqdLGQnWbLw5QoCN2eW3JBp5/pD0eoKCbdmzHGhN3syVUr73XMF/8OQIduL3vdMxK0XxfXTUmWteJBpS5DE9y84Hsk85Iu2lHIp/wToGAraQxc9mmOF+qv0TA0DVwqDnqA5A3fHXNzRQkFw8ozfAs4UZaCvVC69XXreZSkxSp56ZoRbo2iNjP5z4rgkVwxirbUPiyfAhYeQapnU9N3AY9W0mlE10F+aas5c3PugmKb51rNXZ8tdyU7lGpPmiWcsFEuf2TfZD75/cRL7/rkSnYnfhcR/PFTfDdBAbtoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;"></span>
-  <img class="gatsby-resp-image-image" alt="prototypes" title="prototypes" src="/static/e9a6b912bf0e13308d2e1e4d3a826392/3f520/prototypes.png" srcset="/static/e9a6b912bf0e13308d2e1e4d3a826392/158c9/prototypes.png 155w,
-/static/e9a6b912bf0e13308d2e1e4d3a826392/5fad2/prototypes.png 310w,
-/static/e9a6b912bf0e13308d2e1e4d3a826392/3f520/prototypes.png 380w" sizes="(max-width: 380px) 100vw, 380px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;" loading="lazy">
-    </span>></p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">이렇게 확인이 가능g하다.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
-<h3>클래스</h3>
-<p>클래스는 정확히 생성자를 이용한 타입 생성과 그 결과가 일치한다.</p>
-<p>자바스크립트만의 사용자 정의타입 생성 방법을 다른 언어의 클래스 문법처럼 바꿔준것이 바로 자바스크립트 클래스다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">class User {
-  constructor(name) {
-    this.name = name;
-  }
-  sayName() {
-    console.log(this.name);
-  }
+console.log(myFood.smell === myFood2.smell);</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">이렇게 했더니 결과값이 같다.
+
+myFood [[prototype]] -&gt; Food [[Prototype]] -&gt; Object [[Prototype]] -&gt; null
+
+이런식으로 인스턴스에서 생성자의 [[Prototype]]을 타고 올라가며 프로퍼티를 탐색하는 현상을 프로토타입 체인이라고 한다.
+
+### 정리
+
+- 자바스크립트는 생성자의 prototype 프로퍼티를 통해 타입의 특징을 정의한다.
+- 모든 인스턴스는 내부에 [[Prototype]]프로퍼티를 가지며 이를 통해 생성자의 prototype 프로퍼티를 추적한다.
+- 인스턴스에서 생성자의 [[Prototype]]을 타고 올라가며 프로퍼티를 탐색하는 현상을 프로토타입 체인이라고 한다.
+
+브라우저 콘솔에 직접 쳐보면
+&lt;img src=&quot;../assets/images/prototypes.png&quot; width=&quot;300px&quot; height=&quot;300px&quot;/&gt;&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>이렇게 확인이 가능g하다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">### 클래스
+
+클래스는 정확히 생성자를 이용한 타입 생성과 그 결과가 일치한다.
+
+자바스크립트만의 사용자 정의타입 생성 방법을 다른 언어의 클래스 문법처럼 바꿔준것이 바로 자바스크립트 클래스다.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>class User {
+constructor(name) {
+this.name = name;
 }
-
-var me = new User(&quot;Wade&quot;);
-me.sayName(); // wade
-
-function UserOld(name) {
-  this.name = name;
+sayName() {
+console.log(this.name);
 }
-
-UserOld.prototype.sayName = function() {
-  console.log(this.name)
+}</p>
+<p>var me = new User(“Wade”);
+me.sayName(); // wade</p>
+<p>function UserOld(name) {
+this.name = name;
+}</p>
+<p>UserOld.prototype.sayName = function() {
+console.log(this.name)
+}</p>
+<p>var user = new UserOld(“Wade”);
+user.sayName(); //wade</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">위 아래 코드처럼 내부동작은 동일하지만, 더 보기 좋고 편리하게 개선된 문법을 슈가 신텍스라고 부른다.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>class Sausage {
+constructor(el1, el2) {
+this.inside1 = el1;
+this.inside2 = el2;
+}</p>
+<p>taste() {
+return this.inside1+ “와” + this.inside2 + “맛이 난다!”;
 }
-
-var user = new UserOld(&quot;Wade&quot;);
-user.sayName(); //wade</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>위 아래 코드처럼 내부동작은 동일하지만, 더 보기 좋고 편리하게 개선된 문법을 슈가 신텍스라고 부른다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">class Sausage {
-  constructor(el1, el2) {
-    this.inside1 = el1;
-    this.inside2 = el2;
-  }
-
-  taste() {
-    return this.inside1+ &quot;와&quot; + this.inside2 + &quot;맛이 난다!&quot;;
-  }
+}</p>
+<p>var classicSausage = new Sausage(“닭고기”, “양파”);
+// console.log(classicSausage.taste());</p>
+<p>class FireSausage extends Sausage{
+constructor(el1, el2, el3) {
+super(el1, el2);
+this.inside3 = el3;
 }
-
-var classicSausage = new Sausage(&quot;닭고기&quot;, &quot;양파&quot;);
-// console.log(classicSausage.taste());
-
-class FireSausage extends Sausage{
-  constructor(el1, el2, el3) {
-    super(el1, el2);
-    this.inside3 = el3;
-  }
-  flavor(){
-    return this.inside3 + &quot;의 풍미도 있다!&quot;;
-  }
+flavor(){
+return this.inside3 + “의 풍미도 있다!”;
 }
+}</p>
+<p>var classicFireSausage = new FireSausage(“소고기”, “파”,“불맛”);
+console.log(classicFireSausage.flavor());</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">이런식으로도 자바랑 비슷하게 사용할수 있다.
 
-var classicFireSausage = new FireSausage(&quot;소고기&quot;, &quot;파&quot;,&quot;불맛&quot;);
-console.log(classicFireSausage.flavor());</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>이런식으로도 자바랑 비슷하게 사용할수 있다.</p>
-<h3>정리</h3>
-<ul>
-<li>자바스크립트의 타입 생성 방법을 다른 언어와 비슷하도록 보기 쉽게 개선한 것이 바로 자바스크립트 클래스다.</li>
-<li>extends 연산자를 통해 상위 타입의 프로퍼티를 상속받습니다.</li>
-<li>super 메소드를 통해 자식 클래스의 생성자 함수가 부모 클래스의 생성자 함수를 덮어 씌우는 것을 방지 할 수 있다.</li>
-</ul>
-<h2>호이스팅</h2></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
+### 정리
+
+- 자바스크립트의 타입 생성 방법을 다른 언어와 비슷하도록 보기 쉽게 개선한 것이 바로 자바스크립트 클래스다.
+- extends 연산자를 통해 상위 타입의 프로퍼티를 상속받습니다.
+- super 메소드를 통해 자식 클래스의 생성자 함수가 부모 클래스의 생성자 함수를 덮어 씌우는 것을 방지 할 수 있다.</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
 /static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" /><img loading="lazy" width="90" height="90" srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,

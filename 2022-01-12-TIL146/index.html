@@ -23,18 +23,18 @@
 <li>자바스크립트는 스크립트 안에 있는 변수, 함수 등이 렉시 컬(Lexical Enviroment) 환경에 올라간다. 여기서 var 함수는 렉시 컬 환경에 올라가자마자 초기화를 해준다. 그래서 var로 선언한 변수를 맨 위에서 console.log로 찍어보면 undefined가 출력된다. 하지만 const let은 초기화가 안 되어있다. 그리고 코드가 실행될 때 초기화된다. 이런 이유로 const와 let은 var처럼 undefined가 아니라 에러가 출력된다.</li>
 <li>클로저는 함수와 렉시 컬 환경의 조합이다. 함수가 생성될 당시의 외부 변수를 기억하고 생성 이후에도 계속 접근이 가능하다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function makeCounter() {
-    let num = 0; // 은닉화
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">makeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> num <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">// 은닉화</span>
 
-    return function() {
-        return num++;
-    }
-}
-let counter = makeCounter();
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> num<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> counter <span class="token operator">=</span> <span class="token function">makeCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-console.log(counter());  //0
-console.log(counter());  //1
-console.log(counter());  //2</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//0</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//1</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">counter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//2</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>인위적으로 makeCounter라는 외부 함수에 있는 변수를 바꿀 수 없다. 오직 num을 증가시키는 내부 함수에 의해서만 가능하다.</p>
 <ul>
 <li>[요약] 함수는 종료되면 함수 안에 있는 메모리도 사라진다. 하지만 외부 함수가 종료되더라도, 외부 함수 안에 있는 내부 함수는 외부 함수를 참조할 수 있다. 이것을 클로저라고 한다.</li>

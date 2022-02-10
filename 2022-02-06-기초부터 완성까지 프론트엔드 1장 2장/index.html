@@ -16,7 +16,7 @@
 </Blockquote>
 <br/>
 <h3>HTML</h3>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">&lt;h1&gt;Hello world&lt;/h1&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span><span class="token plain-text">Hello world</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>HTML요소는 3가지 Content(내용), Start Tag(시작 태그), End Tag(종료 태그)로 나뉘며 이 3가지 구조를 합쳐 Element(요소)라고 부릅니다.
 <br/></p>
 <p>인라인 요소 : 태그가 할당된 텍스트나 이미지의 크기에 맞는 필요한 공간만을 차지합니다. 높이나 너비를 지정 할 수 없으며,줄 내부 어디서든 시작합니다. span, button, img등 대표적인 인라인 요소입니다.</p>
@@ -56,8 +56,8 @@ HTML을 시맨틱하게 작성한다는 것 의미없는 div 태그를 대신해
 <li>meta charset=“UTF-8를 사용해 인코딩 방식을 지정하자.</li>
 <li>open graph, twitter 태그를 사용해 외부 사용자를 유인하자</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">&lt;meta property = &quot;og:title content=&quot;페이지 이름&quot;/&gt;
-&lt;meta property = &quot;og:description content=&quot;페이지에 대한 간략한 한두 줄 설명&quot;/&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token operator">&lt;</span>meta property <span class="token operator">=</span> <span class="token string">"og:title"</span> content<span class="token operator">=</span><span class="token string">"페이지 이름"</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>meta property <span class="token operator">=</span> <span class="token string">"og:description"</span> content<span class="token operator">=</span><span class="token string">"페이지에 대한 간략한 한두 줄 설명"</span><span class="token operator">/</span><span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
 <bn/>
 <h3>박스모델</h3>
 <p>브라우저의 렌더링 엔진은 각 요소를 나타낼 때 CSS 박스 모델에 맞춰 그립니다. 박스 모델은 4가지 영역으로 이뤄지는데 content영역, padding영역, border영역, margin영역으로 구분됩니다. content영역은 텍스트나 하위 박스 모델 등을 나타내며 padding,border,margin은 순서대로 content 영역을 둘러싸는 영역입니다. 둘러싼 영역들은 margin,padding,border CSS 프로퍼티로 너비를 지정합니다.</p>
@@ -79,9 +79,9 @@ HTML을 시맨틱하게 작성한다는 것 의미없는 div 태그를 대신해
 </ul>
 <h3>미디어 쿼리</h3>
 <p>콘텐츠 자체를 변경하지 않고 장치의 해상도, 뷰포트의 너비, 미디어의 유형 같은 조건에 따라 스타일을 지정할 수 있습니다. 데스크톱과 모바일, 태블릿 등 화면의 크기에 따라 다른 스타일을 지정하거나 인쇄, 음성 장치 등의 조건에 따라 다른 스타일을 적용할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">@media (min-width: 700px) {
-    /* ... */
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx">@<span class="token function">media</span> <span class="token punctuation">(</span><span class="token parameter">min<span class="token operator">-</span>width<span class="token operator">:</span> <span class="token number">700</span>px</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* ... */</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <h3>접근성</h3>
 <p>웹 접근성은 모든 신체적 한계, 환경적 한계를 고려해 개발하는 것을 의미합니다. 웹 접근성에 대한 가이드라인은 대표적으로</p>
 <ol>
@@ -91,9 +91,9 @@ HTML을 시맨틱하게 작성한다는 것 의미없는 div 태그를 대신해
 <li>Focus하는 지점을 명확하게 하자. 예를들어 input칸에 갔을경우 윤곽선이 생기는 것을 설정해주자</li>
 <li>멀티미디어 요소에 접근성을 부여하자.</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">&lt;img src=&quot;coffee.png&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token operator">&lt;</span>img src<span class="token operator">=</span>"coffee<span class="token punctuation">.</span>png<span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>스크린 리더는 이미지를 “coffee.png.image” 라고 읽습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">&lt;img src=&quot;coffee.png&quot; alt=컵에 담긴 따듯한 아메리카노&quot; title=&quot;아메리카노&quot;/&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"coffee.png"</span> alt<span class="token operator">=</span>컵에 담긴 따듯한 아메리카노<span class="token string">" title="</span>아메리카노"<span class="token operator">/</span><span class="token operator">></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <p>위 예제처럼 작성한다면 스크린 리더는 컵에 담긴 따듯한 아메리카노 라고 읽습니다.</p>
 <p>웹 접근성 가이드라인을 모두 완벽하게 맞추는 것은 사실상 불가능에 가깝지만 맞추려는 노력은 해야한다.</p></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,

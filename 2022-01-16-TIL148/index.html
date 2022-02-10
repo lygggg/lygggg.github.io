@@ -20,18 +20,18 @@
 <li>전체 상태값이 하나의 자바스크립트 객체로 표현되기 때문에 활용도가 높아진다. 리덕스를 사용하면 하나의 객체를 직렬화해서 서버와 클라이언트가 프로그램의 전체 상탯값을 서로 주고받을 수 있다. 프로그램이 특정한 상태에 있을 때 발생하는 버그를 확인하기 위해 그 상태값을 저장한 후 반복해서 재현 할 수 있다. 최근 상태값을 버리지 않고 저장해 놓으면 실행 취소와 다시 실행 기능을 쉽게 구현할 수 있다. 하지만 애니메이션을 위한 데이터나 문자열 입력창의 현재 상태값은 컴포넌트에서 관리하는게 더 나을 수 있다. 프로그램의 일부 상태만 리덕스를 활용해도 된다.</li>
 <li>상태값을 불변 객체로 관리한다.</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const incrementAction = {
-    type: &#39;INCREMENT&#39;,
-    amount: 123,
-};
-const conditionalIncrementAction = {
-    type: &#39;CONDITIONAL_INCREMENT&#39;,
-    amount: 2,
-    gt: 10,
-    lt: 100,
-};
-store.dispatch(incrementAction);
-store.dispatch(conditionalIncrementAction);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> incrementAction <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'INCREMENT'</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">123</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> conditionalIncrementAction <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'CONDITIONAL_INCREMENT'</span><span class="token punctuation">,</span>
+  amount<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  gt<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+  lt<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>incrementAction<span class="token punctuation">)</span>
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>conditionalIncrementAction<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <ul>
 <li>액션 객체는 type 속성값이 존재해야한다. type 속성값으로 액션 객체를 구분한다. type 속성값을 제외한 나머지는 상태값을 수정하기 위해 사용되는 정보다.
 액션객체와 함께 dispatch 메서드를 호출하면 상태값이 변경된다. 리덕스의 상택밧을 수정하는 유일한 방법은 액션 객체와 함께 dispatch메서드를 호출하는 것이다. 다른 어떤 방법으로도 상태값을 수정하면 안된다.</li>
