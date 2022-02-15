@@ -9,12 +9,12 @@
 <Blockquote>
 느슨한 타입이라고 타입이 존재하지 않는 것이 아닙니다. 변수를 선언할 때 타입을 명시하지 않는 것일 뿐, 내부적으로는 데이터의 종류에 따른 변수의 타입을 가집니다.
 </Blockquote>
-<br/> 
-자바스크립트에서는 var, let, const 세 가지 키워드를 사용해 변수를 선언하며, 이 변수에 값을 할당합니다. 
 <br/>
+<p>자바스크립트에서는 <code class="language-text">var, let, const</code> 세 가지 키워드를 사용해 변수를 선언하며, 이 변수에 값을 할당합니다.
 <br/>
+<br/></p>
 <h3>var</h3>
-<p>var로 선언된 변수는 기존에 선언된 변수의 값을 덮어쓰며, 함수 스코프를 기준으로 동작합니다.</p>
+<p><code class="language-text">var</code>로 선언된 변수는 기존에 선언된 변수의 값을 덮어쓰며, <code class="language-text">함수 스코프</code>를 기준으로 동작합니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>isSomething<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -22,16 +22,15 @@
 <span class="token punctuation">}</span>
 
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 2;</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>변수 a에 1을 할당하고 조건문 내에 변수 a를 2로 다시 선언했다. 중복된 변수명으로 선언했으나 기존 a의 변수 값을 덮어쓰며, 에러도 발생하지 않는다. var로 변수를 선언할 경우 스코프 내에 이미 동일한 식별자를 가진 변수가 존재한다면 해당 변수에 값을 재할당합니다. 위 예제 코드처럼 작성하면 버그가 발생할 때 원인을 찾기 어렵다.</p>
-<p>블록 함수에서 선언하지 않는 변수는 모두 전역 스코프를 기준으로 선언되며, 이를 전역변수라고 부릅니다. 전역 스코프가 아닌 특정 함수내에서 var로 선언한 변수는 함수 스코프를 가집니다. 함수 스코프를 가진다는 것은 변수를 선언한 함수 내에서만 해당 변수에 접근할수 있다는 것을 의미합니다.</p>
+<p>변수 a에 1을 할당하고 조건문 내에 변수 a를 2로 다시 선언했다. 중복된 변수명으로 선언했으나 기존 a의 변수 값을 덮어쓰며, 에러도 발생하지 않는다. <code class="language-text">var</code>로 변수를 선언할 경우 스코프 내에 이미 동일한 식별자를 가진 변수가 존재한다면 해당 변수에 값을 재할당합니다. 위 예제 코드처럼 작성하면 버그가 발생할 때 원인을 찾기 어렵다.</p>
+<p>블록 함수에서 선언하지 않는 변수는 모두 <code class="language-text">전역 스코프</code>를 기준으로 선언되며, 이를 <code class="language-text">전역변수</code>라고 부릅니다. <code class="language-text">전역 스코프</code>가 아닌 특정 함수내에서 var로 선언한 변수는 <code class="language-text">함수 스코프</code>를 가집니다. <code class="language-text">함수 스코프</code>를 가진다는 것은 변수를 선언한 함수 내에서만 해당 변수에 접근할수 있다는 것을 의미합니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span>
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 1</span>
 <span class="token punctuation">}</span>
 
-<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-error</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>하지만 블록 스코프는 블록을 무시해서 문제가 된다.</p>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// error</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>하지만 <code class="language-text">함수 스코프</code>는 블록을 무시해서 문제가 된다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">//</span>
@@ -39,9 +38,9 @@ error</code><span aria-hidden="true" class="line-numbers-rows" style="white-spac
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 10</span>
 <span class="token punctuation">}</span>
 <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>변수 i는 var를 사용했기 때문에 for문 블록 스코프를 무시한다. 그래서 함수스코프 안에있는 i를 참조가 가능하다. 이렇게 코드를 작성하면 혼란을 초래한다. 이러한 문제를 해결하기 위해 let, const가 등장합니다.</p>
+<p>변수 i는 var를 사용했기 때문에 for문 <code class="language-text">블록 스코프</code>를 무시한다. 그래서 <code class="language-text">함수스코프</code> 안에있는 i를 참조가 가능하다. 이렇게 코드를 작성하면 혼란을 초래한다. 이러한 문제를 해결하기 위해 <code class="language-text">let</code>, <code class="language-text">const</code>가 등장합니다.</p>
 <h3>let과 const</h3>
-<p>let, const는 var와 달리 재선언을 허용하지 않으며, 블록스코프를 가집니다.</p>
+<p><code class="language-text">let</code>, <code class="language-text">const</code>는 <code class="language-text">var</code>와 달리 <code class="language-text">재선언</code>을 허용하지 않으며, <code class="language-text">블록스코프</code>를 가집니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span>
 <span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">2</span> <span class="token comment">// error</span>
 
@@ -52,7 +51,7 @@ error</code><span aria-hidden="true" class="line-numbers-rows" style="white-spac
 <span class="token punctuation">}</span>
 
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// error</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>블록 스코프를 가진다는 소리는 변수를 둘러싼 블록({}) 안에서만 해당 변수에 접근할 수 있다는 의미입니다.</p>
+<p><code class="language-text">블록 스코프</code>를 가진다는 소리는 변수를 둘러싼 블록({}) 안에서만 해당 변수에 접근할 수 있다는 의미입니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
@@ -60,16 +59,16 @@ error</code><span aria-hidden="true" class="line-numbers-rows" style="white-spac
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">//error</span>
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>자바스크립트를 아는 사람이라면 당연한 결과인 것 같다.</p>
-<p>const는 let과 달리 값의 변경을 허용하지 않는다. const는 변하지 않는 상수를 선언할 때 사용한다.</p>
+<p><code class="language-text">const</code>는 <code class="language-text">let</code>과 달리 값의 변경을 허용하지 않는다. const는 변하지 않는 상수를 선언할 때 사용한다.</p>
 <h3>객체와 타입</h3>
-<p>자바스크립트 타입을 다른 언어들과 달리 매우 느슨합니다. 타입과 상관없이 car, let, const와 같은 키워드로 변수를 선언합니다. 자바스크립트 값은 원시 타입과 객체 타입으로 나뉩니다.</p>
+<p>자바스크립트 타입을 다른 언어들과 달리 매우 느슨합니다. 타입과 상관없이 car, let, const와 같은 키워드로 변수를 선언합니다. 자바스크립트 값은 <code class="language-text">원시 타입</code>과 <code class="language-text">객체 타입</code>으로 나뉩니다.</p>
 <p>원시 타입</p>
 <p><code class="language-text">number, string, boolean, null, undefined, Symbol, BigInt(새로 추가됨)</code></p>
-<p>원시 타입은 하나의 값만 가지며, 불변의 데이터라 연산을 해도 기존 값이 변경되지 않는다.</p>
+<p><code class="language-text">원시 타입</code>은 하나의 값만 가지며, 불변의 데이터라 연산을 해도 기존 값이 변경되지 않는다.</p>
 <p><code class="language-text">원시 타입을 제외한 나머지는 객체다</code></p>
 <br/>
 <h3>Symbol</h3>
-<p>심볼은 데이터의 유일함을 나타낼 때 사용하며, 생성된 심볼은 다른 어떰 심볼과도 일치하지 않습니다. 심볼은 다른 원시 타입과는 달리 Symbol() 함수를 호출해 사용합니다.</p>
+<p>심볼은 데이터의 유일함을 나타낼 때 사용하며, 생성된 심볼은 다른 어떰 심볼과도 일치하지 않습니다. 심볼은 다른 원시 타입과는 달리 <code class="language-text">Symbol()</code> 함수를 호출해 사용합니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> sym1 <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'key'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> sym2 <span class="token operator">=</span> <span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">'key'</span><span class="token punctuation">)</span>
 
@@ -80,7 +79,7 @@ error</code><span aria-hidden="true" class="line-numbers-rows" style="white-spac
 
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sym1 <span class="token operator">===</span> Symbol<span class="token punctuation">.</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token string">'myApp.key'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sym2 <span class="token operator">===</span> sym2<span class="token punctuation">)</span> <span class="token comment">// true</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>심볼은 객체나 클래스에서 유일한 프로퍼티를 만들 때 사용됩니다. 심볼을 사용해 프로퍼티를 만들면 유일함이 보장되어 프로퍼티 추가시 충돌날 일이 없습니다. 또한 외부접근에서 변경을 막을수있습니다.</p>
+<p><code class="language-text">심볼</code>은 객체나 클래스에서 유일한 프로퍼티를 만들 때 사용됩니다. 심볼을 사용해 프로퍼티를 만들면 유일함이 보장되어 프로퍼티 추가시 충돌날 일이 없습니다. 또한 외부접근에서 변경을 막을수있습니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token punctuation">{</span>
   name<span class="token operator">:</span> <span class="token string">'javascript'</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
@@ -100,8 +99,8 @@ user<span class="token punctuation">[</span>height<span class="token punctuation
   <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// lygggg</span>
 <span class="token punctuation">}</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span> <span class="token comment">// {name: 'lygggg', Symbol(height): 181}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>for문으로 출력할때는 Symbol로 정의한 데이터는 숨겨진다.
-심볼로 정의한 프로퍼티를 수정할 방법이 존재하긴하는데, getOwnPropertySymbols() 메서드로 키값을 얻어서 갱신할 수 있지만 지양하는게 좋다고 한다.</p>
+<p>for문으로 출력할때는 <code class="language-text">Symbol</code>로 정의한 데이터는 숨겨진다.
+심볼로 정의한 프로퍼티를 수정할 방법이 존재하긴하는데, <code class="language-text">getOwnPropertySymbols()</code> 메서드로 키값을 얻어서 갱신할 수 있지만 지양하는게 좋다고 한다.</p>
 <h3>객체 리터럴</h3>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
   name<span class="token operator">:</span> <span class="token string">'lygggg'</span><span class="token punctuation">,</span>
@@ -121,7 +120,7 @@ user<span class="token punctuation">[</span>height<span class="token punctuation
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3>Object.defineProperty()와 프로퍼티 속성</h3>
-<p>정적 메서드 Object.defineProperty를 사용하면 접근자 프로퍼티를 생성할 수있다. 이 메서드는 객체에 직접 새로운 프로퍼티를 정의하거나 이미 존재하는 프로퍼티를 수정한 후 그 객체를 반환합니다.</p>
+<p>정적 메서드 <code class="language-text">Object.defineProperty</code>를 사용하면 접근자 프로퍼티를 생성할 수있다. 이 메서드는 객체에 직접 새로운 프로퍼티를 정의하거나 이미 존재하는 프로퍼티를 수정한 후 그 객체를 반환합니다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> myName<span class="token operator">:</span> <span class="token string">'javascript'</span> <span class="token punctuation">}</span>
 
 Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -137,7 +136,7 @@ Object<span class="token punctuation">.</span><span class="token function">defin
 
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// java</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'lygggg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// lygggg</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
-<p>Object.defineProperty() 메서드는 첫 번째 인자로 대상이 되는 객체, 두 번째 인자로 추가 또는 갱신하려는 프로퍼티 명이나 심볼을 넘깁니다. 그리고 마지막 인자로 프로퍼티 서술자를 정의한 객체를 넘깁니다.</p>
+<p><code class="language-text">Object.defineProperty()</code> 메서드는 첫 번째 인자로 대상이 되는 객체, 두 번째 인자로 추가 또는 갱신하려는 프로퍼티 명이나 심볼을 넘깁니다. 그리고 마지막 인자로 프로퍼티 서술자를 정의한 객체를 넘깁니다.</p>
 <p><code class="language-text">configurable</code> : 프로퍼티의 삭제 및 서술자의 변경 가능 여부를 결정합니다.</p>
 <p><code class="language-text">enumerable</code> : 열거 시 프로퍼티의 노출 여부를 결정합니다. 열거 시 프로퍼티가 노출된다면 enumerable 속성값은 true이며 디폴트값은 false입니다.</p>
 <p><code class="language-text">writable</code> : 프로퍼티의 수정 가능 여부를 결정합니다. 수정이 가능하다면 writable 속성 값은 true이며 디폴트값은 false입니다.</p>
@@ -170,9 +169,9 @@ arr<span class="token punctuation">.</span>length <span class="token operator">=
 <h3>랩퍼(wrapper) 객체</h3>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> str <span class="token operator">=</span> <span class="token string">'javascript'</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token comment">// 10</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
-<p>문자열은 원시타입인데 어떻게 length 프로퍼티를 가질수있을까? 자바스크립트는 문자열의 프로퍼티에 접근할 때 내부적으로 문자열 값을 가지고 임시 객체로 변환합니다. 그리고 프로퍼티 접근이 종료되면 생성된 객체는 제거됩니다. 이런 과정을 박싱(Boxing)이라고 부릅니다. 숫자와 불리언타입 다 동일합니다. 박싱 과정에서 생성되는 임시 객체를 랩퍼 객체라고 합니다.</p>
+<p>문자열은 원시타입인데 어떻게 length 프로퍼티를 가질수있을까? 자바스크립트는 문자열의 프로퍼티에 접근할 때 내부적으로 문자열 값을 가지고 임시 객체로 변환합니다. 그리고 프로퍼티 접근이 종료되면 생성된 객체는 제거됩니다. 이런 과정을 <code class="language-text">박싱</code>(Boxing)이라고 부릅니다. 숫자와 불리언타입 다 동일합니다. 박싱 과정에서 생성되는 임시 객체를 <code class="language-text">랩퍼 객체</code>라고 합니다.</p>
 <h3>언박싱</h3>
-<p>박싱이 있다면 언박싱도 있다. 반대로 랩퍼객체를 원시타입으로 변환한다.</p>
+<p>박싱이 있다면 <code class="language-text">언박싱</code>도 있다. 반대로 <code class="language-text">랩퍼객체를 원시타입</code>으로 변환한다.</p>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> num <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Number</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
