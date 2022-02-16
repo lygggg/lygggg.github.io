@@ -19,18 +19,20 @@ App.js에서
 
 - App.js
 
-```
-<AuthRoute path='/purchase'>
-              <PurchaseList/>
-            </AuthRoute>
+```tsx
+<AuthRoute path="/purchase">
+  <PurchaseList />
+</AuthRoute>
 ```
 
 AuthRoute를 선언해준 뒤에
 
 - Home.js
 
-```
-<li><Link to='/purchase'>구매목록</Link></li>
+```tsx
+<li>
+  <Link to="/purchase">구매목록</Link>
+</li>
 ```
 
 링크 path를 설정해줍니다. 그후 PurchaseList라는 컴포넌트를 만들어 주어야 합니다. 이 컴포넌트는 로그인 상태일시에 들어갈수있는 페이지라고 생각하시면 됩니다. 아무 컴포넌트나 만들어서 넣어주시면 됩니다. 그럼 이제 경로가 `/purchase`이면, `PurchaseList`라고 설정해둔 컴포넌트로 라우팅합니다.

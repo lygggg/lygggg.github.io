@@ -20,14 +20,14 @@ tag: ['Posts']
 
 #### 팩토리얼(Factorial) 구하기
 
-```
+```tsx
 function factorial(n) {
-    if(n === 1) {
-        return 1;
-    }
-    return n* factorial(n - 1);
+  if (n === 1) {
+    return 1
+  }
+  return n * factorial(n - 1)
 }
-factorial(3); // 6
+factorial(3) // 6
 ```
 
 즉 팩토리얼함수에 3의 값을 넣었을 때 처음 스택 3이 쌓이고 두 번째 2 마지막 조건문을 끝으로 1이 쌓입니다. 결과적으로 3*2*1 = 6이 됩니다.
@@ -50,7 +50,7 @@ n이 1일 경우 함수가 정지하도록 설정하였습니다.
 
 밑에 코드는 재귀와 꼬리 재귀를 사용한 코드다.
 
-```
+```tsx
 int Recursive(int n)
 {
  if(n==1) return 1;

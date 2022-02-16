@@ -46,11 +46,9 @@ ex 입력값이 "abcde"면 반환값은 "c", 입력값이 "qwer"이면 반환값
 2. 입력값의 길이가 짝수면 입력값의 길이를 절반으로 나눈값의 몫을 구한후, 입력값의s 에서 나눈값의 몫-1에서부터 2개의 글자를 출력한다.
 3. 입력값의 길이가 홀수면 입력값의 길이에서 절반으로 나눈값을 반올림한값 -1 에서부터 한글자를 출력한다.
 
-```
+```tsx
 function solution(s) {
-
-    return s.substr(Math.ceil(s.length/2) -1, (s.length%2 === 0 ? 2:1));
-
+  return s.substr(Math.ceil(s.length / 2) - 1, s.length % 2 === 0 ? 2 : 1)
 }
 ```
 
