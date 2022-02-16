@@ -6,106 +6,106 @@
 <p>따라서 Boolean을 제외한 String int 같은 클래스의 인스턴스는 모두 정렬이 가능합니다.
 이때 기본정렬은 오름차순이고, 설정해서 내림차순으로 변경이 가능합니다.</p>
 <p>다음 예제는 인스턴스가 비교를 위해 사용자 정의 클래스인 Car클래스가 Comparable인터페이스를 구현하는 예제입니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">class Car implements Comparable&lt;Car&gt; {
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token keyword">implements</span> <span class="token class-name">Comparable<span class="token operator">&lt;</span>Car<span class="token operator">></span></span> <span class="token punctuation">{</span>
 
-    private String modelName;
+    <span class="token keyword">private</span> String modelName<span class="token punctuation">;</span>
 
-    private int modelYear;
+    <span class="token keyword">private</span> int modelYear<span class="token punctuation">;</span>
 
-    private String color;
-
-
-
-    Car(String mn, int my, String c) {
-
-        this.modelName = mn;
-
-        this.modelYear = my;
-
-        this.color = c;
-
-    }
+    <span class="token keyword">private</span> String color<span class="token punctuation">;</span>
 
 
 
-    public String getModel() {
+    <span class="token function">Car</span><span class="token punctuation">(</span><span class="token parameter">String mn<span class="token punctuation">,</span> int my<span class="token punctuation">,</span> String c</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-        return this.modelYear + &quot;식 &quot; + this.modelName + &quot; &quot; + this.color;
+        <span class="token keyword">this</span><span class="token punctuation">.</span>modelName <span class="token operator">=</span> mn<span class="token punctuation">;</span>
 
-    }
+        <span class="token keyword">this</span><span class="token punctuation">.</span>modelYear <span class="token operator">=</span> my<span class="token punctuation">;</span>
 
+        <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> c<span class="token punctuation">;</span>
 
-
-    public int compareTo(Car obj) {
-
-        if (this.modelYear == obj.modelYear) {
-
-            return 0;
-
-        } else if(this.modelYear &lt; obj.modelYear) {
-
-            return -1;
-
-        } else {
-
-            return 1;
-
-        }
-
-    }
-
-}
+    <span class="token punctuation">}</span>
 
 
 
-public class Comparable01 {
+    <span class="token keyword">public</span> String <span class="token function">getModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    public static void main(String[] args) {
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>modelYear <span class="token operator">+</span> <span class="token string">"식 "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>modelName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>color<span class="token punctuation">;</span>
 
-        Car car01 = new Car(&quot;아반떼&quot;, 2016, &quot;노란색&quot;);
-
-        Car car02 = new Car(&quot;소나타&quot;, 2010, &quot;흰색&quot;);
+    <span class="token punctuation">}</span>
 
 
 
-        System.out.println(car01.compareTo(car02));
+    <span class="token keyword">public</span> int <span class="token function">compareTo</span><span class="token punctuation">(</span><span class="token parameter">Car obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    }
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>modelYear <span class="token operator">==</span> obj<span class="token punctuation">.</span>modelYear<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>modelYear <span class="token operator">&lt;</span> obj<span class="token punctuation">.</span>modelYear<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+            <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Comparable01</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token parameter">String<span class="token punctuation">[</span><span class="token punctuation">]</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        Car car01 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token string">"아반떼"</span><span class="token punctuation">,</span> <span class="token number">2016</span><span class="token punctuation">,</span> <span class="token string">"노란색"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        Car car02 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Car</span><span class="token punctuation">(</span><span class="token string">"소나타"</span><span class="token punctuation">,</span> <span class="token number">2010</span><span class="token punctuation">,</span> <span class="token string">"흰색"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>car01<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>car02<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <h3>Comparator<T> 인터페이스</h3>
 <p>Comparator 인터페이스는 Comparable 인터페이스와 같이 객체를 정렬하는데 사용되는 인터페이스입니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">import java.util.*;
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">;</span>
 
 
 
-class DescendingOrder implements Comparator&lt;Integer&gt; {
+<span class="token keyword">class</span> <span class="token class-name">DescendingOrder</span> <span class="token keyword">implements</span> <span class="token class-name">Comparator<span class="token operator">&lt;</span>Integer<span class="token operator">></span></span> <span class="token punctuation">{</span>
 
-    public int compare(Integer o1, Integer o2) {
+    <span class="token keyword">public</span> int <span class="token function">compare</span><span class="token punctuation">(</span><span class="token parameter">Integer o1<span class="token punctuation">,</span> Integer o2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-        if(o1 instanceof Comparable &amp;&amp; o2 instanceof Comparable) {
+        <span class="token keyword">if</span><span class="token punctuation">(</span>o1 <span class="token keyword">instanceof</span> <span class="token class-name">Comparable</span> <span class="token operator">&amp;&amp;</span> o2 <span class="token keyword">instanceof</span> <span class="token class-name">Comparable</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-            Integer c1 = (Integer)o1;
+            Integer c1 <span class="token operator">=</span> <span class="token punctuation">(</span>Integer<span class="token punctuation">)</span>o1<span class="token punctuation">;</span>
 
-            Integer c2 = (Integer)o2;
+            Integer c2 <span class="token operator">=</span> <span class="token punctuation">(</span>Integer<span class="token punctuation">)</span>o2<span class="token punctuation">;</span>
 
-            return c2.compareTo(c1);
+            <span class="token keyword">return</span> c2<span class="token punctuation">.</span><span class="token function">compareTo</span><span class="token punctuation">(</span>c1<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        }
+        <span class="token punctuation">}</span>
 
-        return -1;
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 
-    }
+    <span class="token punctuation">}</span>
 
-}
+<span class="token punctuation">}</span>
 
 
 
-public class Comparable02 {
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Comparable02</span> <span class="token punctuation">{</span>
 
-    public static void main(String[] args) {
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token parameter">String<span class="token punctuation">[</span><span class="token punctuation">]</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-        TreeSet&lt;Integer&gt; ts = new TreeSet&lt;Integer&gt;(new DescendingOrder());
+        TreeSet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span></span><span class="token punctuation">></span></span><span class="token plain-text"> ts = new TreeSet&lt;Integer>(new DescendingOrder());
 
 
 
@@ -119,21 +119,21 @@ public class Comparable02 {
 
 
 
-        Iterator&lt;Integer&gt; iter = ts.iterator();
+        Iterator</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span></span><span class="token punctuation">></span></span><span class="token plain-text"> iter = ts.iterator();
 
-        while(iter.hasNext()) {
+        while(iter.hasNext()) </span><span class="token punctuation">{</span>
 
-            System.out.println(iter.next());
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iter<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        }
+        <span class="token punctuation">}</span><span class="token plain-text">
 
     }
 
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
+}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
 /static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" /><img loading="lazy" width="90" height="90" srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
 /static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
-/static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" src="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png" alt="Your Profile" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="description"><a href="/about"><span class="author">Lee YoungGyu</span></a><p class="intro"></p><a href="https://github.com/lygggg"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://baayoo93@gmail.com"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></a><a href="https://lygggg.github.io/about"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" class="svg-inline--fa fa-smile fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"></path></svg></a></div></div><div class="navigator"><span class="prev"><a rel="prev" href="/2020-02-10-Complexity/">&lt;<!-- --> <!-- -->시간 복잡도, 공간 복잡도, Big-O에 대해서 알아보자.</a></span><span class="next"><a rel="next" href="/2022-01-09-storage/">[javaScript] 웹스토리지(localStorage, sessionStorage) 자세하게 정리.<!-- --> <!-- -->&gt;</a></span></div><div id="disqus_thread"></div></div><footer class="footer">© 2020 <a href="https://github.com/passwd10">ParkAnswer</a>, Built with<!-- --> <a href="https://github.com/passwd10/gatsby-starter-answer">Gatsby-Find-Answer</a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+/static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" src="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png" alt="Your Profile" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="description"><a href="/about"><span class="author">Lee YoungGyu</span></a><p class="intro"></p><a href="https://github.com/lygggg"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://baayoo93@gmail.com"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></a><a href="https://lygggg.github.io/about"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" class="svg-inline--fa fa-smile fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"></path></svg></a></div></div><div class="navigator"><span class="prev"><a rel="prev" href="/2020-02-10-Complexity/">&lt;<!-- --> <!-- -->시간 복잡도, 공간 복잡도, Big-O에 대해서 알아보자.</a></span><span class="next"><a rel="next" href="/2022-01-09-storage/">[javaScript] 웹스토리지(localStorage, sessionStorage) 정리.<!-- --> <!-- -->&gt;</a></span></div><div id="disqus_thread"></div></div><footer class="footer">© 2020 <a href="https://github.com/passwd10">ParkAnswer</a>, Built with<!-- --> <a href="https://github.com/passwd10/gatsby-starter-answer">Gatsby-Find-Answer</a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
   
   
   if(true) {
