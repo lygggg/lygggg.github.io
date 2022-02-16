@@ -18,7 +18,7 @@ tag: ['Posts']
 
 다음 예제는 인스턴스가 비교를 위해 사용자 정의 클래스인 Car클래스가 Comparable인터페이스를 구현하는 예제입니다.
 
-```
+```tsx
 class Car implements Comparable<Car> {
 
     private String modelName;
@@ -92,7 +92,7 @@ public class Comparable01 {
 
 Comparator 인터페이스는 Comparable 인터페이스와 같이 객체를 정렬하는데 사용되는 인터페이스입니다.
 
-```
+```tsx
 import java.util.*;
 
 

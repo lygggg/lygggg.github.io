@@ -10,27 +10,27 @@ tag: ['Posts']
 
 ## forEach
 
-```
-const array = [1, 2, 3, 4, 5];
-const test = [];
+```tsx
+const array = [1, 2, 3, 4, 5]
+const test = []
 
 array.forEach(num => {
-  test.push(num * 3);
-});
+  test.push(num * 3)
+})
 
-console.log(test); // [3, 6, 9, 12, 15]
+console.log(test) // [3, 6, 9, 12, 15]
 ```
 
 ## map
 
-```
-const array = [1, 2, 3, 4, 5];
-const test = array.map(num => num * 3);
+```tsx
+const array = [1, 2, 3, 4, 5]
+const test = array.map(num => num * 3)
 
-console.log(test); // [3, 6, 9, 12, 15]
+console.log(test) // [3, 6, 9, 12, 15]
 ```
 
-느낌이 오는가?
+느낌이 오시나요?
 
 가장 큰 차이점은
 `forEach는 배열의 요소마다 한번씩 정해진 함수를 실행한다. 반면 map은 배열의 요소에 정해진 함수의 결과를 새로운 배열에 반환한다.`

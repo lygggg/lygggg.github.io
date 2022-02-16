@@ -30,10 +30,10 @@ Big-O는 최고차항만을 계산합니다.
 
 앞서 이야기한 대로 시간 복잡도란 알고리즘이 수행되는데 소요되는 연산 횟수를 이야기합니다.
 
-```
+```tsx
 function sample(arr, n) {
-  for(let i=0; i<arr.length; i++) {
-    if(arr[i] === n) return i;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === n) return i
   }
 }
 ```
