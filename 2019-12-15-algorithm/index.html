@@ -28,11 +28,9 @@
 <li>입력값의 길이가 짝수면 입력값의 길이를 절반으로 나눈값의 몫을 구한후, 입력값의s 에서 나눈값의 몫-1에서부터 2개의 글자를 출력한다.</li>
 <li>입력값의 길이가 홀수면 입력값의 길이에서 절반으로 나눈값을 반올림한값 -1 에서부터 한글자를 출력한다.</li>
 </ol>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">function solution(s) {
-
-    return s.substr(Math.ceil(s.length/2) -1, (s.length%2 === 0 ? 2:1));
-
-}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">function</span> <span class="token function">solution</span><span class="token punctuation">(</span><span class="token parameter">s</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> s<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>length <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token number">2</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <h3>사용한 함수</h3>
 <ul>
 <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil">Math.ceil</a></li>

@@ -12,48 +12,48 @@ Node.js 기반으로 만들어진 서버가 가동되면, 변수들을 initializ
 <p>이벤트가 콜백과 비슷해 보이지만, 차이점이 있습니다. 차이점은, 콜백함수는 비동기식 함수에서 결과를 반환할때 호출되지만, 이벤트 핸들링은 옵저버 패턴에 의해 작동 된다는점 입니다.</p>
 <p>EventListeners 함수들이 옵저버 역할을 합니다. event가 실행될때 까지 기다리다가 실행되면 listener(이벤트 처리 함수) 기능이 실행됩니다.
 Node.js에는 events 모듈과 EventEmitter 클래스가 내장되어있다. 이를 사용해서 event와 event listner를 바인딩 할 수 있습니다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">// events 모듈 사용
-var events = require(&#39;events&#39;);
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token comment">// events 모듈 사용</span>
+<span class="token keyword">var</span> events <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'events'</span><span class="token punctuation">)</span>
 
-// EventEmitter 객체 생성
-var eventEmitter = new events.EventEmitter();</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token comment">// EventEmitter 객체 생성</span>
+<span class="token keyword">var</span> eventEmitter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">events</span><span class="token punctuation">.</span><span class="token function">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>다음은 이벤트 핸들러와 이벤트를 연동시키는 구문이다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">// event와 EventHandler 를 연동(bind)
-// eventName 은 임의로 설정 가능
-eventEmitter.on(&#39;eventName&#39;, eventHandler);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token comment">// event와 EventHandler 를 연동(bind)</span>
+<span class="token comment">// eventName 은 임의로 설정 가능</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> eventHandler<span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
 <p>프로그램안에서 이벤트를 발생시킬때의 구문이다.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">eventEmitter.emit(&#39;eventName&#39;);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx">eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
 <h2>이벤트 핸들링 예제</h2>
 <p>이벤트를 다루는 예제를 작성해보도록 하자.</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">// events 모듈 사용
-var events = require(&#39;events&#39;);
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token comment">// events 모듈 사용</span>
+<span class="token keyword">var</span> events <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'events'</span><span class="token punctuation">)</span>
 
-// EventEmitter 객체 생성
-var eventEmitter = new events.EventEmitter();
+<span class="token comment">// EventEmitter 객체 생성</span>
+<span class="token keyword">var</span> eventEmitter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">events</span><span class="token punctuation">.</span><span class="token function">EventEmitter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-// EventHandler 함수 생성
-var connectHandler = function connected(){
-    console.log(&quot;Connection Successful&quot;);
+<span class="token comment">// EventHandler 함수 생성</span>
+<span class="token keyword">var</span> <span class="token function-variable function">connectHandler</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">connected</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Connection Successful'</span><span class="token punctuation">)</span>
 
-    // data_recevied 이벤트를 발생시키기
-    eventEmitter.emit(&quot;data_received&quot;);
-}
+  <span class="token comment">// data_recevied 이벤트를 발생시키기</span>
+  eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'data_received'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
 
-// connection 이벤트와 connectHandler 이벤트 핸들러를 연동
-eventEmitter.on(&#39;connection&#39;, connectHandler);
+<span class="token comment">// connection 이벤트와 connectHandler 이벤트 핸들러를 연동</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'connection'</span><span class="token punctuation">,</span> connectHandler<span class="token punctuation">)</span>
 
-// data_received 이벤트와 익명 함수와 연동
-// 함수를 변수안에 담는 대신에, .on() 메소드의 인자로 직접 함수를 전달
-eventEmitter.on(&#39;data_received&#39;, function(){
-    console.log(&quot;Data Received&quot;);
-});
+<span class="token comment">// data_received 이벤트와 익명 함수와 연동</span>
+<span class="token comment">// 함수를 변수안에 담는 대신에, .on() 메소드의 인자로 직접 함수를 전달</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'data_received'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Data Received'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-// connection 이벤트 발생시키기
-eventEmitter.emit(&#39;connection&#39;);
+<span class="token comment">// connection 이벤트 발생시키기</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'connection'</span><span class="token punctuation">)</span>
 
-console.log(&quot;Program has ended&quot;);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Program has ended'</span><span class="token punctuation">)</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <p>출력결과</p>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">$ node main.js
+<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx">$ node main<span class="token punctuation">.</span>js
 Connection Successful
 Data Received
 Program has ended</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
