@@ -61,7 +61,9 @@
 <url> <loc>http://answer.netlify.app/2022-02-18-포켓몬/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2022-02-19-모의고사/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-19-TIL22/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://answer.netlify.app/2022-02-19-TIL169/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-20-TIL23/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://answer.netlify.app/2022-02-19-기초부터 완성까지 프론트엔드4장/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-23-TIL24/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-24-TIL25/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://answer.netlify.app/2019-12-22-webserverWasNode/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
