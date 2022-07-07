@@ -1,0 +1,262 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.625 -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:Ubuntu;font-weight:700;text-rendering:optimizeLegibility;font-size:40px;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:30px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:20px;color:inherit;font-family:Ubuntu;font-weight:600;text-rendering:optimizeLegibility;font-size:30px;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:30px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:20px;color:inherit;font-family:Ubuntu;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:10px;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:10px;color:inherit;font-family:Ubuntu;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Helvetica','Arial',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}ul{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:6px;list-style-position:outside;list-style-image:none;}ol{margin-left:1.625rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-family:Ubuntu;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:0.85rem;line-height:1.625rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;font-size:1rem;line-height:1.625rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}blockquote{margin-left:1.625rem;margin-right:1.625rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(0.8125rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8125rem;}b{font-weight:600;}strong{font-weight:600;}dt{font-weight:600;}th{font-weight:600;}li{margin-bottom:2px;}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}li > ul{margin-left:1.625rem;margin-bottom:calc(0.8125rem / 2);margin-top:calc(0.8125rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(0.8125rem / 2);}code{font-size:0.85rem;line-height:1.625rem;}kbd{font-size:0.85rem;line-height:1.625rem;}samp{font-size:0.85rem;line-height:1.625rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.08333rem;padding-right:1.08333rem;padding-top:0.8125rem;padding-bottom:calc(0.8125rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{text-decoration:none;font-family:Ubuntu;}a:hover{text-decoration:none;}span{font-family:Ubuntu;}button{font-family:Ubuntu;border:0;outline:0;}div{font-family:Ubuntu;}</style><style data-href="/styles.3e2b9592fbb98d957979.css" id="gatsby-global-css">code[class*=language-],pre[class*=language-]{color:#fff;background:none;font-family:Ubuntu,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:15px;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;padding-right:2em;-moz-tab-size:2;-o-tab-size:2;tab-size:2;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}blockquote{color:#a0a0a0}.gatsby-highlight{background-color:#1d1f21;border-radius:.3em;margin:.5em 0;padding:1em;overflow:auto}.gatsby-highlight pre[class*=language-].line-numbers{padding:0 0 0 2.8em;overflow:initial}div.gatsby-highlight{background:#263238}pre[class*=language-]{padding:.5em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-]{padding:.1em;white-space:normal;background:#447979;border-radius:3px}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}pre[data-line]{position:relative;padding:1em 0 1em 3em}.line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,.08);background:linear-gradient(90deg,rgba(153,122,102,.1) 70%,rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}.line-highlight:before,.line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,.4);color:#f5f2f0;font:700 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}.line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}.line-numbers .line-highlight:after,.line-numbers .line-highlight:before{content:none}.line-numbers-rows>span{pointer-events:none}span.inline-color{display:inline-block;height:1.333ch;width:1.333ch;margin:0 .333ch;box-sizing:border-box;border:1px solid #fff;outline:1px solid #000}div.code-toolbar{position:relative}div.code-toolbar>.toolbar{position:absolute;top:.3em;right:.2em;transition:opacity .3s ease-in-out;opacity:0}div.code-toolbar:hover>.toolbar{opacity:1}div.code-toolbar:focus-within>.toolbar{opacity:1}div.code-toolbar>.toolbar .toolbar-item{display:inline-block}div.code-toolbar>.toolbar a{cursor:pointer}div.code-toolbar>.toolbar button{background:none;border:0;color:inherit;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}div.code-toolbar>.toolbar a,div.code-toolbar>.toolbar button,div.code-toolbar>.toolbar span{color:#bbb;font-size:.8em;padding:0 .5em;background:#f5f2f0;background:hsla(0,0%,87.8%,.2);box-shadow:0 2px 0 0 rgba(0,0,0,.2);border-radius:.5em}div.code-toolbar>.toolbar a:focus,div.code-toolbar>.toolbar a:hover,div.code-toolbar>.toolbar button:focus,div.code-toolbar>.toolbar button:hover,div.code-toolbar>.toolbar span:focus,div.code-toolbar>.toolbar span:hover{color:inherit;text-decoration:none}pre[class*=language-].line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}pre[class*=language-].line-numbers>code{position:relative;white-space:inherit}.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:0;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-ms-user-select:none;user-select:none}.line-numbers-rows>span{display:block;counter-increment:linenumber}.line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}@font-face{font-family:Ubuntu;font-style:normal;font-display:swap;font-weight:300;src:local("Ubuntu Light "),local("Ubuntu-Light"),url(/static/ubuntu-latin-300-16a73d944d9825af5a5c1a1f55de8f28.woff2) format("woff2"),url(/static/ubuntu-latin-300-f47318810718978402787f6c97d80b3c.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:italic;font-display:swap;font-weight:300;src:local("Ubuntu Light italic"),local("Ubuntu-Lightitalic"),url(/static/ubuntu-latin-300italic-094f326bbf5d701e828be07645618e13.woff2) format("woff2"),url(/static/ubuntu-latin-300italic-1f11b1e747c45516b1a5478480d6cedd.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:normal;font-display:swap;font-weight:400;src:local("Ubuntu Regular "),local("Ubuntu-Regular"),url(/static/ubuntu-latin-400-5b23eeb3a32b30e91682d601535d2a89.woff2) format("woff2"),url(/static/ubuntu-latin-400-1e926e228a9e2e1e77034f624211e2b4.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:italic;font-display:swap;font-weight:400;src:local("Ubuntu Regular italic"),local("Ubuntu-Regularitalic"),url(/static/ubuntu-latin-400italic-ff2b5b4da106e880a3f3733fd5d77ceb.woff2) format("woff2"),url(/static/ubuntu-latin-400italic-27149a968393dbdc0d872f05f177e843.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:normal;font-display:swap;font-weight:500;src:local("Ubuntu Medium "),local("Ubuntu-Medium"),url(/static/ubuntu-latin-500-b4e565dcfc8f6cb332be0fc03302ad99.woff2) format("woff2"),url(/static/ubuntu-latin-500-e5613b0c875443174f948840c8ce07f6.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:italic;font-display:swap;font-weight:500;src:local("Ubuntu Medium italic"),local("Ubuntu-Mediumitalic"),url(/static/ubuntu-latin-500italic-657fed7d867932571e9fa5fab260ed90.woff2) format("woff2"),url(/static/ubuntu-latin-500italic-f068ac523f3d278ff11cfa4010af4d2a.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:normal;font-display:swap;font-weight:700;src:local("Ubuntu Bold "),local("Ubuntu-Bold"),url(/static/ubuntu-latin-700-b91fae466c698c775adb2ae92cecc8b2.woff2) format("woff2"),url(/static/ubuntu-latin-700-669545b14b8032954bfe46909785c19f.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:italic;font-display:swap;font-weight:700;src:local("Ubuntu Bold italic"),local("Ubuntu-Bolditalic"),url(/static/ubuntu-latin-700italic-c02fdf8544ee71a10050b800f1c146b1.woff2) format("woff2"),url(/static/ubuntu-latin-700italic-ad7e4c2f2d357a1eb39a11ecc1ad43aa.woff) format("woff")}.top{position:relative;width:100%;height:70px;background:#2f4e77;padding-top:20px}.top .title{color:#fff;opacity:.8;margin-left:20px;margin-top:10px;font-size:35px}.footer{text-align:center;width:100%;height:60px;background:transparent}.footer a{color:navy}.layout-body{margin:3rem auto;max-width:650px;padding:0 1rem;min-height:calc(100vh - 130px - 6rem)}blockquote{border-left:5px solid #a0a0a0;padding-left:15px;margin-left:0}.user{display:flex;align-items:center;margin:20px auto 12px}.user:last-child{margin-bottom:0}.description{flex:1 1;padding-top:5px;margin-left:18px;font-size:17px;color:#666565}.description .author{margin:0 0 3px;padding:0;color:#1b1a1a;opacity:.7;font-weight:500;font-size:20px;letter-spacing:-.5px}.description .author:hover{color:#bb2020}.description .intro{margin-bottom:15px;font-weight:100}.blog-title,.description .icon{color:#1b1a1a}.blog-title{background-color:transparent;font-size:38px;font-weight:700;letter-spacing:-2px}.blog-title:hover{color:#bb2020}.title-link{letter-spacing:-3px;color:#1b1a1a;opacity:.95}.container{margin-top:50px}.title{font-size:23px;font-weight:600;letter-spacing:-.5px;color:#1b1a1a}.title:hover{color:#bb2020}.postDate,.postTag{float:left;margin-top:-15px;margin-right:15px;letter-spacing:-.5px;color:#aaa}.excerpt{color:#8f8e8e;margin:0 0 13px;letter-spacing:-1px;line-height:1.4;font-size:16px}.thumbnail{margin:0 0 60px}.countPost{text-align:center;font-weight:400;margin:-5px 0 20px}.item button{background-color:transparent;margin:5px;color:#bb2020;border:2px solid #bb2020;border-radius:15px;font-size:20px;cursor:pointer}.item button:hover{color:#fff;background:#bb2020}.item button:visited{color:#fff;background:#bb2020}.category{margin:40px 0}.post-title{text-align:center;margin-bottom:50px}.post-date{text-align:right;color:#a5a5a5}.horizontal{margin:50px;background:#1b1a1a;height:1.5px}.navigator{margin:40px 0;display:flex;flex-wrap:wrap;justify-content:space-between}.navigator .next,.navigator .prev{display:inline-block;text-align:center;background:#355a85;line-height:40px;border-radius:30px}.navigator a{margin:auto;padding:16px 8px;font-size:17px;color:#fff}.navigator a:hover{color:#bb2020}</style><meta name="generator" content="Gatsby 2.32.2"/><link rel="icon" href="/icons/icon-48x48.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#6b37bf"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=eb507c3c9a96a193a8a2614ecb928366"/><link rel="preconnect dns-prefetch" href="https://www.google-analytics.com"/><title data-react-helmet="true"></title><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link as="script" rel="preload" href="/webpack-runtime-f296fbe368f29a84a508.js"/><link as="script" rel="preload" href="/framework-1f9e9c9d026ce769db50.js"/><link as="script" rel="preload" href="/app-16b86bde41d76089ae6b.js"/><link as="script" rel="preload" href="/styles-407fe62976dc5310c43e.js"/><link as="script" rel="preload" href="/cb1608f2-f782a8f32dc4d2f4a1aa.js"/><link as="script" rel="preload" href="/a9a7754c-6236e32b63fccc546cfb.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-58b9a13296ff4660feda.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-48b64414da7f7f9df18a.js"/><link as="fetch" rel="preload" href="/page-data/2022-07-06-deepCopy/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3668704128.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="top"><a class="link" href="/"><span class="title">YoungGyu Blog</span></a></div><div class="layout-body"><h1 class="post-title">깊은 복사에 대해 얼마나 알고있을까?</h1><p class="post-date">July 06, 2022</p><div><h2>깊은 복사에 대해 얼마나 알고있을까?</h2>
+<p>제가 자바스크립트에 관한 책을 읽으면 항상 언급되는 것이 깊은복사에 대한 문제였습니다. 그만큼 중요하다고 생각하고, 제가 공부한 것들을 블로그에 정리해보려고 합니다.</p>
+<p>여태까지 깊은 복사를 공부하려고 관련 블로그 글들을 접했을 때에는 자바스크립트에서 제공하는 JSON.stringify 같은 방법들이 깊은 복사에 대한 문제들을 문제없이 해결해준다고 생각했습니다. 그리고 이렇게 알고있었던 것을 반성하며 글로 정리해보려고 합니다.</p>
+<h2>복사를 하기 위한 다양한 방법들</h2>
+<p>아래부터는 다양한 복사 방법들을 보고 이글에서 언급했던 깊은복사에 대해서 생각하면서 몇가지 질문들을 가지고 글을 읽으시면 더 좋을 것 같습니다.</p>
+<ul>
+<li>복사된 객체의 참조 주소와 기존의 객체의 참조 주소가 다른가요?</li>
+<li>어떠한 타입도 문제없이 복사할 수있나요?</li>
+<li>객체 안에 객체가있는 상황이 반복되어도 기존 객체의 참조 주소와 다른가요?</li>
+</ul>
+<h3>Spread Operator</h3>
+<p>Spread 연산자는 편하고 실제도로 객체를 복사할 떄 많이 쓰는 방법입니다.</p>
+<p>기본적으로 Spread 연산자를 사용하기 위해서는 해당 객체에 <code class="language-text">[Symbol.iterator]</code> 프로퍼티가 존재해야 합니다.</p>
+<p><img src="https://user-images.githubusercontent.com/52567149/177507220-318b8b1a-5493-4e40-ba98-48c338e29439.png" alt="iterator"></p>
+<p>간단하게 Spread 연산자의 사용법에 대해서 알아보겠습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const arr = [1, 2, 3, 4];
+const copyArr = [...arr];
+console.log(copyArr) // [1, 2, 3, 4]</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>위 코드를 실행하면 arr 배열을 copyArr에 복사할 수 있습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const arr = [1, 2, 3, 4];
+const copyArr = [...arr];
+arr[Symbol.iterator] = null;
+console.log(copyArr) // [error] arr is not iterable</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<p>또한 위에서 언급했듯이 <code class="language-text">[Symbol.iterator]</code>를 삭제한다면 위와 같은 에러가 발생하지만 다른 문제가 없다면 안전하게 배열을 복사하는 것을 볼 수 있습니다. 그러나 이러한 복사는 치명적인 문제가 존재합니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const arr = [1, 2, 3, 4, [1, 2]];
+const copyArr = [...arr];
+copyArr.push(5);
+copyArr[4].push(3);
+console.log(copyArr); // [1, 2, 3, 4, [1, 2, 3], 5]
+console.log(arr); // [1, 2, 3, 4, [1, 2, 3]]</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>위 코드를 보면 문제점을 찾을 수 있습니다. copyArr에 5를 push했을경우 두 배열의 참조 주소가 다르기 때문에 copyArr에만 5가 들어가지만, arr에는 없는 것을 확인할 수 있습니다. 하지만 copyArr 4번째 인덱스에 있는 배열에 푸쉬했을 경우 기존의 arr에도 값이 들어가있는 것을 확인할 수 있습니다.</p>
+<p>바로 위에서 언급했던 질문중에 <code class="language-text">객체 안에 객체가있는 상황이 반복되어도 기존 객체의 참조 주소와 다른가요?</code> 의 경우에 맞지않습니다. 기존 arr 값들을 하나씩 옮겨담는 작업을 하기 떄문에 즉 Spread 연산자를 사용한 복사는 depth가 1이 넘어가는 객체를 깊은복사 할 수 없기때문에 이 방법은 얇은 복사라고 할 수 있습니다.</p>
+<h3>Array.prototype.slice</h3>
+<p>slice 메소드를 사용하는 방법의 문제점도 위에서 언급했던 Spread 연산자의 문제점과 같습니다. 기존의 배열에서 자르고 싶은 부분을 복사할 수 있는 메서드입니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const arr = [1, 2, 3, 4, [1, 2]];
+const copyArr = arr.slice(); // [1, 2, 3, 4, [1, 2]]
+copyArr.push(5);
+copyArr[4].push(3);
+console.log(copyArr); // [1, 2, 3, 4, [1, 2, 3], 5]
+console.log(arr); // [1, 2, 3, 4,[1, 2, 3]]</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>위에서 언급했던 문제와 동일하게 depth가 1이 넘어가는 객체를 깊은복사 할 수 없기 때문에 얇은 복사라고 할 수 있습니다.</p>
+<h3>Object.assign</h3>
+<p>자바스크립트에서 제공하는 Object,assign()을 사용하면 객체의 모든 데이터들을 복사해 대상 객체에 붙여넣을 수 있습니다. 하지만 이러한 방법도 위에서 제시한 문제들을 해결할 수 없습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const object = {
+    test: 1,
+    testObject: {
+        a: 2,
+        b: 3,
+    },
+};
+
+const copyObj = Object.assign({}, object);
+
+copyObj.testObject.a = 4;
+console.log(object.testObject); // {a: 4, b: 3}
+console.log(copyObj.testObject); // {a: 4, b: 3}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>복사한 copyObj.testObject안의 a를 변경했을시 기존 object의 a 또한 변경되는 모습을 볼 수 있습니다. 그러므로 이 방법 또한 얇은 복사라고 할 수 있습니다.</p>
+<blockquote>
+깊은 클로닝에 대해서, Object.assign() 은 속성의 값을 복사하기때문에 다른 대안을 사용해야합니다. 출처 값이 객체에 대한 참조인 경우, 참조 값만을 복사합니다.
+</blockquote>
+<h3>JSON.stringify</h3>
+<p>JSON.stringify 을 사용한 방법은 깊은 복사에 대해 깊게 공부하기 전까지 정말 좋은 방법이라고 생각하고있었고, 필자도 자주 사용했던 방법입니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const object = {
+    test: 1,
+    testObject: {
+      a: 2,
+      b: 3,
+    },
+  };
+
+  const copyObj = JSON.parse(JSON.stringify(object));
+  copyObj.testObject.a = null;
+  console.log(copyObj.testObject); // {a: null, b: 3}
+  console.log(object.testObject); // {a: 2, b: 3}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>위에 언급했던 얇은 복사 방법들과는 다르게 JSON.stringify를 사용한 복사는 <code class="language-text">객체 안에 객체가있는 상황이 반복되어도 기존 객체의 참조 주소와 다른가요?</code> 에 대한 질문에 만족할 수 있는 방법입니다. 이렇게 될수있는 원리를 알아보면 JSON.stringify는 객체를 string 문자열로 변경해주는 역할을 하고, JSON.parse는 문자열을 다시 객체로 변경해주는 역할을 하기 때문입니다.</p>
+<p>자바스크립트에서 string, number같은 기본형타입은 불변성(Immutable)을 가진 타입이고, 기본형 타입을 제외한 모든 타입 즉 객체타입은 가변성(mutable)을 가진 타입이기 떄문입니다. 그렇기 떄문에 문자열로 변경하는 작업에서 이전 객체에서의 참조가 없어지는 원리를 이용한 방법입니다.</p>
+<h3>그렇다면 JSON.stringify는 아무런 문제점이 없는 방법인가요?</h3>
+<p>JSON.stringify를 이용한 방법에도 문제점이 존재합니다. 바로 JSON에서 허용하는 데이터 포맷이 아닌경우에는 정상적으로 데이터를 복사할 수 없습니다.</p>
+<p>JSON에서 허용하는 데이터 포맷은 아래와 같습니다.</p>
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Array</li>
+<li>Object</li>
+<li>null</li>
+</ul>
+<p>예를들면 객체안의 함수나 메소드, 정규표현식, Symbol, Date, Infinity, Map, Set, BigInt등을 복사할 수 없습니다.</p>
+<h3>저 위에 언급한 것들도 자바스크립트에서는 객체(Object) 아닌가요?</h3>
+<p>맞습니다 실제로 Map, Set 는 타입을 검사해도 Object가 나옵니다. 실제로 저도 같은 생각을 가지고 있었습니다. 그리고 알아본 결과로는 Object.prototype.toString.call를 사용해서 나오는 2번쨰 값이 Object일 경우에만 허용하는 것을 확인할 수 있었습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">console.log(Object.prototype.toString.call(new Set())); // [object Set]
+  console.log(Object.prototype.toString.call(new Map())); // [object Map]
+  console.log(Object.prototype.toString.call(function () { })); // [object Function]
+  console.log(Object.prototype.toString.call(BigInt)); // [object Function]
+  console.log(Object.prototype.toString.call({})); // [object Object]</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>평균적으로 다른 방법들보다 속도면에서 느리다는 단점이 있습니다.</h2>
+<p><img src="https://user-images.githubusercontent.com/52567149/177692595-62767319-5e15-45b7-8704-4090743adecb.png" alt="deepcopytest"></p>
+<p><a href="https://jsben.ch/rmgqP">https://jsben.ch/rmgqP</a>
+첫번째는 재귀를 사용한 복사, 두번째는 lodash, 세번째는 JSON.stringify를 사용하고 나온 성능 테스트 결과입니다.</p>
+<h3>직접 함수를 구현하는 방법</h3>
+<p>직접 깊은복사를 하는 함수를 구현하는 방법이 있습니다. 이 방법은 재귀를 사용한 방법이고, 제가 제시했던 3가지 문제점들을 해결해 줄 수 있습니다.</p>
+<p>아래 코드는 따로 처리가 필요한 타입들을 따로 객체에 저장해서 객체일시 재귀를 반복하고 아닐경우 값을 리턴함으로써 깊은복사가 되도록 구현한 코드입니다. 정답이 아니며 더 좋은 방법이 있을수 있습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const checkType = (target) =&gt; {
+  const CONSTRUCTOR_TYPE = {
+    &quot;[object Array]&quot;: copyArray,
+    &quot;[object Object]&quot;: copyObject,
+    &quot;[object Map]&quot;: copyMap,
+    &quot;[object Set]&quot;: copySet,
+    &quot;[object Date]&quot;: copyDate,
+    &quot;[object RegExp]&quot;: copyRegExp,
+  };
+  const type = Object.prototype.toString.call(target);
+  return CONSTRUCTOR_TYPE[type];
+};
+
+const copyObjectDeep = (target) =&gt; {
+  const isObject = checkType(target);
+  if (isObject) return isObject(target);
+  return target;
+};
+
+function copyObject(target) {
+  const result = {};
+  for (let key of Object.keys(target)) {
+    result[key] = copyObjectDeep(target[key]);
+  }
+  return result;
+}
+
+function copyArray(target) {
+  const result = [];
+  for (let index in target) {
+    result[index] = copyObjectDeep(target[index]);
+  }
+  return result;
+}
+
+function copyMap(target) {
+  const result = new Map();
+  target.forEach((value, key) =&gt; result.set(key, copyObjectDeep(value)));
+  return result;
+}
+
+function copySet(target) {
+  const result = new Set();
+  target.forEach((prop) =&gt; result.add(copyObjectDeep(prop)));
+  return result;
+}
+
+function copyRegExp(target) {
+  return new RegExp(target.source, target.flags);
+}
+
+function copyDate(target) {
+  return new Date(target.getTime());
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>위 코드가 성공적으로 깊은 복사를 수행할 수 있는지 테스트코드 또한 작성해볼 수 있습니다. 재귀로 구현한 함수를 테스트하기 위해서 재귀를 사용하는 방법으로 불변성까지 테스트하도록 작성했습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const obj = {
+  bigInt: BigInt(1),
+  date: Date(),
+  string: &quot;ss&quot;,
+  number: 123,
+  reg: new RegExp(&quot;ab/c&quot;),
+  isNaN: 123 / &quot;a&quot;,
+  infinity: 123 / 0,
+  arr: [1],
+  undefined: undefined,
+  null: null,
+  symbol: Symbol(1),
+  obj1: {
+    obj2: {
+      test: 100,
+      obj3: [1, 2, 3],
+    },
+  },
+  fun: function () {
+    return 100;
+  },
+};
+
+test(&quot;객체 안에 객체안에 객체가 있어도 복사할 수 있다.&quot;, () =&gt; {
+  const copyObj = copyObjectDeep(obj);
+  expect(copyObj.obj1.obj2.test).toEqual(100);
+});
+
+test(&quot;Map,Set를 복사할 수 있다.&quot;, () =&gt; {
+  const map = new Map();
+  map.set(1, &quot;a&quot;);
+  const set = new Set();
+  set.add(&quot;응애&quot;);
+  expect(copyObjectDeep(map)).toEqual(map);
+  expect(copyObjectDeep(set)).toEqual(set);
+});
+
+test(&quot;객체 안에 배열을 복사할 수 있다.&quot;, () =&gt; {
+  const copyObj = copyObjectDeep(obj);
+  expect(copyObj.obj1.obj2.obj3).toEqual([1, 2, 3]);
+});
+
+test(&quot;객체에 함수를 복사할 수 있다.&quot;, () =&gt; {
+  const copyObj = copyObjectDeep(obj);
+  expect(copyObj.fun()).toBe(100);
+});
+
+test(&quot;객체에 Date객체, 정규표현식, Infinity등을 복사할 수 있다.&quot;, () =&gt; {
+  const copyObj = copyObjectDeep(obj);
+  expect(copyObj).toEqual(obj);
+});
+
+test(&quot;객체의 불변성을 테스트한다.&quot;, () =&gt; {
+  const copyObj = copyObjectDeep(obj);
+  const recursiveDeepTest = (obj, copyObj) =&gt; {
+    for (let key in obj) {
+      if (typeof obj[key] === &quot;object&quot; &amp;&amp; obj[key] !== null) {
+        expect(obj[key] === copyObj[key]).toBe(false);
+        recursiveDeepTest(obj[key], copyObj[key]);
+      }
+    }
+  };
+  recursiveDeepTest(obj, copyObj);
+});</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<script src="https://gist.github.com/lygggg/542037096598bb531e6dcef100b34b1b.js"></script>
+<p><img src="https://user-images.githubusercontent.com/52567149/177704550-674f6a27-5a6f-4d79-8945-cc5767e4c413.png" alt="deepjest"></p>
+<p>테스트가 성공적으로 수행되는 것을 볼 수 있습니다.</p>
+<h3>Lodash</h3>
+<p>마지막으로는 많은 사람들이 흔히 사용하는 Lodash를 이용하여 깊은 복사를 하는 방법이 있습니다. 팀원들끼리 합의를 했거나, 이미 프로젝트에서 사용중이라면 사용을 고려해볼 수 있습니다.</p>
+<p>Lodash cloneDeep을 사용하면 위에서 언급한 모든것을 만족하는 결과를 얻을 수 있습니다. 아래코드에서 간단하게 사용법만 알아보겠습니다.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">const _ = require(&#39;lodash&#39;);
+
+const obj = {
+  string: &quot;ss&quot;,
+  number: 123,
+  reg: new RegExp(&quot;ab/c&quot;),
+  isNaN: 123 / &quot;a&quot;,
+  infinity: 123 / 0,
+};
+
+const copyObj = _.cloneDeep(obj);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h2>결론</h2>
+<p>자바스크립트에서는 객체를 복사하는 다양한 방법이 존재한다. Spread Operator, Array.prototype.slice, Object.assign는 깊은 복사를 지원하지 못하고, JSON.stringify는 깊은복사를 지원하지만 JSON 타입에 맞지않는 유형이 있다면 복사를 못하는 문제점이 있기 떄문에 조심해야한다.</p>
+<p>결국 상황에 맞는 방법을 사용하는 것이 최고라고 생각한다. 특정한 상황에서는 위에 언급한 방법들이 최선의 방법이 될수도 있다. 예를들면 알고리즘 문제를 풀떄 간단한 배열, string, number만 저장하는 객체라면 얇은 복사, JSON.stringify를 사용하는 것도 좋은 방법이 될 수 있다. 그런 것이 아니라면 직접 구현하거나 lodash같은 라이브러리를 사용하는 것을 고려해보자.</p>
+<p>객체의 불변성은 어디서나 언급될 정도로 중요한 문제지만 무조건은 없다고 생각한다. 객체가 무거운 상황이거나, 생명주기가 짧은경우, 상태를 공유하는 상황일때 가변으로 설계를 고려하는 것도 좋은 대안 될 수도 있다.</p></div><hr class="horizontal"/><div class="user"><div class="profile gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:90px;height:90px;border-radius:100%"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABQElEQVQ4y5VUS07DMBB1aruqegMOADdBYgXdVln0COUiXRGJCyAhsYEuOAlijcQZumrswkz0HKbGThxLLzOyZ17mZyul1E8GJyEl5FkKSSLp2BIc0CZ+VEQ45DAW6WC6jKeqqjYM1jM2oxF61olkq6JFe/ew86UResgPQWIYgvczsh0kbCGf4TyjxZ+OG3svkW0R4V5E2EGsd9i4KSl/WWsXCDFEqIwxSxLfU1KWTblGhJqEhn5T2pR4mFl/DVmL+r2J0qTmMUnW14ZSvVJ/3bkUji5Dmp36A6GhOs4DIemWxAPOcrfrbONIeKQ63WqtL3Jd5jO2YVv4/Isw1GwXXQyOyKAhGrqNbHZRTbuPQ1fv1MQFn1DTnjDMU0NYEWrCegQ1bJtojEZfjxKcjY183zxC94VwIruTTDn33Jei9/0F0E8uZmUCGTYAAAAASUVORK5CYII=" alt="Your Profile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
+/static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
+/static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" /><img loading="lazy" width="90" height="90" srcset="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png 1x,
+/static/092799f3998c5c33fabfa980b718f6f3/a5bb6/profile.png 1.5x,
+/static/092799f3998c5c33fabfa980b718f6f3/d8216/profile.png 2x" src="/static/092799f3998c5c33fabfa980b718f6f3/847e4/profile.png" alt="Your Profile" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><div class="description"><a href="/about"><span class="author">Lee YoungGyu</span></a><p class="intro"></p><a href="https://github.com/lygggg"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://baayoo93@gmail.com"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" class="svg-inline--fa fa-google fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg></a><a href="https://lygggg.github.io/about"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" class="svg-inline--fa fa-smile fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style="width:23px;margin-right:10px"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"></path></svg></a></div></div><div class="navigator"><span class="prev"><a aria-current="page" rel="prev" class="" href="/2022-07-06-deepCopy/">&lt;<!-- --> <!-- -->깊은 복사에 대해 얼마나 알고있을까?</a></span><span class="next"><a aria-current="page" rel="next" class="" href="/2022-07-06-deepCopy/">깊은 복사에 대해 얼마나 알고있을까?<!-- --> <!-- -->&gt;</a></span></div><div id="disqus_thread"></div></div><footer class="footer">© 2020 <a href="https://github.com/passwd10">ParkAnswer</a>, Built with<!-- --> <a href="https://github.com/passwd10/gatsby-starter-answer">Gatsby-Find-Answer</a></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-149433358-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2022-07-06-deepCopy/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-31bd25ec256a9117a66a.js"],"app":["/app-16b86bde41d76089ae6b.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-3069fb1a0c0878c134d9.js"],"component---src-pages-404-js":["/component---src-pages-404-js-c0f16def8fdf5e7878d1.js"],"component---src-pages-about-js":["/component---src-pages-about-js-9a47248c86131de85258.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2ab18a72562fb73174ce.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-48b64414da7f7f9df18a.js"]};/*]]>*/</script><script src="/polyfill-31bd25ec256a9117a66a.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-48b64414da7f7f9df18a.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-58b9a13296ff4660feda.js" async=""></script><script src="/a9a7754c-6236e32b63fccc546cfb.js" async=""></script><script src="/cb1608f2-f782a8f32dc4d2f4a1aa.js" async=""></script><script src="/styles-407fe62976dc5310c43e.js" async=""></script><script src="/app-16b86bde41d76089ae6b.js" async=""></script><script src="/framework-1f9e9c9d026ce769db50.js" async=""></script><script src="/webpack-runtime-f296fbe368f29a84a508.js" async=""></script></body></html>
