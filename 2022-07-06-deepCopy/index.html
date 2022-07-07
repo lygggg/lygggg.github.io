@@ -100,11 +100,11 @@ copyObj<span class="token punctuation">.</span>testObject<span class="token punc
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>copyObj<span class="token punctuation">.</span>testObject<span class="token punctuation">)</span> <span class="token comment">// {a: null, b: 3}</span>
 <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>object<span class="token punctuation">.</span>testObject<span class="token punctuation">)</span> <span class="token comment">// {a: 2, b: 3}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <br/>
-<p>위에 언급했던 얇은 복사 방법들과는 다르게 JSON.stringify를 사용한 복사는 <code class="language-text">객체 안에 객체가있는 상황이 반복되어도 기존 객체의 참조 주소와 다른가요?</code> 에 대한 질문에 만족할 수 있는 방법입니다. 이렇게 될수있는 원리를 알아보면 JSON.stringify는 객체를 string 문자열로 변경해주는 역할을 하고, JSON.parse는 문자열을 다시 객체로 변경해주는 역할을 하기 때문입니다.</p>
+<p>위에 언급했던 얇은 복사 방법들과는 다르게 JSON.stringify를 사용한 복사는 <code class="language-text">객체 안에 객체가 있는 상황이 반복되어도 복사가 가능하며, 복사된 객체들의 참조 주소도 기존 객체의 참조 주소와 다른가요?</code> 에 대한 질문에 만족할 수 있는 방법입니다. 이렇게 될수있는 원리를 알아보면 JSON.stringify는 객체를 string 문자열로 변경해주는 역할을 하고, JSON.parse는 문자열을 다시 객체로 변경해주는 역할을 하기 때문입니다.</p>
 <p>자바스크립트에서 string, number같은 기본형타입은 불변성(Immutable)을 가진 타입이고, 기본형 타입을 제외한 모든 타입 즉 객체타입은 가변성(mutable)을 가진 타입이기 떄문입니다. 그렇기 떄문에 문자열로 변경하는 작업에서 이전 객체에서의 참조가 없어지는 원리를 이용한 방법입니다.</p>
 <br/>
 <h3>그렇다면 JSON.stringify는 아무런 문제점이 없는 방법인가요?</h3>
-<p>JSON.stringify를 이용한 방법에도 문제점이 존재합니다. 바로 JSON에서 허용하는 데이터 포맷이 아닌 경우에는 정상적으로 데이터를 복사할 수 없습니다.</p>
+<p>JSON.stringify를 이용한 방법에도 문제점이 존재합니다. 바로 JSON에서 허용하는 데이터 포맷이 아닌 경우에는 정상적으로 데이터를 복사할 수 없습니다. 즉 <code class="language-text">어떠한 타입도 문제없이 복사할 수 있나요?</code> 경우에 맞지 않습니다.</p>
 <br/>
 <p>JSON에서 허용하는 데이터 포맷은 아래와 같습니다.</p>
 <ul>
@@ -262,7 +262,7 @@ copyObj<span class="token punctuation">.</span>testObject<span class="token punc
 <br/>
 <h3>Lodash 라이브러리</h3>
 <p>마지막으로는 많은 사람들이 흔히 사용하는 Lodash를 이용하여 깊은 복사를 하는 방법이 있습니다. 팀원들끼리 합의를 했거나, 이미 프로젝트에서 사용 중이라면 사용을 고려해 볼 수 있습니다.</p>
-<p>Lodash cloneDeep을 사용하면 위에서 언급한 모든 것을 만족하는 결과를 얻을 수 있습니다. 아래 코드에서 간단하게 사용법만 알아보겠습니다.</p>
+<p>Lodash cloneDeep을 사용하면 위에서 언급한 것들을 만족하는 결과를 얻을 수 있습니다. 아래 코드에서 간단하게 사용법만 알아보겠습니다.</p>
 <br/>
 <div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token keyword">const</span> _ <span class="token operator">=</span> <span class="token keyword">require</span><span class="token punctuation">(</span><span class="token string">'lodash'</span><span class="token punctuation">)</span>
 
