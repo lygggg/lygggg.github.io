@@ -136,11 +136,11 @@ copyObj<span class="token punctuation">.</span>testObject<span class="token punc
 <p>직접 깊은 복사를 하는 함수를 구현하는 방법이 있습니다. 이 방법은 재귀를 사용한 방법이고, 제가 제시했던 3가지 문제점들을 해결해 줄 수 있습니다.</p>
 <p>아래 코드는 따로 처리가 필요한 타입들을 따로 객체에 저장해서 target이 객체라면 재귀를 반복하고 아닐 경우 값을 리턴 함으로써 깊은 복사가 되도록 구현한 코드입니다. 정답이 아니며 더 좋은 방법이 있을 수 있습니다.</p>
 <br/>
-<div class="gatsby-highlight" data-language="tsx"><pre style="counter-reset: linenumber NaN" class="language-tsx line-numbers"><code class="language-tsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://gist.github.com/lygggg/6c3710f224f218a5e89b002f75be22e8.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<script src="https://gist.github.com/lygggg/6c3710f224f218a5e89b002f75be22e8.js"></script>
 <br/>
 <p>위 코드가 성공적으로 깊은 복사를 수행할 수 있는지 테스트코드 또한 작성해볼 수 있습니다. 재귀로 구현한 함수를 테스트하기 위해서 재귀를 사용하는 방법으로 불변성까지 테스트하도록 작성했습니다.</p>
 <br/>
-<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">&lt;script src=&quot;https://gist.github.com/lygggg/e0264f592fad474add3155ca0ff21c08.js&quot;&gt;&lt;/script&gt;</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p><a href="https://gist.github.com/lygggg/e0264f592fad474add3155ca0ff21c08.js">https://gist.github.com/lygggg/e0264f592fad474add3155ca0ff21c08.js</a></p>
 <p><img src="https://user-images.githubusercontent.com/52567149/177704550-674f6a27-5a6f-4d79-8945-cc5767e4c413.png" alt="deepjest"></p>
 <p>테스트가 성공적으로 수행되는 것을 볼 수 있습니다.</p>
 <br/>
