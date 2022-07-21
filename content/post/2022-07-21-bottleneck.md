@@ -108,3 +108,14 @@ console.timeEnd('promiseAll')
    {status: "rejected",  reason: Error: an error}
  ]
 ```
+
+하지만 함수가 의존성을 갖는 경우는 해당 방법들만으로는 부족합니다.
+
+## 함수끼리 의존성이 있는 경우
+
+```tsx
+const promise1 = () => new Promise(res => setTimeout(res, 1000))
+const promise2 = () => new Promise(res => setTimeout(res, 2000))
+const promise3 = () => new Promise(res => setTimeout(res, 3000))
+const promise4 = fun => new Promise(res => setTimeout(res, fun))
+```
