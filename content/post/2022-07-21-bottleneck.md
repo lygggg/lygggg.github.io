@@ -229,10 +229,10 @@ async await는 코드를 순차적으로 실행하기 때문에 동시에 실행
 
 <br/>
 
-### 참고
+### Reference
 
-https://medium.com/@HoseungJang/javascript%EC%97%90%EC%84%9C-async-await%EC%9D%98-%EB%B3%91%EB%AA%A9-%EB%AC%B8%EC%A0%9C-%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0-60d54795c4fa
+- https://medium.com/@HoseungJang/javascript%EC%97%90%EC%84%9C-async-await%EC%9D%98-%EB%B3%91%EB%AA%A9-%EB%AC%B8%EC%A0%9C-%EA%B0%9C%EC%84%A0%ED%95%98%EA%B8%B0-60d54795c4fa
 
-기초부터 완성까지 프런트엔드
+- 기초부터 완성까지 프런트엔드
 
 틀린 내용이 있다면 거침없는 피드백 부탁드립니다
