@@ -152,6 +152,32 @@ console.timeEnd('promiseAll')
 
 <br/>
 
+### 병렬로 처리하는 또 다른 방법
+
+<br/>
+
+async await를 사용할 때 여러 비동기 함수를 병렬로 처리하는 또 하나의 방법이 있습니다.
+
+함수에 의존성이 없다면 프로미스를 먼저 생성하고, await 키워드를 나중에 사용하면 병렬로 실행되는 코드가 됩니다.
+
+<br/>
+
+```tsx
+const runA = promise1()
+const runB = promise2()
+
+const data1 = await runA
+const data2 = await runB
+```
+
+<br/>
+
+runA, runB 두 개의 프로미스가 생성되고, 각자의 비동기 코드가 실행됩니다. 그 후에 두 프로미스가 생성된 후 기다리기 때문에 두 개의 비동기 함수가 병렬로 처리됩니다.
+
+어느 방법을 사용하든 병렬처리를 한다는 부분에서 결과는 같지만, 필자가 생각하기에는 promise.all을 사용하는 것이 심플하고 가독성이 좋은 것 같습니다.
+
+<br/>
+
 ## 함수끼리 의존성이 있는 경우
 
 <br/>
