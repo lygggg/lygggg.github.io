@@ -1,6 +1,6 @@
 ---
 title: 'Object, Map 무엇을 사용해야 할까? '
-date: 2022-07-28
+date: 2022-08-08
 tag: ['JavaScript']
 ---
 
@@ -12,8 +12,6 @@ Hash 알고리즘 문제를 풀다가 Object와 Map으로 선언했을 때 속�
 
 ## MDN 에서는 다음과 같이 설명합니다.
 
-<br/>
-
 ### Map, Object?
 
 Map 객체는 간단한 키와 값을 서로 연결시켜 저장하며, 저장된 순서대로 각 요소들을 반복적으로 접근할 수 있도록 한다.
@@ -22,13 +20,9 @@ Object는 문자열을 값에 매핑하는데 사용한다. Object는 키를 값
 
 아래에서 Object와 Map의 차이점을 알아보겠습니다.
 
-<br/>
-
 ### Object의 키는 `Strings`이며, Map의 키는 모든 값을 가질 수 있다.
 
 이 말은 Object의 키로 배열, 함수, Symbol 등등 어떠한 값을 넣든 String으로 저장됩니다. 실제로 궁금해서 확인해 봤습니다.
-
-<br/>
 
 ```jsx
 const symbol = Symbol()
@@ -41,15 +35,13 @@ const Object = {
 }
 ```
 
-<br/>
-
 ### 결과
 
 ![image](https://user-images.githubusercontent.com/52567149/183314801-0ebd35d0-e055-40cd-bcd2-930fe585b96e.png)
 
-반면 Map의 키는 모든 값을 가질 수 있습니다. 아래 코드에서 확인해 보겠습니다.
-
 <br/>
+
+반면 Map의 키는 모든 값을 가질 수 있습니다. 아래 코드에서 확인해 보겠습니다.
 
 ```jsx
 const symbol = Symbol()
@@ -73,11 +65,7 @@ console.log(map)
 
 이렇게 보니 Map 은 Object와 다르게 기능을 굉장히 유연하게 제공하는 것을 알 수 있습니다.
 
-<br/>
-
 ### 결과
-
-<br/>
 
 ![image](https://user-images.githubusercontent.com/52567149/183314701-6b1427ac-87bb-4b60-af73-6b26bfc2906d.png)
 
@@ -85,15 +73,11 @@ console.log(map)
 
 ### Object는 크기를 수동으로 추적해야하지만, Map은 크기를 쉽게 얻을 수 있다.
 
-<br/>
-
 Object는 배열이 아니기 때문에 length 프로퍼티로 객체의 길이를 구할 수 없습니다. 대신 map은 size 프로퍼티를 사용해 Map의 길이를 구할 수 있다는 부분에서 차이점을 보입니다. 유사 배열 객체로 만들어서 length 프로퍼티를 생성하는 방법이 있지만, 결론적으로는 없다고 보면 될 것 같습니다.
 
 <br/>
 
 ### Map은 삽입된 순서대로 반복된다.
-
-<br/>
 
 이 말은 Map은 삽입된 순서대로 반복이 가능하다는 말 같습니다. 실제로 Map 속성에 `[Symbol.iterator]` 프로퍼티가 존재하기 때문에 `스프레드 연산자`, `for ... of`, `forEach`를 사용해서 순환하거나, 반복문을 적용할 수 있습니다. 하지만 Object는 요소를 반복하려면 `for ... in`, `Object.keys()`, `Object.values()`, `Object.entries()`를 거쳐서 배열로 변경하는 작업을 거친 후에 반복작업을 실행할 수 있습니다.
 
@@ -105,15 +89,11 @@ Object는 배열이 아니기 때문에 length 프로퍼티로 객체의 길이�
 
 ### 객체(Object)에는 prototype이 있고, Map에도 기본 키들이 있다. (이것은 map = Object.create(null)를 사용하여 우회할 수 있다.)
 
-<br/>
-
 처음에 이 문장을 보고 의아했는데, 결국은 Object, Map 둘 다 프로토타입이 존재하지만, Map의 프로토타입에는 clear, delete, forEach, get, has, set 같은 기본 키가 존재한다는 말 같습니다.
 
 <br/>
 
 ## 성능 비교
-
-<br/>
 
 자 이제 가장 중요한 성능 비교를 할 차례입니다. 모든 것은 상황에 맞게 사용해야 하기 때문에 결국 최선의 선택을 해야 합니다.
 
@@ -136,12 +116,7 @@ MDN에서는 이렇게 설명하고 있습니다.
 <br/>
 
 [여기 코드를 참고했습니다](<[https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d](https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d)>)
-
-<br/>
-
 먼저 len 길이의 Object와 Map을 만드는 코드를 작성하겠습니다.
-
-<br/>
 
 ```jsx
 let obj = {},
@@ -157,8 +132,6 @@ for (let i = 0; i < len; i++) {
 <br/>
 
 아래에서는 console.time()을 사용하여 Map, Object를 가지고 몇 가지를 테스트하면서 특정 상황에서 무엇을 사용하면 좋을지 확인해 보겠습니다.
-
-<br/>
 
 ### key를 모르는 상황에서 값이 있는지 확인하기
 
@@ -182,11 +155,7 @@ console.timeEnd('obj test1')
 
 제가 테스트했을 때는 차이는 미미했고, 여러 번 테스트하면 Object 가 더 빠른 경우도 있었습니다.
 
-<br/>
-
 ## key, Index를 아는 상황에서 값을 가져오고 싶을 때
-
-<br/>
 
 ```jsx
 console.time('map test2')
@@ -201,13 +170,10 @@ console.timeEnd('obj test2')
 
 ### Object : 0.01
 
+<br/>
 key, Index를 알고 있어도 value를 가져오는 속도 또한 비슷합니다.
 
-<br/>
-
 ## 데이터를 추가할 때
-
-<br/>
 
 ```jsx
 console.time('map test3')
@@ -237,8 +203,6 @@ console.timeEnd('obj test3')
 <br/>
 
 ### 왜 그럼 내가 Map을 사용한 코드는 Object를 사용한 코드보다 느렸을까요?
-
-<br/>
 
 밑에 코드에서 설명드리겠습니다. 새롭게 obj와 map을 선언하고 이번에는 n의 크기를 100000으로 줄이도록 하겠습니다.
 
@@ -281,8 +245,6 @@ console.timeEnd('obj test4')
 <br/>
 
 ### Key가 string 일 때
-
-<br/>
 
 ```jsx
 console.time('map test4')
