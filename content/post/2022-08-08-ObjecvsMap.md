@@ -278,8 +278,6 @@ Object, Map 두 개 다 장점과 단점이 존재합니다. 예를 들면 우�
 
 만약 저와 같은 고민을 겪고 계신 분들이 있다면 이 글을 통해서 꼭 도움이 되었으면 좋겠습니다.
 
-틀린 내용이 있다면 거침없는 피드백 부탁드립니다
-
 <br/>
 
 ### Reference
@@ -289,3 +287,5 @@ Object, Map 두 개 다 장점과 단점이 존재합니다. 예를 들면 우�
 [https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d](https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d)
 
 [https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373](https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373)
+
+틀린 내용이 있다면 거침없는 피드백 부탁드립니다
