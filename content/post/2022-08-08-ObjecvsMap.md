@@ -115,7 +115,6 @@ MDN에서는 이렇게 설명하고 있습니다.
 
 <br/>
 
-[여기 코드를 참고했습니다](<[https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d](https://bretcameron.medium.com/how-javascript-maps-can-make-your-code-faster-90f56bf61d9d)>)
 먼저 len 길이의 Object와 Map을 만드는 코드를 작성하겠습니다.
 
 ```jsx
@@ -270,11 +269,17 @@ console.timeEnd('obj test4')
 
 <br/>
 
+### But
+
+Map과 Object는 둘 다 Key, Value로 이루어져 있지만, Map은 Object를 완벽하게 대체할 수 없습니다. 현재 Map은 JSON을 지원하지 않기 때문에 JSON으로 변환하려면 직접 일일이 변환해 주는 작업을 거쳐야 합니다.
+
+</br>
+
 ## 결론
 
 이번 포스팅에서는 Object와 Map의 차이점에 대해서 알아보았습니다. 항상 어떤 기술을 사용할 때는 명확한 이유가 있어야 한다고 생각합니다.
 
-Object, Map 두 개 다 장점과 단점이 존재합니다. 예를 들면 우리가 주로 사용하는 JSON 데이터는 Object 형식이기 때문에, Map은 Object를 완벽하게 대체할 수 없습니다. 또한 Map은 Object가 지원하지 않는 forEach, has, set, size 같은 유용한 기능을 제공합니다. 그리고 우리는 테스트를 통해서 어느 것이 어떤 상황에서 더 좋은 성능을 가지고 있는지 확인했습니다.
+Object, Map 두 개 다 장점과 단점이 존재합니다. 예를 들면 우리가 주로 사용하는 JSON 데이터는 Object 형식이기 때문에, Map은 Object를 완벽하게 대체할 수 없습니다. 또한 Map은 Object가 지원하지 않는 forEach, has, set, size 같은 유용한 기능을 제공합니다. 그리고 우리는 테스트를 통해서 어느 것이 어떤 상황에서 더 좋은 성능을 가지고 있는지 확인했습니다. 그리고 이것을 토대로 더 좋은 선택을 할 수 있을 것이라고 생각합니다.
 
 만약 저와 같은 고민을 겪고 계신 분들이 있다면 이 글을 통해서 꼭 도움이 되었으면 좋겠습니다.
 
